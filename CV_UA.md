@@ -35,7 +35,7 @@ Sortable.js • CSS Cascade Layers • Figma • SEO • Доступність 
 ## Досвід роботи
 
 ### **Senior Frontend Developer**  
-**ITNET** (Львів) | 2022–2024  
+**ITNET** (Львів) | 2024–2026  
 
 **VD-Express — платформа онлайн-бронювання автобусних квитків**
 
@@ -62,7 +62,7 @@ Sortable.js • CSS Cascade Layers • Figma • SEO • Доступність 
 ---
 
 ### **Senior Frontend Developer**  
-**DGtek** (Австралія) | 2019–2022  
+**DGtek** (Австралія) | 2019–2023  
 *Дистанційно, 4+ років роботи*
 
 **Багатофункціональний портал DGtek та реселлерів**
@@ -89,7 +89,7 @@ Sortable.js • CSS Cascade Layers • Figma • SEO • Доступність 
 ---
 
 ### **Frontend Developer**  
-**Pineapple** | 2019–2021  
+**Pineapple** | 2019–2022  
 *Дистанційно*
 
 **CMS для динамічного створення лендингів**
