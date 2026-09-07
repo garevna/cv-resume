@@ -1,25 +1,37 @@
-The developers are not a special category of people. They are the another generation.
+# On Software Development & Design Patterns
 
-The developers must think logically and systemically and this is the reason they does not tolerate lies and fakes.
+## Core Beliefs
 
-The developers have binary thinking. It is important for them that something white should be white and something black should be black. Good is good and evil is evil.
+Developers are not a special category of people—they're another generation with a different way of thinking.
 
-A clear identification of concepts is important because otherwise the code does not work.
+We must think **logically and systemically**. This is why we don't tolerate lies and fakes. Code either works or it doesn't.
 
-A good developer knows that there is no ambiguity in the code. The developer knows the difference between polymorphism and ambiguity. This means that the developer should be an honest person. Otherwise this one is a bad developer.
+### Binary Thinking
 
-We have software design patterns.
+We have binary thinking because it matters:
+- Something white should be white; something black should be black
+- Good code is good; poor patterns are poor
+- There's no ambiguity in working software
 
-I'm the Ukrainian and this is the best pattern in my life.
+Clear identification of concepts is **essential**. Otherwise, the code doesn't work.
 
-Junior is a developer who has some idea of ​​patterns.
+### The Honesty Principle
 
-Middle is a developer who effectively uses patterns.
+A good developer is an honest person. Why? Because ambiguity and compromises lead to broken systems.
 
-Senior is the developer who himself creates new patterns.
+If you don't understand something fully, you can't build it properly. This requires intellectual honesty.
 
-Lead is a senior with good organizational skills.
+### Design Patterns Hierarchy
 
-I like to create new patterns.
+- **Junior**: Knows patterns exist
+- **Middle**: Applies patterns effectively  
+- **Senior**: Creates new patterns
+- **Lead**: Senior + organizational skills
 
-I like good patterns.
+I believe in creating new patterns, not just implementing existing ones.
+
+### Why This Matters
+
+Design patterns aren't dogma—they're solutions to recurring problems. A true senior developer recognizes when patterns don't fit and creates better ones.
+
+That's what I do.
