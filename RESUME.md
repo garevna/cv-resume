@@ -293,6 +293,8 @@ Higher Education (Mathematician)
 - 💼 **LinkedIn:** https://www.linkedin.com/in/garevna/
 
 ---
+## [Recommendations](https://www.linkedin.com/in/garevna/details/recommendations/)
+---
 
 ## Languages
 
