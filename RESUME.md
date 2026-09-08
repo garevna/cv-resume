@@ -167,23 +167,23 @@ The online booking platform for international coach services is designed as a re
 
 ---
 
-**8. Visual Content Editor — визуальный редактор для управления контентом**
+**8. Visual Content Editor — a visual editor for content management**
 
-Интерактивный визуальный редактор для создания и редактирования контента сайтов в реальном времени. Позволяет пользователям изменять текст, изображения, стили и структуру страниц без доступа к коду.
+An interactive visual editor for creating and editing website content in real time. It allows users to modify text, images, styles and page structure without needing to access the code.
 
-*Функциональность:*
-- Drag-and-drop редактирование компонентов на странице
-- WYSIWYG-редактор с предпросмотром в реальном времени
-- Управление стилями (цвета, шрифты, размеры) через интуитивный интерфейс
-- Сохранение и управление версиями контента
-- Синхронизация изменений между редактором и live-версией сайта
-- Поддержка многоязычного контента
-
-*Архитектура:*
-- Vue 3 (Composition API) для реактивного обновления интерфейса
-- Pinia для управления состоянием редактора и истории изменений
-- Реал-тайм синхронизация через WebSocket
-- Интеграция с CMS-бэкендом для сохранения данных
+*Features:*
+- Drag-and-drop editing of page components
+- WYSIWYG editor with real-time preview
+- Style management (colours, fonts, sizes) via an intuitive interface
+- Saving and version control of content
+- Synchronisation of changes between the editor and the live version of the website
+- Support for multilingual content
+- 
+*Architecture:*
+- Vue 3 (Composition API) for reactive interface updates
+- Pinia for managing the editor’s state and change history
+- Real-time synchronisation via WebSocket
+- Integration with the CMS backend for data storage
 
 **Technology stack:** Vue 3, TypeScript, Vuetify 3, Pinia, WebSocket, REST API, Vite
 
