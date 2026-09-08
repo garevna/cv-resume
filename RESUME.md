@@ -197,7 +197,7 @@ An interactive visual editor for creating and editing website content in real ti
 
 *Remote*
 
-**DGtek Provisioning Portal** (2020–2023)
+[**DGtek Provisioning Portal**](https://garevna.github.io/cv-resume/dgtek_portal.html) | 2020–2023
 
 Frontend Lead / Senior Frontend Engineer
 
