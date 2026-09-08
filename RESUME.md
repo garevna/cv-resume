@@ -100,38 +100,38 @@ A responsive multi-page landing page for a B2B platform for managing connections
 
 ---
 
-**5. IT NET — корпоративный сайт IT-компании**
+**5. IT NET — an IT company’s corporate website**
 
-Адаптивный мультиязычный лендинг (uk/en/de) презентующий компанию, её CRM-продукты и услуги. Реализованы интерактивные карточки, отдельные desktop/mobile-сценарии навигации, формы обратной связи и pop-up-сценарии.
+A responsive, multilingual landing page (uk/en/de) showcasing the company, its CRM products and services. The site features interactive cards, separate desktop and mobile navigation flows, feedback forms and pop-up scenarios.
 
-*Зона ответственности:*
-- Разработка пользовательского интерфейса, адаптивной вёрстки и интерактивности
-- Интеграция клиентской логики и компонентов Vuetify
-- (Docker и CI/CD были настроены другими участниками команды)
+*Scope of responsibility:*
+- Development of the user interface, responsive layout and interactivity
+- Integration of client-side logic and Vuetify components
+- (Docker and CI/CD were set up by other team members)
 
-**Стек:** Vue 3, TypeScript, Vite, Vuetify, Pinia, Vue i18n, Swiper, Vitest
+**Technology stack:** Vue 3, TypeScript, Vite, Vuetify, Pinia, Vue i18n, Swiper, Vitest
 
 ---
 
-**6. Site Constructor — мультибрендовая (white-label) frontend-платформа**
+**6. Site Constructor — multi-brand (white-label) front-end platform**
 
-Разработала клиентскую часть платформы онлайн-продажи автобусных билетов, где единая кодовая база обслуживает несколько независимых брендов одновременно. Тема оформления определяется во время выполнения приложения; динамически подгружаются UI-компоненты, цветовая схема, локализация и контент конкретного бренда — без пересборки проекта.
+Developed the client-side of an online bus ticket sales platform, where a single codebase supports several independent brands simultaneously. The design theme is determined at runtime; UI components, colour schemes, localisation and content specific to each brand are dynamically loaded — without the need to rebuild the project.
 
-*Реализованный путь бронирования:*
-- Поиск маршрутов (включая по геолокации) с картой MapLibre GL
-- Сравнение вариантов рейсов; интерактивная схема выбора мест в автобусе
-- Оформление данных пассажиров, добавление багажа, выбор услуг
-- Оплата и получение электронного билета; личный кабинет с историей бронирований
+*Booking flow implemented:*
+- Route search (including geolocation) using the MapLibre GL map
+- Comparison of journey options; interactive seat selection diagram on the bus
+- Passenger details, adding luggage, selecting services
+- Payment and receipt of an e-ticket; personal account with booking history
 
-*Архитектурный подход:*
-- Vue 3 (Composition API) + TypeScript с Vuetify 3 как компонентной библиотекой
-- Pinia: состояние разбито на предметные stores (поиск, бронирование, пассажиры, расчёты, авторизация)
-- vue-i18n с отдельными наборами словарей для каждого бренда
-- Контент (динамические страницы, меню, цвета, популярные направления) вынесен в JSON-конфигурацию
-- Runtime-выбор темы через defineAsyncComponent с динамическим импортом
-- Адаптивная вёрстка с отдельными мобильными UX-паттернами
+*Architectural approach:*
+- Vue 3 (Composition API) + TypeScript with Vuetify 3 as the component library
+- Pinia: state is broken down into subject-specific stores (search, booking, passengers, payments, authorisation)
+- vue-i18n with separate dictionary sets for each brand
+- Content (dynamic pages, menus, colours, popular destinations) is defined in a JSON configuration file
+- Runtime theme selection via `defineAsyncComponent` with dynamic import
+- Responsive layout with separate mobile UX patterns
 
-**Стек:** Vue 3 (Composition API, `<script setup>`), TypeScript, Vuetify 3, Pinia, vue-i18n, MapLibre GL, Firebase Auth, REST API
+**Technology stack:** Vue 3 (Composition API, `<script setup>`), TypeScript, Vuetify 3, Pinia, vue-i18n, MapLibre GL, Firebase Auth, REST API
 
 ---
 
@@ -161,7 +161,7 @@ A responsive multi-page landing page for a B2B platform for managing connections
 - Трансферы от двери до двери: геолокация, зоны на MapLibre, расчёт стоимости
 - Три языка (uk/en/de) с локализованными форматами
 
-**Стек:** Vue 3 (Composition API), TypeScript, Vite, Vuetify 3, Pinia + persisted state, Vue Router, vue-i18n, MapLibre GL, Firebase Auth, WebSocket, Axios, libphonenumber-js, pnpm workspaces
+**Technology stack:** Vue 3 (Composition API), TypeScript, Vite, Vuetify 3, Pinia + persisted state, Vue Router, vue-i18n, MapLibre GL, Firebase Auth, WebSocket, Axios, libphonenumber-js, pnpm workspaces
 
 **Статус:** Полностью реализованы доменное ядро, API-слой, UI-библиотека и основной сценарий бронирования. На следующем этапе — декларативная конфигурация флоу и подключение второго клиента-перевозчика.
 
@@ -185,7 +185,7 @@ A responsive multi-page landing page for a B2B platform for managing connections
 - Реал-тайм синхронизация через WebSocket
 - Интеграция с CMS-бэкендом для сохранения данных
 
-**Стек:** Vue 3, TypeScript, Vuetify 3, Pinia, WebSocket, REST API, Vite
+**Technology stack:** Vue 3, TypeScript, Vuetify 3, Pinia, WebSocket, REST API, Vite
 
 ---
 
@@ -216,7 +216,7 @@ Developed a comprehensive portal serving different user roles: resellers, superv
 - ~1 year development cycle
 - Close collaboration with backend developer and C-level executives
 
-**Стек:** Vue 2, TypeScript, Vuetify, Vuex, WebSocket, Google Maps, Geoscape API, REST API
+**Technology stack:** Vue 2, TypeScript, Vuetify, Vuex, WebSocket, Google Maps, Geoscape API, REST API
 
 ---
 
