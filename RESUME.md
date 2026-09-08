@@ -39,11 +39,11 @@ Figma • SEO • Accessibility (a11y) • E2E Testing (Cypress) • Unit Testin
 
 #### Project Portfolio
 
-**1. Admin Dashboard — Корпоративна админ-платформа**
+**1. Admin Dashboard — Corporate administration platform**
 
-SPA-приложение для управления пользователями, ролями, подразделениями и транспортной инфраструктурой. Реализованы JWT-аутентификация, ролевая модель доступа (RBAC), CRUD-операции, поиск и фильтрация данных, редактирование автобусов, географические модули на базе MapLibre, локализация интерфейса и интеграция с REST API.
+SPA for managing users, roles, departments and transport infrastructure. Features include JWT authentication, role-based access control (RBAC), CRUD operations, data search and filtering, bus editing, geographical modules based on MapLibre, interface localisation and integration with a REST API.
 
-**Стек:** Vue 3, TypeScript, Pinia, Vue Router, Vuetify 3, Axios, MapLibre GL, Vue i18n, Vite, Vitest, Cypress
+**Technology stack:** Vue 3, TypeScript, Pinia, Vue Router, Vuetify 3, Axios, MapLibre GL, Vue i18n, Vite, Vitest, Cypress
 
 ---
 
@@ -64,39 +64,39 @@ Built frontend from scratch for international bus transportation service handlin
 - Real-time seat sync through WebSocket with automatic reconnection (exponential backoff)
 - Reusable component library with Vuetify 3 and custom patterns
 
-**Стек:** Vue 3 (Composition API), TypeScript, Vuetify 3, Pinia, Firebase Auth, WebSocket, REST API, MapLibre GL, Vue i18n
+**Technology stack:** Vue 3 (Composition API), TypeScript, Vuetify 3, Pinia, Firebase Auth, WebSocket, REST API, MapLibre GL, Vue i18n
 
 ---
 
-**3. BUSPORTAL — многоязычный промо-сайт SaaS-платформы**
+**3. BUSPORTAL — a multilingual promotional website for a SaaS platform**
 
-Маркетинговый сайт CRM-платформы для автобусных и логистических компаний: витрина возможностей, тарифы, FAQ, блог и воронка сбора лидов. Сайт полностью статически пререндерится, работает на четырёх языках (uk/en/de/ru) и обслуживает украинский, европейский и международный рынки.
+A marketing website for a CRM platform aimed at bus and logistics companies: showcasing features, pricing, FAQs, a blog and a lead generation funnel. The website is fully statically pre-rendered, available in four languages (uk/en/de/ru) and serves the Ukrainian, European and international markets.
 
-*Техническое решение:*
-- **Статическая генерация с гидратацией** через vite-ssg: все маршруты пререндерятся в HTML, состояние Pinia сериализуется в разметку
-- **Четыре локали, 20+ маршрутов** с раздельными URL, синхронизацией локали с маршрутом на пререндере и в рантайме
-- **SEO-слой** как отдельный composable: title/description/keywords, canonical, hreflang, Open Graph, Twitter Card, sitemap.xml с автогенерацией
-- **Лидогенерация и аналитика:** формы демо-запроса, запроса цены, обратного звонка; отправка на API и events в GA4/Google Ads
-- **Интерактивный интерфейс:** sticky-скролл с синхронизированными изображениями, кастомные слайдеры, адаптивные карточки с hover-состояниями
-- **Контент на self-hosted Directus:** пререндер блог-постов с реальными датами публикации и кросс-локальными alternate-ссылками
+*Technical solution:*
+- **Static generation with hydration** via vite-ssg: all routes are pre-rendered as HTML, and the Pinia state is serialised into the markup
+- **Four localisations, 20+ routes** with distinct URLs, synchronisation of localisation with the route during pre-rendering and at runtime
+- **SEO layer** as a separate composable: title/description/keywords, canonical, hreflang, Open Graph, Twitter Card, sitemap.xml with auto-generation
+- **Lead generation and analytics:** demo request, price enquiry and call-back forms; integration with APIs and events in GA4/Google Ads
+- **Interactive interface:** sticky-scroll with synchronised images, custom sliders, responsive cards with hover states
+- **Content on self-hosted Directus:** pre-rendered blog posts with actual publication dates and cross-regional alternate links
 
-**Стек:** Vue 3 (Composition API), TypeScript, Vite 7, vite-ssg, Vuetify 3, Pinia, vue-i18n, vue-router, @unhead/vue, Directus 11, GA4, ESLint + Prettier
+**Technology stack:** Vue 3 (Composition API), TypeScript, Vite 7, vite-ssg, Vuetify 3, Pinia, vue-i18n, vue-router, @unhead/vue, Directus 11, GA4, ESLint + Prettier
 
 ---
 
-**4. IS PORTAL — платформа автоматизации телекоммуникационного бизнеса**
+**4. IS PORTAL — telecommunications business automation platform**
 
-Адаптивный многостраничный лендинг для B2B-платформы управления подключениями, монтажными бригадами, заявками, складами и закупками.
+A responsive multi-page landing page for a B2B platform for managing connections, installation teams, requests, warehouses and procurement.
 
-*Реализовано:*
-- Адаптивная версия для desktop и mobile с отдельными UX-паттернами
-- Локализация интерфейса; интерактивное меню и плавная навигация по секциям
-- Тарифный модуль с переключением месячной и годовой подписки
-- Формы заявок, обратного звонка и консультации с валидацией
-- FAQ-блок, всплывающие окна, карусели на Swiper
-- Компонентная архитектура на Vue 3
+*Features implemented:*
+- Responsive versions for desktop and mobile with distinct UX patterns
+- Localisation of the interface; interactive menu and seamless navigation between sections
+- Pricing module with the option to switch between monthly and annual subscriptions
+- Request, call-back and consultation forms with validation
+- FAQ section, pop-ups and carousels using Swiper
+- Component-based architecture using Vue 3
 
-**Стек:** Vue 3, TypeScript, Vite, Pinia, Vue i18n, Vuetify, Swiper, Vitest
+**Technology stack:** Vue 3, TypeScript, Vite, Pinia, Vue i18n, Vuetify, Swiper, Vitest
 
 ---
 
