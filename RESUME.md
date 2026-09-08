@@ -1,7 +1,7 @@
 # Irina H. Fylyppova
 **Senior Frontend Developer**
 
-📧 [irina.fylyppova@gmail.com](mailto:irina.fylyppova@gmail.com)  
+📧 [irina.h.fylyppova@gmail.com](mailto:irina.h.fylyppova@gmail.com)  
 🔗 [GitHub](https://github.com/garevna) | [LinkedIn](https://www.linkedin.com/in/garevna/)  
 🌍 Kharkiv, Ukraine | Remote Only
 
@@ -9,7 +9,7 @@
 
 ## Professional Summary
 
-Senior Frontend Developer with 4+ years of experience building high-performance web applications and managing complex data systems. Specialized in architecting scalable solutions, optimizing performance, real-time synchronization, and leading technical design decisions. Proven track record of delivering complex multi-featured systems serving 100k+ records and managing cross-functional teams.
+Senior Frontend Developer with 8+ years of experience building high-performance web applications and managing complex data systems. Specialized in architecting scalable solutions, optimizing performance, real-time synchronization, and leading technical design decisions. Proven track record of delivering complex multi-featured systems serving 100k+ records and managing cross-functional teams.
 
 ---
 
@@ -22,7 +22,7 @@ Vue 2/3 (Composition API, `<script setup>`) • TypeScript • Vuetify 2/3 • P
 Web Workers • IndexedDB (with advanced indexing) • REST API • WebSockets • Real-time Synchronization • Geolocation APIs (Google Maps, MapLibre GL, Geoscape)
 
 **DevOps & Tools:**  
-Git • Firebase Auth • Docker • CI/CD • GitLab CI • vite-ssg • Directus
+Git • Firebase Auth • GitLab CI • vite-ssg • Directus
 
 **Backend (foundational):**  
 Node.js • Express • File System (fs)
@@ -35,7 +35,7 @@ Figma • SEO • Accessibility (a11y) • E2E Testing (Cypress) • Unit Testin
 ## Professional Experience
 
 ### **Senior Frontend Developer**  
-**ITNET** (Lviv, Ukraine) | Feb 2024–Present  
+**ITNET** (Lviv, Ukraine) | Feb 2025–Present  
 
 #### Project Portfolio
 
@@ -221,7 +221,7 @@ Developed a comprehensive portal serving different user roles: resellers, superv
 ---
 
 ### **Frontend Developer**  
-**Pineapple** | 2019–2021  
+**Pineapple** | 2019–2022  
 *Remote*
 
 **CMS for Dynamic Landing Page Generation**
