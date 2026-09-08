@@ -192,31 +192,40 @@ Developed the client-side of an online bus ticket sales platform, where a single
 ---
 
 ### **Senior Frontend Developer**  
-**DGtek Fibre Network** (Australia) | Sep 2019–Sep 2023  
+
+**DGtek Fibre Network** (Melbourne AU) | Sep 2019–Sep 2023  
+
 *Remote*
 
-**Multi-functional Portal for DGtek and Resellers**
+**DGtek Provisioning Portal** (2020–2023)
+
+Frontend Lead / Senior Frontend Engineer
+
+Sole frontend engineer on a B2B OSS/provisioning platform for a metro fibre network operator, serving three user groups: DGtek network admins, reseller ISPs (RSPs) and public visitors. Owned the whole frontend estate — 14 repositories, ~70,000 lines of Vue/JS, delivered as a set of applications plus 7 in-house npm packages shared between them.
+
+• **Admin dashboard** (~42k LOC): network footprint and building management, customers and services, SLAs, partners, ticketing, installation scheduling, document storage, role/permission settings and an analytics section (MRR, churn, ARPU, connection pipeline, per-building and per-partner reports).
+
+• **Partner (RSP) cabinet**: address serviceability check, customer and service lifecycle (assign, suspend, resume, cancel), tickets, installation slot booking, statistics and white-labelled company profile.
+
+• **Entry & registration app**: partner onboarding with ABN/email/phone validation, auth, password recovery, public build-cost calculator.
+
+• **Architected a Web Worker data layer** used across all apps: a route/action message controller, AES-encrypted credentials (crypto-js), all API traffic and a versioned IndexedDB cache (10 object stores with secondary indexes, migration-aware upgrades, MessageChannel ports). This kept a heavy admin UI responsive and offline-tolerant on datasets of thousands of buildings and customers.
+
+• **Moved reporting to the client**: monthly revenue, churn and connection reports are computed in the worker over IndexedDB cursors and indexes instead of on the server, then rendered with Google Charts — removing a whole class of slow report endpoints.
+
+• **Geospatial features on Google Maps API + Geoscape (AU address database)**: rendering of serviceability polygons and building markers by status (lit / footprint / under construction / coming soon), point-in-polygon address lookup, fallback flow for addresses Google fails to geocode, and in-map editors for polygons and pits.
+
+• **Build-cost calculator** estimating fibre haul cost from a building to the nearest pit (tunnels, Telstra/NBN ducts, open trench, underboring, pit types, reinstatement, traffic management) and exporting a client-ready PDF quote.
+
+• **Bulk data tooling**: customer import from spreadsheets with a validation pipeline separating fatal errors, errors and warnings; exports to Excel, CSV and KML; editable inline engineering table (PPPoE credentials, IP, VLANs, subnets).
+
+• **Packaged reusable functionality as published npm libraries** (map/worker package, cost calculator, polygons editor, pits editor, two address-autocomplete components, date utilities), consumed by three separate applications and wired into their CI build scripts — a micro-frontend-style split that let each app upgrade independently.
+
+• Also built companion clients: a PWA connection-status checker, a public address-check landing page, and mobile app prototypes (Ionic/Capacitor and NativeScript).
+
+**Technology stack**: Vue 2, Vuetify 2, Vuex, Vue Router, Web Workers, IndexedDB, Service Workers/PWA, Webpack, Google Maps API, Geoscape API, crypto-js, xlsx / json2csv / tokml, PDF generation, npm package publishing. Mobile prototypes on Vue 3 + Ionic + Capacitor.
 
 Developed a comprehensive portal serving different user roles: resellers, supervisors, managers, installation technicians, and administrators. Database: 100k+ records.
-
-*Functionality by Role:*
-- **Resellers:** submit connection/disconnection requests, real-time status tracking, service cost calculation, subscriber information management
-- **Supervisors:** role management, access control configuration, portal settings
-- **Map Administrators:** polygon editing for coverage zones with live map updates
-- **Connection Scheduling:** auto-generated schedules based on reseller requests and crew availability
-
-*Custom Packages Developed:*
-- **Polygon editor** for coverage zone editing with token-protected access
-- **Coverage lookup** with Australian Geoscape API and Google Maps integration
-- **Shareholder reports** with animated charts and real-time data visualizations
-- **Reseller management** with full lifecycle management
-
-*Project Details:*
-- 100k+ database records with advanced indexing
-- ~1 year development cycle
-- Close collaboration with backend developer and C-level executives
-
-**Technology stack:** Vue 2, TypeScript, Vuetify, Vuex, WebSocket, Google Maps, Geoscape API, REST API
 
 ---
 
