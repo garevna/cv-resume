@@ -307,6 +307,6 @@ Higher Education (Mathematician)
 ## Work Preferences
 
 - ✅ Remote only
-- 💰 Salary expectation: $2,000+/month
+- 💰 Salary expectation: $3,500+/month
 - 📍 Timezone: UTC+2 (Kyiv)
 - 🔄 Open to long-term engagements, complex projects, and architectural challenges
