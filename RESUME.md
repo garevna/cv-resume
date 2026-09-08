@@ -135,35 +135,35 @@ Developed the client-side of an online bus ticket sales platform, where a single
 
 ---
 
-**7. VD Express Platform — модульная frontend-платформа (Active Development)**
+**7. VD Express Platform — modular front-end platform (Active Development)**
 
-Платформа онлайн-бронирования международных автобусных перевозок спроектирована как переиспользуемое ядро, обслуживающее несколько независимых перевозчиков через белый лейбл. Весь путь бронирования вынесен в переиспользуемое ядро как Vue-плагин.
+The online booking platform for international coach services is designed as a reusable core that serves several independent operators via a white-label solution. The entire booking flow is implemented within the reusable core as a Vue plugin.
 
-*Архитектура:*
-- **Монорепозиторий** на pnpm workspaces, разрезанный по ответственности:
-  - `wizard-core` — ядро бронирования (Pinia-сторы, доменные сервисы, роуты)
-  - `app-types` — единый доменный контракт (модели рейсов, сегментов, автобусов, мест)
-  - `app-services` — API-слой (поиск, бронирование, резервации, расчёты)
-  - `shared-ui` — библиотека компонентов (поля с масками, валидация телефонов)
-  - `event-manager` — типизированная событийная шина приложения
+*Architecture:*
+- **Monorepository** on pnpm workspaces, split by responsibility:
+  - `wizard-core` — booking core (Pinia forms, domain services, routes)
+  - `app-types` — unified domain contract (models for journeys, segments, buses, seats)
+  - `app-services` — API layer (search, booking, reservations, calculations)
+  - `shared-ui` — component library (fields with masks, phone number validation)
+  - `event-manager` — typed application event bus
 
-- **Инверсия зависимостей:** ядро не импортирует сторы приложения; вместо этого хост регистрирует их через `registerStoresFor*()`, обеспечивая полную переиспользуемость
+- **Dependency inversion:** the core does not import application stores; instead, the host registers them via `registerStoresFor*()`, ensuring full reusability
 
-- **Конфигурируемый флоу:** `WizardStep` с предикатами `isEnabled/canEnter/canLeave` и `WizardFlowConfig` позволяют описывать порядок шагов декларативно
+- **Configurable flow:** `WizardStep` with `isEnabled/canEnter/canLeave` predicates and `WizardFlowConfig` allow the order of steps to be described declaratively
 
-*Функциональность:*
-- Поиск рейсов туда-обратно с построением маршрутов через пересадки
-- Интерактивная схема салона с реальной планировкой, типами мест, автоподбором для групп
-- Real-time синхронизация занятости через WebSocket с автоматическим переподключением и ping-контролем
-- Пассажиры с типами и скидками, пошаговый пересчёт стоимости в нескольких валютах
-- Полный жизненный цикл: бронь → оплата → PDF-билеты → email → отмена/возврат
-- Личный кабинет с историей, программой лояльности и промо
-- Трансферы от двери до двери: геолокация, зоны на MapLibre, расчёт стоимости
-- Три языка (uk/en/de) с локализованными форматами
+*Functionality:*
+- Search for return journeys with route planning via connections
+- Interactive cabin layout with real-world seating plans, seat types and automatic seat selection for groups
+- Real-time seat availability synchronisation via WebSocket with automatic reconnection and ping monitoring
+- Passengers with seat types and discounts, step-by-step cost recalculation in multiple currencies
+- Full lifecycle: booking → payment → PDF tickets → email → cancellation/refund
+- Personal account with history, loyalty programme and promotions
+- Door-to-door transfers: geolocation, zones on MapLibre, cost calculation
+- Three languages (uk/en/de) with localised formats
 
 **Technology stack:** Vue 3 (Composition API), TypeScript, Vite, Vuetify 3, Pinia + persisted state, Vue Router, vue-i18n, MapLibre GL, Firebase Auth, WebSocket, Axios, libphonenumber-js, pnpm workspaces
 
-**Статус:** Полностью реализованы доменное ядро, API-слой, UI-библиотека и основной сценарий бронирования. На следующем этапе — декларативная конфигурация флоу и подключение второго клиента-перевозчика.
+**Status:** The domain core, API layer, UI library and main booking workflow have been fully implemented. The next stage involves the declarative configuration of the workflow and the integration of a second carrier client.
 
 ---
 
