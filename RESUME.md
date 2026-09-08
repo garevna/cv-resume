@@ -231,6 +231,7 @@ Developed a comprehensive portal serving different user roles: resellers, superv
 
 ### **Frontend Developer**  
 **Pineapple** | 2019–2022  
+
 *Remote*
 
 **CMS for Dynamic Landing Page Generation**
@@ -269,7 +270,7 @@ Built a complete CMS enabling dynamic landing page creation, content management,
 - International localization and multi-locale support
 
 ### Mentoring & Communication
-- 3+ years mentoring junior developers
+- 5+ years mentoring junior developers
 - Onboarding students to commercial projects
 - Direct stakeholder communication with C-level executives
 - Technical documentation and code reviews
@@ -279,7 +280,7 @@ Built a complete CMS enabling dynamic landing page creation, content management,
 ## Education
 
 **Kharkiv National University named after V.N. Karazin**  
-Higher Education
+Higher Education (Mathematician)
 
 ---
 
