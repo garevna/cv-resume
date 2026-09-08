@@ -4,9 +4,10 @@
 
 ## 📄 Documents
 
+- **[:round_pushpin: pdf](https://garevna.github.io/cv-resume/RESUME-eng.pdf)**
 - **[RESUME.md](./RESUME.md)** — English version for international opportunities
 - **[CV_UA.md](./CV_UA.md)** — Ukrainian version
-- **[index.html](./index.html)** — Interactive web version (GitHub Pages)
+- **[Interactive web version](https://garevna.github.io/cv-resume/index.html)**
 
 ## 🎨 Developer Philosophy
 
