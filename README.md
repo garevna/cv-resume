@@ -84,4 +84,4 @@ Vue 2/3 (Composition API) | TypeScript | Pinia/Vuex | Web Workers | IndexedDB | 
 
 ---
 
-**Last Updated:** September 2024
+**Last Updated:** September 2026
