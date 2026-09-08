@@ -25,7 +25,7 @@
 
 - 🧑‍💻 **GitHub:** [github.com/garevna](https://github.com/garevna)
 - 💼 **LinkedIn:** [linkedin.com/in/garevna](https://www.linkedin.com/in/garevna/)
-- 📧 **Email:** irina.fylyppova@gmail.com
+- 📧 **Email:** irina.h.fylyppova@gmail.com
 - 📚 **JS Lessons:** [garevna.github.io/js-lessons/](https://garevna.github.io/js-lessons/)
 - 🧠 **JS Quiz:** [garevna.github.io/js-quiz/](https://garevna.github.io/js-quiz/)
 
@@ -41,10 +41,10 @@ Senior Frontend Developer with 4+ years of experience building high-performance 
 
 ## 💰 Key Stats
 
-- 4+ years senior frontend development
+- 8+ years senior frontend development
 - 100k+ records database experience
-- 5+ complete projects from architecture to deployment
-- 3+ years mentoring junior developers
+- 8+ complete projects from architecture to deployment
+- 8+ years mentoring junior developers
 - 38 NPM packages published
 - Remote-only specialist
 
