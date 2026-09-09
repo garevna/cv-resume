@@ -201,6 +201,8 @@ An interactive visual editor for creating and editing website content in real ti
 
 Frontend Lead / Senior Frontend Engineer
 
+Sole frontend engineer across DGtek's web products: the provisioning portal below, the corporate MPA site, a series of landing pages, and the npm packages that tied them together.
+
 Sole frontend engineer on a B2B OSS/provisioning platform for a fibre network operator expanding from Melbourne across Australia, serving three user groups: DGtek network admins, reseller ISPs (RSPs) and public visitors, over <!--p:records-->100k+<!--/p--> customer and building records. Owned the whole frontend estate — 14 repositories, ~72,000 lines of Vue/JS, delivered as a set of applications plus 7 in-house npm packages shared between them.
 
 • **Admin dashboard** (~42k LOC): network footprint and building management, customers and services, SLAs, partners, ticketing, installation scheduling, document storage, role/permission settings and an analytics section (MRR, churn, ARPU, connection pipeline, per-building and per-partner reports).
@@ -219,7 +221,9 @@ Sole frontend engineer on a B2B OSS/provisioning platform for a fibre network op
 
 • **Bulk data tooling**: customer import from spreadsheets with a validation pipeline separating fatal errors, errors and warnings; exports to Excel, CSV and KML; editable inline engineering table (PPPoE credentials, IP, VLANs, subnets).
 
-• **Packaged reusable functionality as published npm libraries** (map/worker package, cost calculator, polygons editor, pits editor, two address-autocomplete components, date utilities), consumed by three separate applications and wired into their CI build scripts — a micro-frontend-style split that let each app upgrade independently.
+• **Packaged reusable functionality as published npm libraries** (map/worker package, cost calculator, polygons editor, pits editor, two address-autocomplete components, date utilities), consumed by three separate applications and wired into their CI build scripts.
+
+• **Shipped the coverage-check packages to DGtek's reseller ISPs**, which turned a component into a distribution channel: a reseller's own site draws DGtek's live coverage polygons, resolves a visitor's address against them, then reads that zone's settings back from DGtek's admin to quote a realistic connection time — two days or two weeks by zone — before handing the visitor to a connection request. Coverage is edited in one place; the portal, the corporate site, every landing page and third-party reseller sites all follow from it.
 
 • Also built companion clients: a PWA connection-status checker, a public address-check landing page, and mobile app prototypes (Ionic/Capacitor and NativeScript).
 
@@ -231,6 +235,8 @@ Sole frontend engineer on a B2B OSS/provisioning platform for a fibre network op
 **Pineapple** | <!--p:role.pineapple.en-->2019–2022<!--/p-->  
 
 *Remote*
+
+Frontend across Pineapple's web products: a headless CMS was the largest of them, alongside the corporate site and a series of campaign landing pages — all sharing the DGtek coverage-check packages, so a visitor could test an address and start a connection request from any of them.
 
 **CMS for Dynamic Landing Page Generation**
 

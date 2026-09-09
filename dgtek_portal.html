@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Frontend case study: a fibre network provisioning platform - three applications, a Web Worker data layer and coverage-check packages shipped to reseller ISPs.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://garevna.github.io/cv-resume/dgtek_portal.html">
 <meta property="og:title" content="DGtek Provisioning Portal — frontend case study">
-<meta property="og:description" content="Sole frontend engineer on a B2B provisioning platform for a fibre network operator: a Web Worker + IndexedDB data layer, client-side revenue reporting and geospatial serviceability search across 14 repositories.">
+<meta property="og:description" content="Sole frontend engineer on a B2B provisioning platform for a fibre network operator: a Web Worker + IndexedDB data layer, client-side revenue reporting and coverage-check packages shipped to reseller ISPs.">
 <meta property="og:image" content="https://garevna.github.io/cv-resume/media/og-dgtek.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="DGtek Provisioning Portal — 14 repositories, ~72k lines, 7 npm packages">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="Frontend case study: a fibre network provisioning platform - three applications, a Web Worker data layer and geospatial serviceability search.">
 <title>DGtek Provisioning Portal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -644,8 +644,9 @@ footer {
     <p class="lede">
       A fibre network operator needed one system where its own staff, its reseller ISPs and the
       public could all answer the same question — <em>can this street address be connected, and
-      what happens next?</em> I owned the entire frontend: three applications, seven shared npm
-      packages, and a Web Worker data layer that kept a very heavy admin interface responsive.
+      what happens next?</em> I owned the entire frontend: three applications, a Web Worker data
+      layer that kept a very heavy admin interface responsive, and seven npm packages — the ones
+      that answer that question ended up embedded on the resellers' own websites.
     </p>
 
     <div class="metrics">
@@ -1011,13 +1012,27 @@ footer {
 
   <section class="rule-top">
     <p class="eyebrow">Reuse</p>
-    <h2>Seven packages, three applications</h2>
+    <h2>The packages left the building</h2>
     <div class="prose">
       <p>
         The map, the address inputs and the calculator were each needed by more than one
         application, and the applications shipped on different schedules. Rather than a monorepo I
         published them to npm and pulled them in at build time, so each app upgraded when it was
         ready to.
+      </p>
+      <p>
+        Then they stopped being internal. DGtek handed the coverage-check packages to its reseller
+        ISPs to embed on their own sites, which turned a component into a distribution channel: a
+        reseller's page draws DGtek's live coverage polygons, resolves a visitor's address against
+        them, and — this is the part that made it a product rather than a widget — reads that
+        zone's settings back from DGtek's admin to quote a realistic connection time, two days or
+        two weeks depending on where the address falls, before handing the visitor to a connection
+        request.
+      </p>
+      <p>
+        Coverage is edited in exactly one place. Everything downstream — the portal, DGtek's own
+        corporate site, every landing page, and a reseller's site DGtek does not control — follows
+        from the same source, because none of them own a copy of the data.
       </p>
     </div>
 
