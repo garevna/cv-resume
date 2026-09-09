@@ -26,27 +26,27 @@
 
 - 🧑‍💻 **GitHub:** [github.com/garevna](https://github.com/garevna)
 - 💼 **LinkedIn:** [linkedin.com/in/garevna](https://www.linkedin.com/in/garevna/)
-- 📧 **Email:** irina.h.fylyppova@gmail.com
+- 📧 **Email:** <!--p:email-->irina.h.fylyppova@gmail.com<!--/p-->
 - 📚 **JS Lessons:** [garevna.github.io/js-lessons/](https://garevna.github.io/js-lessons/)
 - 🧠 **JS Quiz:** [garevna.github.io/js-quiz/](https://garevna.github.io/js-quiz/)
 
 ## 🚀 About Me
 
-Senior Frontend Developer with 4+ years of experience building high-performance web applications. Specialized in:
+Senior Frontend Developer with <!--p:years-->8+<!--/p--> years of experience building high-performance web applications. Specialized in:
 
 - **Vue 3** with TypeScript, Pinia, Composition API
 - **Performance optimization:** Web Workers, IndexedDB, bundle optimization
 - **Real-time systems:** WebSocket synchronization, live updates
 - **Complex architectures:** multi-step workflows, dynamic theming, state management
-- **Mentoring & leadership:** 3+ years teaching junior developers
+- **Mentoring & leadership:** <!--p:yearsMentoring-->8+<!--/p--> years teaching junior developers
 
 ## 💰 Key Stats
 
-- 8+ years senior frontend development
-- 100k+ records database experience
+- <!--p:years-->8+<!--/p--> years senior frontend development
+- <!--p:records-->100k+<!--/p--> records database experience
 - 8+ complete projects from architecture to deployment
-- 8+ years mentoring junior developers
-- 38 NPM packages published
+- <!--p:yearsMentoring-->8+<!--/p--> years mentoring junior developers
+- <!--p:packages-->38<!--/p--> NPM packages published
 - Remote-only specialist
 
 ## 💼 Recent Work
@@ -67,13 +67,13 @@ Senior Frontend Developer with 4+ years of experience building high-performance 
 
 ## 🛠️ Tech Stack
 
-Vue 2/3 (Composition API) | TypeScript | Pinia/Vuex | Web Workers | IndexedDB | Firebase Auth | REST API | Node.js/Express | Google Maps | Webpack/Vite | 38 NPM packages
+Vue 2/3 (Composition API) | TypeScript | Pinia/Vuex | Web Workers | IndexedDB | Firebase Auth | REST API | Node.js/Express | Google Maps | Webpack/Vite | <!--p:packages-->38<!--/p--> NPM packages
 
 ## 🌐 Current Status
 
-- ✅ **Open to opportunities** | Remote only
-- 💵 **Salary:** $3,500+/month
-- 📍 **Timezone:** UTC+2 (Kyiv)
+- ✅ **Open to opportunities** | <!--p:availability.en-->Remote only<!--/p-->
+- 💵 **Salary:** <!--p:salary.en-->$3,500+/month<!--/p-->
+- 📍 **Timezone:** <!--p:timezone-->UTC+2 (Kyiv)<!--/p-->
 - 🗣️ **Languages:** Ukrainian, Russian, English (Upper-Intermediate)
 
 ## 📱 How to Use
@@ -85,4 +85,4 @@ Vue 2/3 (Composition API) | TypeScript | Pinia/Vuex | Web Workers | IndexedDB | 
 
 ---
 
-**Last Updated:** September 2026
+**Last Updated:** <!--p:lastUpdated-->September 2026<!--/p-->

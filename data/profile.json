@@ -1,0 +1,19 @@
+{
+  "name": "Irina H. Fylyppova",
+  "title": "Senior Frontend Developer",
+  "email": "irina.h.fylyppova@gmail.com",
+  "location": { "en": "Kharkiv, Ukraine", "ua": "Харків, Україна" },
+  "timezone": "UTC+2 (Kyiv)",
+  "remoteOnly": true,
+  "salary": { "amount": 3500, "currency": "USD", "period": "month" },
+  "yearsExperience": 8,
+  "yearsMentoring": 8,
+  "npmPackages": 38,
+  "recordsHandled": "100k+",
+  "links": {
+    "github": "https://github.com/garevna",
+    "linkedin": "https://www.linkedin.com/in/garevna/",
+    "lessons": "https://garevna.github.io/js-lessons/"
+  },
+  "lastUpdated": "September 2026"
+}

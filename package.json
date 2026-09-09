@@ -1,0 +1,9 @@
+{
+  "name": "cv-resume",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-profile.mjs",
+    "check": "node scripts/sync-profile.mjs --check"
+  }
+}

@@ -1,15 +1,15 @@
 # Irina H. Fylyppova
 **Senior Frontend Developer**
 
-📧 [irina.h.fylyppova@gmail.com](mailto:irina.h.fylyppova@gmail.com)  
+📧 <!--p:email.md-->[irina.h.fylyppova@gmail.com](mailto:irina.h.fylyppova@gmail.com)<!--/p-->  
 🔗 [GitHub](https://github.com/garevna) | [LinkedIn](https://www.linkedin.com/in/garevna/)  
-🌍 Kharkiv, Ukraine | Remote Only
+🌍 <!--p:location.en-->Kharkiv, Ukraine<!--/p--> | <!--p:availability.en-->Remote only<!--/p-->
 
 ---
 
 ## Professional Summary
 
-Senior Frontend Developer with 8+ years of experience building high-performance web applications and managing complex data systems. Specialized in architecting scalable solutions, optimizing performance, real-time synchronization, and leading technical design decisions. Proven track record of delivering complex multi-featured systems serving 100k+ records and managing cross-functional teams.
+Senior Frontend Developer with <!--p:years-->8+<!--/p--> years of experience building high-performance web applications and managing complex data systems. Specialized in architecting scalable solutions, optimizing performance, real-time synchronization, and leading technical design decisions. Proven track record of delivering complex multi-featured systems serving 100k+ records and managing cross-functional teams.
 
 ---
 
@@ -306,7 +306,7 @@ Higher Education (Mathematician)
 
 ## Work Preferences
 
-- ✅ Remote only
-- 💰 Salary expectation: $3,500+/month
-- 📍 Timezone: UTC+2 (Kyiv)
+- ✅ <!--p:availability.en-->Remote only<!--/p-->
+- 💰 Salary expectation: <!--p:salary.en-->$3,500+/month<!--/p-->
+- 📍 Timezone: <!--p:timezone-->UTC+2 (Kyiv)<!--/p-->
 - 🔄 Open to long-term engagements, complex projects, and architectural challenges

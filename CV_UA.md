@@ -1,9 +1,9 @@
 # Ірина Филиппова
 **Senior Frontend Developer**
 
-📧 [irina.h.fylyppova@gmail.com](mailto:irina.h.fylyppova@gmail.com)  
+📧 <!--p:email.md-->[irina.h.fylyppova@gmail.com](mailto:irina.h.fylyppova@gmail.com)<!--/p-->  
 🔗 [GitHub](https://github.com/garevna) | [LinkedIn](https://www.linkedin.com/in/garevna/)  
-🌍 Харків, Україна | Remote Only
+🌍 <!--p:location.ua-->Харків, Україна<!--/p--> | <!--p:availability.ua-->Тільки remote<!--/p-->
 
 ---
 
@@ -315,7 +315,7 @@ Vue 2, Vuetify, Vuex, Web Workers, IndexedDB, Service Worker/PWA, Webpack, Googl
 
 ## Умови роботи
 
-- ✅ Тільки remote
-- 💰 Зарплатні очікування: від $3,500/місяць
-- 📍 Часовий пояс: UTC+2 (Київ)
+- ✅ <!--p:availability.ua-->Тільки remote<!--/p-->
+- 💰 Зарплатні очікування: <!--p:salary.ua-->від $3,500/місяць<!--/p-->
+- 📍 Часовий пояс: <!--p:timezone-->UTC+2 (Kyiv)<!--/p-->
 - 🔄 Готова до довгострокової співпраці та складних проектів
