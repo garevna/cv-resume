@@ -2,7 +2,14 @@ name: profile in sync
 
 on:
   push:
-    paths: ['README.md', 'RESUME.md', 'CV_UA.md', 'index.html', 'data/profile.json']
+    branches: [main]
+    paths:
+      - 'README.md'
+      - 'RESUME.md'
+      - 'CV_UA.md'
+      - 'index.html'
+      - 'data/profile.json'
+      - 'scripts/**'
   pull_request:
 
 jobs:
@@ -13,4 +20,35 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: node scripts/sync-profile.mjs --check
+      - name: Values match data/profile.json
+        run: node scripts/sync-profile.mjs --check
+
+  pdf:
+    # Only on main: a pull request runs the check above; the artifact is
+    # rebuilt once the change is merged. RESUME-eng.pdf is not in the paths
+    # filter, so this job's own commit does not retrigger the workflow.
+    if: github.event_name == 'push'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rebuild RESUME-eng.pdf from index.html
+        run: node scripts/build-pdf.mjs
+
+      - name: Commit if the PDF changed
+        run: |
+          if git diff --quiet -- RESUME-eng.pdf; then
+            echo "PDF unchanged."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add RESUME-eng.pdf
+          git commit -m "Rebuild RESUME-eng.pdf from index.html"
+          git push

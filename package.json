@@ -4,6 +4,8 @@
   "type": "module",
   "scripts": {
     "sync": "node scripts/sync-profile.mjs",
-    "check": "node scripts/sync-profile.mjs --check"
+    "check": "node scripts/sync-profile.mjs --check",
+    "pdf": "node scripts/build-pdf.mjs",
+    "build": "npm run sync && npm run pdf"
   }
 }
