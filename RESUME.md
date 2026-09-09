@@ -238,6 +238,18 @@ Sole frontend engineer on a B2B OSS/provisioning platform for a fibre network op
 
 Frontend across Pineapple's web products: a headless CMS was the largest of them, alongside the corporate site and a series of campaign landing pages — all sharing the DGtek coverage-check packages, so a visitor could test an address and start a connection request from any of them.
 
+**Public site — Nuxt 2, statically generated**
+
+- `target: 'static'` with SSR output: pages ship as HTML and hydrate on demand, deployed straight to a CDN branch
+- Composed from **10 npm packages I published** (nav bar, internet plans, FAQ, testimonials, contact form, popup, footer, system bar, how-to-connect, shared styles), each versioned and released independently
+- Selective hydration via `vue-lazy-hydration` (`when-visible`): below-the-fold sections cost nothing until the visitor reaches them
+- Navigation and page content resolved at runtime from the CMS endpoint, so marketing edits pages without a deploy
+- Repo: https://github.com/garevna/nuxt-app
+
+**Technology stack:** Nuxt 2, Vue 2, Vuetify 2, Vuex, vue-lazy-hydration, PWA
+
+---
+
 **CMS for Dynamic Landing Page Generation**
 
 Built a complete CMS enabling dynamic landing page creation, content management, and survey form generation with customizable field types.

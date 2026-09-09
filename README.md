@@ -67,7 +67,7 @@ Senior Frontend Developer with <!--p:years-->8+<!--/p--> years of experience bui
 
 ## 🛠️ Tech Stack
 
-Vue 2/3 (Composition API) | TypeScript | Pinia/Vuex | Web Workers | IndexedDB | Firebase Auth | REST API | Node.js/Express | Google Maps | Webpack/Vite | <!--p:packages-->38<!--/p--> NPM packages
+Vue 2/3 (Composition API) | Nuxt 2 | TypeScript | Pinia/Vuex | Web Workers | IndexedDB | Firebase Auth | REST API | Node.js/Express | Google Maps | Webpack/Vite | <!--p:packages-->38<!--/p--> NPM packages
 
 ## 🌐 Current Status
 
