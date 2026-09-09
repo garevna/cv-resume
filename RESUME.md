@@ -9,7 +9,7 @@
 
 ## Professional Summary
 
-Senior Frontend Developer with <!--p:years-->8+<!--/p--> years of experience building high-performance web applications and managing complex data systems. Specialized in architecting scalable solutions, optimizing performance, real-time synchronization, and leading technical design decisions. Proven track record of delivering complex multi-featured systems serving 100k+ records and managing cross-functional teams.
+Senior Frontend Developer with <!--p:years-->8+<!--/p--> years of experience building high-performance web applications and managing complex data systems. Specialized in architecting scalable solutions, optimizing performance, real-time synchronization, and leading technical design decisions. Proven track record of delivering complex multi-featured systems serving <!--p:records-->100k+<!--/p--> records and managing cross-functional teams.
 
 ---
 
@@ -35,7 +35,7 @@ Figma • SEO • Accessibility (a11y) • E2E Testing (Cypress) • Unit Testin
 ## Professional Experience
 
 ### **Senior Frontend Developer**  
-**ITNET** (Lviv, Ukraine) | Feb 2025–Present  
+**ITNET** (Lviv, Ukraine) | <!--p:role.itnet.en-->Feb 2025–Present<!--/p-->  
 
 #### Project Portfolio
 
@@ -193,7 +193,7 @@ An interactive visual editor for creating and editing website content in real ti
 
 ### **Senior Frontend Developer**  
 
-**DGtek Fibre Network** (Melbourne AU) | Sep 2019–Sep 2023  
+**DGtek Fibre Network** (Australia) | <!--p:role.dgtek.en-->Sep 2019–Sep 2023<!--/p-->  
 
 *Remote*
 
@@ -201,7 +201,7 @@ An interactive visual editor for creating and editing website content in real ti
 
 Frontend Lead / Senior Frontend Engineer
 
-Sole frontend engineer on a B2B OSS/provisioning platform for a metro fibre network operator, serving three user groups: DGtek network admins, reseller ISPs (RSPs) and public visitors. Owned the whole frontend estate — 14 repositories, ~70,000 lines of Vue/JS, delivered as a set of applications plus 7 in-house npm packages shared between them.
+Sole frontend engineer on a B2B OSS/provisioning platform for a fibre network operator expanding from Melbourne across Australia, serving three user groups: DGtek network admins, reseller ISPs (RSPs) and public visitors, over <!--p:records-->100k+<!--/p--> customer and building records. Owned the whole frontend estate — 14 repositories, ~72,000 lines of Vue/JS, delivered as a set of applications plus 7 in-house npm packages shared between them.
 
 • **Admin dashboard** (~42k LOC): network footprint and building management, customers and services, SLAs, partners, ticketing, installation scheduling, document storage, role/permission settings and an analytics section (MRR, churn, ARPU, connection pipeline, per-building and per-partner reports).
 
@@ -209,7 +209,7 @@ Sole frontend engineer on a B2B OSS/provisioning platform for a metro fibre netw
 
 • **Entry & registration app**: partner onboarding with ABN/email/phone validation, auth, password recovery, public build-cost calculator.
 
-• **Architected a Web Worker data layer** used across all apps: a route/action message controller, AES-encrypted credentials (crypto-js), all API traffic and a versioned IndexedDB cache (10 object stores with secondary indexes, migration-aware upgrades, MessageChannel ports). This kept a heavy admin UI responsive and offline-tolerant on datasets of thousands of buildings and customers.
+• **Architected a Web Worker data layer** used across all apps: a route/action message controller, credentials kept encrypted rather than in plain localStorage (crypto-js), all API traffic and a versioned IndexedDB cache (10 object stores with secondary indexes, migration-aware upgrades, MessageChannel ports). This kept a heavy admin UI responsive and offline-tolerant on datasets of thousands of buildings and customers.
 
 • **Moved reporting to the client**: monthly revenue, churn and connection reports are computed in the worker over IndexedDB cursors and indexes instead of on the server, then rendered with Google Charts — removing a whole class of slow report endpoints.
 
@@ -225,12 +225,10 @@ Sole frontend engineer on a B2B OSS/provisioning platform for a metro fibre netw
 
 **Technology stack**: Vue 2, Vuetify 2, Vuex, Vue Router, Web Workers, IndexedDB, Service Workers/PWA, Webpack, Google Maps API, Geoscape API, crypto-js, xlsx / json2csv / tokml, PDF generation, npm package publishing. Mobile prototypes on Vue 3 + Ionic + Capacitor.
 
-Developed a comprehensive portal serving different user roles: resellers, supervisors, managers, installation technicians, and administrators. Database: 100k+ records.
-
 ---
 
 ### **Frontend Developer**  
-**Pineapple** | 2019–2022  
+**Pineapple** | <!--p:role.pineapple.en-->2019–2022<!--/p-->  
 
 *Remote*
 
@@ -270,7 +268,7 @@ Built a complete CMS enabling dynamic landing page creation, content management,
 - International localization and multi-locale support
 
 ### Mentoring & Communication
-- 5+ years mentoring junior developers
+- <!--p:yearsMentoring-->8+<!--/p--> years mentoring junior developers
 - Onboarding students to commercial projects
 - Direct stakeholder communication with C-level executives
 - Technical documentation and code reviews

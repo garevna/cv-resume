@@ -1,3 +1,1262 @@
-<!doctype html><html lang="en" data-frame-uuid="f3de6709-1575-4eba-9c9f-ec77d3f714c4"><head><meta property="og:title" content="Claude Artifact"><meta name="twitter:title" content="Claude Artifact"><meta name="description" content="Try out Artifacts created by Claude users"><meta property="og:description" content="Try out Artifacts created by Claude users"><meta name="twitter:description" content="Try out Artifacts created by Claude users"><meta property="og:image" content="https://claude.ai/images/claude_ogimage.png"><meta name="twitter:image" content="https://claude.ai/images/claude_ogimage.png"><meta property="og:image:width" content="1138"><meta property="og:image:height" content="640"><meta property="og:image:alt" content="Claude Artifact"><meta name="twitter:card" content="summary"><meta name="robots" content="noindex, nofollow"><link rel="preconnect" href="https://assets-proxy.anthropic.com" crossorigin><link rel="dns-prefetch" href="https://assets-proxy.anthropic.com"><meta name="build-timestamp" content="1788917122"><meta name="build-git-hash" content="58cd16593c4e0f97d79cfe007c3f296240612eb6"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="referrer" content="no-referrer"><title>Claude Artifact</title><script nonce="vF3XUXlRzEuOE9Ze/oD2sA==">window.__frameInlineProbe=new Error,function(e,t,o){if(t?.embedded&&(e.embedded=e.host=""),parent!==window){var n=location.origin,r=location.ancestorOrigins;if(r)r[0]===n&&r[r.length-1]===n&&(e.embedded="");else if(parent===top&&document.referrer)try{new URL(document.referrer).origin===n&&(e.embedded="")}catch{}}"embedded"in e&&"none"===(t?.chrome??o.get("chrome"))&&(e.chrome="none",document.querySelector("meta[name=viewport]").setAttribute("content","width=device-width,initial-scale=1,viewport-fit=cover"));var a="desktop"===t?.platform?"host-tools":"comment-mode",d="embedded"in e?t?null!=t.hostcaps?t.hostcaps:(" "+o.get("hostcaps")+" ").indexOf(" "+a+" ")<0?"":a:o.get("hostcaps"):"",c=String(d||"").split(" ").filter(function(e,t,o){return("comment-mode"===e||"page-comments"===e||"artifact-nav"===e||"comment-summon"===e||"open-in-claude"===e||"open-chat"===e||"cloud-session"===e||"cowork-task"===e||"no-send-all"===e||"confirm-page-sends"===e||"viewer-context"===e||"chrome"===e||"export"===e||"chrome-readonly"===e||"header"===e||"presence"===e||"host-tools"===e||"context-card"===e||"context-send"===e||"host-nav"===e||"promote-strip"===e)&&o.indexOf(e)===t});c.length&&(e.hostcaps=c.join(" "));var i={mode:["light","dark","system"],platform:["web","desktop"],font:["anthropic","system"]};for(var s of Object.keys(i)){var m=t?.[s]??o.get(s[0]);if("mode"===s&&null==t?.mode&&!("embedded"in e))try{var l=JSON.parse(localStorage.getItem("LSS-userThemeMode"));l&&"object"==typeof l&&(l=l.value),"light"!==l&&"dark"!==l||(m=l)}catch(e){}i[s].includes(m)&&(e[s]=m)}}(document.documentElement.dataset,window.claudeDesktopArtifactPane,new URLSearchParams(location.search))</script><script nonce="vF3XUXlRzEuOE9Ze/oD2sA==">!function(){try{var e=document.documentElement.dataset.frameUuid;if(!e)return;var t=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/,a=new URLSearchParams(location.search),r=a.get("org"),n=(document.cookie.match(/(?:^|;\s*)lastActiveOrg=([^;]*)/)||[])[1],o=r&&t.test(r)?r:n&&t.test(n)?n:null,i=self===top&&!("embedded"in document.documentElement.dataset),s=a.get("via"),c=null!==s?s:i?"user_open":"embedded_view",l=a.get("sk"),m=new URLSearchParams;o&&m.set("org",o),c&&m.set("via",c),l&&/^[A-Za-z0-9_-]{16,64}$/.test(l)&&m.set("sk",l);var d=location.pathname.split("/").pop()||"";try{d=decodeURIComponent(d)}catch(e){}var u="";d.toLowerCase().slice(-37)==="-"+e.toLowerCase()?u=d.slice(0,d.length-37):d.length>23&&"-"===d.charAt(d.length-23)&&/^[1-9A-HJ-NP-Za-km-z]{22}$/.test(d.slice(-22))&&(u=d.slice(0,d.length-23)),/^[a-z0-9][a-z0-9-]{0,59}$/.test(u)&&m.set("vanity",u);var f=window.__frameSessionId;null==f&&(f=window.__frameSessionId=crypto.randomUUID?crypto.randomUUID():"");var g="initial";try{var h=function(e){try{var t=sessionStorage.getItem(e);if(!f||!t)return!1;var a=e+"_claim",r=f+"|"+t,n=sessionStorage.getItem(a);if(n===r)return!0;var o=n?n.split("|"):[],i=Number(o[2]);return!(3!==o.length||"reload"!==o[0]||o[1]!==t||!Number.isFinite(i)||Date.now()-i>=3e4)&&(sessionStorage.setItem(a,r),sessionStorage.getItem(a)===r)}catch(e){return!1}},v=(sessionStorage.getItem("frame_chunk_reload")||"").split(":"),p=Number(v[2]),w=v[0]===e&&("chrome"===v[1]||"deferred"===v[1]||"broker"===v[1])&&Number.isFinite(p)&&Date.now()-p<3e5,_=function(t){var a=sessionStorage.getItem(t);if(!a)return!1;var r=a.lastIndexOf(":"),n=Number(a.slice(r+1));return a.slice(0,r)===e&&Number.isFinite(n)&&Date.now()-n<3e5}("frame_pin_reload")&&h("frame_pin_reload"),b=w&&h("frame_chunk_reload");(_||b)&&(g="reboot")}catch(e){}m.set("bk",g);var S="/api/frame/"+e+"?"+m.toString(),I=function(e,t){var a=null==e?null:e.toLowerCase();return null!==a&&-1!==t.indexOf(a)?a:null},k=navigator.userAgent,P={"X-Frame-CP":"go","X-Frame-Platform":I(a.get("platform"),["web","desktop","ios","android","cli"])||(k.includes(" Electron/")?"desktop":/Android/.test(k)?"android":/iPad|iPhone|iPod/.test(k)||k.includes("Macintosh")&&navigator.maxTouchPoints>1?"ios":"web")},y=I(a.get("surface"),["chat","cowork","code","slack","teams","standalone"])||(i?"standalone":"");y&&(P["X-Frame-Surface"]=y);var A=document.head.querySelector('meta[name="build-timestamp"]');A&&A.content&&(P["X-Frame-Client-Version"]=A.content),f&&(P["X-Frame-Session-Id"]=f);var F=fetch(S,{credentials:"same-origin",headers:P,priority:"high",signal:AbortSignal.timeout(2e4)});if(F.catch(function(){}),window.__frameBootPrefetch={url:S,res:F},!o){var U=fetch("/api/account",{credentials:"same-origin",signal:AbortSignal.timeout(8e3)});U.catch(function(){}),window.__frameAccountPrefetch={res:U}}}catch(e){}}()</script><link rel="preload" as="font" type="font/woff2" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cc27851ad-DDVos-BJ.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c0f671921-BcCEXi7X.woff2"><script type="module" crossorigin src="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/frame-shell-18tI87fI.js" nonce="vF3XUXlRzEuOE9Ze/oD2sA=="></script><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/preload-helper-BWst14uo.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/shared-frame-boot-CXfHivao.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/frame-shell-chrome-BwAwBOxK.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-frame-D92Ewxbp.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/rolldown-runtime-CAJkiChf.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/shared-frame-CZx7otzs.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/frame-shell-deferred-Ch5yFegs.js"><style nonce="vF3XUXlRzEuOE9Ze/oD2sA==">:root{--font-anthropic-sans:"anthropic-sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif}@font-face{font-family:anthropic-sans;src:url(https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cc27851ad-DDVos-BJ.woff2)format("woff2");font-weight:300 800;font-style:normal;font-display:swap;font-feature-settings:"dlig" 0}@font-face{font-family:anthropic-sans;src:url(https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c9d3a3a49-CJtkx3-S.woff2)format("woff2");font-weight:300 800;font-style:italic;font-display:swap;font-feature-settings:"dlig" 0}:root{--font-anthropic-serif:"anthropic-serif", ui-serif, Georgia, "Times New Roman", serif}@font-face{font-family:anthropic-serif;src:url(https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c66fc489e-2VcCjn5t.woff2)format("woff2");font-weight:300 800;font-style:normal;font-display:swap;font-feature-settings:"dlig" 0}@font-face{font-family:anthropic-serif;src:url(https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cc410af59-Dcb-9NUS.woff2)format("woff2");font-weight:300 800;font-style:italic;font-display:swap;font-feature-settings:"dlig" 0}:root{--bg:#fff;--fg:#0b0b0b;--mut:#52514e;--spin:#898781;--line:#0b0b0b1a;--div:#0b0b0b0d;--bord:#0b0b0b33;--hov:#0b0b0b0d;--surf:#fff;--brand:#c6613f;--primary:#0b0b0b;--on-primary:#fff}@media (prefers-color-scheme:dark){html:not([data-mode]){--bg:#1a1a19;--fg:#f0efec;--mut:#c3c2b7;--line:#ffffff1a;--div:#ffffff0d;--bord:#fff3;--hov:#ffffff13;--surf:#20201f;--primary:#fff;--on-primary:#0b0b0b}}html[data-mode=light]{--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light}html[data-mode=dark]{--bg:#1a1a19;--fg:#f0efec;--mut:#c3c2b7;--line:#ffffff1a;--div:#ffffff0d;--bord:#fff3;--hov:#ffffff13;--surf:#20201f;--primary:#fff;--on-primary:#0b0b0b;--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark}@font-face{font-family:Anthropicons-Variable;src:url(https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c0f671921-BcCEXi7X.woff2)format("woff2-variations");font-weight:400 700;font-display:block}:root{--bar-h:40px;--strip:0px;--bar:calc(var(--bar-h) + var(--strip));--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light dark}@media (prefers-color-scheme:dark){:root{--lightningcss-light: ;--lightningcss-dark:initial}}html[data-promote-strip]{--strip:36px}@layer{*{box-sizing:border-box;margin:0;padding:0}button{font:inherit;border:0;background:0 0;cursor:pointer;color:inherit}}html,body{overscroll-behavior:none;background:var(--bg);height:100%;color:var(--fg);overflow:hidden}body{font:13px/1.4 anthropic-sans,-apple-system,BlinkMacSystemFont,system-ui,sans-serif}#hdr{height:var(--bar-h);justify-content:space-between;align-items:center;gap:8px;padding:0 12px;display:flex;position:relative}html:not([data-embedded]) #hdr,html:not([data-embedded]) #hdr-degraded{border-bottom:1px solid var(--div)}.l,.r{align-items:center;gap:8px;display:flex}.l{flex:1;min-width:0}.r{flex:none}.byline{font-size:var(--cds-font-size-caption,12px);color:var(--mut);white-space:nowrap;text-overflow:ellipsis;flex-shrink:0;max-width:312px;overflow:hidden}.l>button[data-title-menu]{flex-shrink:1000;min-width:0;margin-left:-6px;overflow:hidden}.l button[data-title-menu]>span,.l button[data-title-menu] .truncate{min-width:0}.skel{background:var(--hov);border-radius:4px;display:inline-block}.skel-title{width:8em;height:1em}.skel-avatar{border-radius:50%;width:24px;height:24px}.degraded-title{white-space:nowrap;text-overflow:ellipsis;font-size:13px;font-weight:400;overflow:hidden}#hdr-degraded,body.chrome-degraded #hdr{display:none}body.chrome-degraded #hdr-degraded{height:var(--bar-h);align-items:center;gap:8px;padding:0 12px;display:flex}@media (width<=768px){html:not([data-embedded]) .l{grid-template-columns:minmax(0,1fr);place-items:center start;gap:0;display:grid}html:not([data-embedded]) .l>*{max-width:100%}html:not([data-embedded]) .l>.byline{margin-top:-3px}html:not([data-embedded]) .l>[data-storage]{margin-top:-4px}}html[data-embedded]{--bar-h:42px}html[data-embedded] #hdr{padding:0 8px}html[data-embedded] .byline{flex-shrink:1;max-width:100%}html[data-embedded] .skel-title,html[data-embedded] .skel-avatar,html[data-embedded][data-chrome=none] #hdr,html[data-embedded][data-chrome=none] #hdr-degraded,html[data-header-hidden] #hdr,html[data-header-hidden] #hdr-degraded,html[data-header-hidden] [data-chrome-pill],html[data-header-hidden] [data-sharing-status][data-host-chrome]{display:none}html[data-embedded][data-chrome=none],html[data-header-hidden]{--bar:0px}html[data-host][data-chrome=none]{--bar:env(safe-area-inset-top,0px)}html[data-embedded][data-chrome=none][data-promote-strip]:not([data-header-hidden]){--bar:var(--strip)}html[data-host][data-chrome=none][data-promote-strip]:not([data-header-hidden]){--bar:calc(env(safe-area-inset-top,0px) + var(--strip))}[data-sharing-status][data-host-chrome]{inset:calc(var(--bar) - var(--strip)) 0 auto;height:var(--strip);position:absolute}main{inset:var(--bar) 0 0 0;display:flex;position:absolute}#frame-slot{flex:1;min-width:0;position:relative}#loading{justify-content:center;align-items:center;display:flex;position:absolute;inset:0}#loading[hidden]{display:none}#loading.slow{text-align:center;color:var(--mut);flex-direction:column;gap:12px;padding:0 24px;font-size:13px}#loading.slow>button{order:1}#loading:after{content:"";box-sizing:border-box;background:conic-gradient(transparent 40%, var(--spin)) border-box, linear-gradient(var(--line), var(--line)) border-box;border:2px solid #0000;border-radius:50%;width:20px;height:20px;animation:1s linear infinite spin;mask:radial-gradient(farthest-side,#0000 calc(100% - 2px),#000 calc(100% - 1.5px))}@keyframes spin{to{transform:rotate(360deg)}}#frame-content{opacity:0;border:0;width:100%;height:100%;transition:opacity .12s;position:absolute;inset:0}#frame-slot>iframe.swap:not(.ready){opacity:0;pointer-events:none;border:0;width:100%;height:100%;position:absolute;inset:0}#frame-content.swap{transition:none}#frame-content.swap.crossfade{transition:opacity .12s}#frame-slot>iframe.fading-out{opacity:1;pointer-events:none;border:0;width:100%;height:100%;position:absolute;inset:0}#frame-content.ready{opacity:1}@media (prefers-reduced-motion:reduce){#loading:after{animation:none}#frame-content{transition:none}}body.err #hdr,body.err #hdr-degraded,#err[hidden]{display:none}#err{text-align:center;color:var(--fg);place-content:safe center;gap:8px;padding:96px 16px 128px;display:grid;position:absolute;inset:0;overflow-y:auto}
-@font-face{font-family:Anthropicons-Variable;src:url(https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c0f671921-BcCEXi7X.woff2)format("woff2-variations");font-weight:400 700;font-display:block}
-</style><meta name="shell-inline-span" content="4566"><meta name="robots" content="noindex, nofollow"><link rel="preconnect" href="https://f3de6709-1575-4eba-9c9f-ec77d3f714c4.frame.claudeusercontent.com"></head><body><header id="hdr" tabindex="-1" aria-label="Artifact controls"><div class="l" aria-hidden="true"><span class="skel skel-title"></span></div><div class="r" aria-hidden="true"><span class="skel skel-avatar"></span></div></header><div id="hdr-degraded"><span class="degraded-title"></span> <span class="byline">Content is user-generated and unverified.</span></div><main><div id="frame-slot" data-frame-uuid="f3de6709-1575-4eba-9c9f-ec77d3f714c4" data-frame-uchost="f3de6709-1575-4eba-9c9f-ec77d3f714c4.frame.claudeusercontent.com" data-frame-tophost="f3de6709-1575-4eba-9c9f-ec77d3f714c4-top.frame.claudeusercontent.com"><div id="loading"><div class="loading-status" role="status" aria-label="Loading" tabindex="-1"></div></div></div></main><div id="err" hidden></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Frontend case study: a fibre network provisioning platform - three applications, a Web Worker data layer and geospatial serviceability search.">
+<title>DGtek Provisioning Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+
+<style>
+:root {
+  --ground: #F2F5F4;
+  --surface: #FFFFFF;
+  --surface-sunk: #E9EEED;
+  --ink: #10201F;
+  --ink-mid: #3D5654;
+  --ink-soft: #6B817F;
+  --rule: #D2DCDA;
+  --rule-strong: #B4C4C1;
+  --accent: #0A6B72;
+  --accent-ink: #085860;
+  --accent-wash: #E0EEEE;
+
+  --st-lit: #009900;
+  --st-footprint: #007F14;
+  --st-build: #005599;
+  --st-soon: #D97400;
+  --st-none: #990000;
+
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --pad: clamp(20px, 5vw, 64px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #0B1413;
+    --surface: #121E1D;
+    --surface-sunk: #0E1817;
+    --ink: #E5EDEB;
+    --ink-mid: #B4C6C3;
+    --ink-soft: #7F9895;
+    --rule: #223836;
+    --rule-strong: #2F4B48;
+    --accent: #4FC7C1;
+    --accent-ink: #6FD8D2;
+    --accent-wash: #10302F;
+
+    --st-lit: #3FC23F;
+    --st-footprint: #35AC4A;
+    --st-build: #5EA3DC;
+    --st-soon: #FFA53D;
+    --st-none: #DE5B5B;
+  }
+}
+
+:root[data-theme="dark"] {
+  --ground: #0B1413;
+  --surface: #121E1D;
+  --surface-sunk: #0E1817;
+  --ink: #E5EDEB;
+  --ink-mid: #B4C6C3;
+  --ink-soft: #7F9895;
+  --rule: #223836;
+  --rule-strong: #2F4B48;
+  --accent: #4FC7C1;
+  --accent-ink: #6FD8D2;
+  --accent-wash: #10302F;
+
+  --st-lit: #3FC23F;
+  --st-footprint: #35AC4A;
+  --st-build: #5EA3DC;
+  --st-soon: #FFA53D;
+  --st-none: #DE5B5B;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--pad) 96px;
+}
+
+.prose { max-width: 65ch; }
+
+p { margin: 0 0 1.1em; }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--accent-ink);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1, h2, h3 {
+  font-family: var(--sans);
+  text-wrap: balance;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
+
+/* ---------- masthead ---------- */
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  padding: clamp(40px, 7vw, 76px) 0 34px;
+}
+
+.masthead h1 {
+  font-size: clamp(38px, 7vw, 68px);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin: 0 0 18px;
+}
+
+.masthead .role {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: var(--accent-ink);
+  margin: 0 0 26px;
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  font-size: clamp(18px, 2.4vw, 21px);
+  line-height: 1.55;
+  color: var(--ink-mid);
+  max-width: 60ch;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-top: 40px;
+}
+
+.metric {
+  background: var(--surface);
+  padding: 16px 18px 18px;
+}
+
+.metric b {
+  display: block;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 27px;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.metric span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 6px;
+}
+
+/* ---------- sections ---------- */
+
+section {
+  padding-top: clamp(52px, 7vw, 84px);
+}
+
+section > h2 {
+  font-size: clamp(25px, 3.6vw, 34px);
+  font-weight: 600;
+  margin-bottom: 20px;
+  max-width: 22ch;
+}
+
+.rule-top {
+  border-top: 1px solid var(--rule);
+}
+
+/* ---------- surfaces ---------- */
+
+.surfaces {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.surface-card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.surface-card h3 {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.surface-card .who {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+.surface-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 15.5px;
+  line-height: 1.45;
+  color: var(--ink-mid);
+}
+
+.surface-card li {
+  padding-left: 15px;
+  position: relative;
+}
+
+.surface-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 1px;
+  background: var(--rule-strong);
+}
+
+.surface-card .foot {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* ---------- figures ---------- */
+
+figure {
+  margin: 34px 0 0;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 26px 26px 20px;
+}
+
+.svg-scroll { overflow-x: auto; }
+
+figure svg {
+  display: block;
+  width: 100%;
+  min-width: 620px;
+  height: auto;
+  color: var(--ink-mid);
+}
+
+figcaption {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 78ch;
+}
+
+.dbox { fill: var(--surface); stroke: var(--rule-strong); stroke-width: 1.25; }
+.dpanel { fill: var(--surface-sunk); stroke: var(--rule-strong); stroke-width: 1; stroke-dasharray: 4 4; }
+.dtitle { font-family: var(--sans); font-size: 13px; font-weight: 600; fill: var(--ink); }
+.dsub { font-family: var(--mono); font-size: 11px; fill: var(--ink-soft); }
+.dpanel-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; fill: var(--ink-soft); text-transform: uppercase; }
+.dlabel { font-family: var(--mono); font-size: 11px; fill: var(--ink-mid); }
+.dline { stroke: var(--ink-soft); stroke-width: 1.4; fill: none; }
+.dline-accent { stroke: var(--accent); stroke-width: 1.8; fill: none; }
+.dlabel-accent { font-family: var(--mono); font-size: 11px; fill: var(--accent-ink); font-weight: 500; }
+.marker-accent { fill: var(--accent); }
+.dbox-accent { fill: var(--accent-wash); stroke: var(--accent); stroke-width: 1.4; }
+
+/* ---------- legend ---------- */
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px 26px;
+  margin-top: 30px;
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+}
+
+.legend div {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--ink-mid);
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex: none;
+  transform: translateY(1px);
+}
+
+/* ---------- problem list ---------- */
+
+.problems {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 30px;
+  border-top: 1px solid var(--rule);
+}
+
+.problem {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (min-width: 800px) {
+  .problem {
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 34px;
+  }
+}
+
+.problem h3 {
+  font-size: 17.5px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.problem .body {
+  font-size: 16.5px;
+  color: var(--ink-mid);
+  max-width: 62ch;
+}
+
+.problem .body p { margin-bottom: 0.8em; }
+
+kbd, code {
+  font-family: var(--mono);
+  font-size: 0.87em;
+  background: var(--surface-sunk);
+  border: 1px solid var(--rule);
+  padding: 1px 5px;
+  color: var(--ink);
+}
+
+/* ---------- table ---------- */
+
+.table-scroll {
+  overflow-x: auto;
+  margin-top: 30px;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 640px;
+  font-size: 15px;
+}
+
+th {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-align: left;
+  font-weight: 400;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--rule-strong);
+  white-space: nowrap;
+}
+
+td {
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-mid);
+  vertical-align: top;
+}
+
+tr:last-child td { border-bottom: none; }
+
+td.pkg {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+td.ver {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+/* ---------- stack ---------- */
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 26px;
+  margin-top: 30px;
+}
+
+.stack-grid h3 {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 12px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.chips span {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  color: var(--ink-mid);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 4px 10px;
+}
+
+/* ---------- closing ---------- */
+
+.closing {
+  margin-top: 40px;
+  padding: 26px 28px;
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  border-top: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.closing h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.closing p {
+  font-size: 16.5px;
+  color: var(--ink-mid);
+  max-width: 66ch;
+}
+
+/* ---------- availability ---------- */
+
+.rate-block {
+  margin-top: 30px;
+  padding: 22px 24px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px 20px;
+}
+
+.rate-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+}
+
+.rate-value {
+  font-family: var(--sans);
+  font-size: clamp(21px, 3vw, 27px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  margin: 0;
+}
+
+.rate-edit {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.rate-edit:hover {
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+
+.rate-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.rate-input {
+  font-family: var(--sans);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--ground);
+  border: 1px solid var(--accent);
+  padding: 7px 10px;
+  min-width: 240px;
+}
+
+.rate-form button {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 13px;
+  cursor: pointer;
+  border: 1px solid var(--rule-strong);
+  background: transparent;
+  color: var(--ink-mid);
+}
+
+.rate-form button[type="submit"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--ground);
+}
+
+.rate-status {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  margin: 0;
+  flex-basis: 100%;
+}
+
+footer {
+  margin-top: 70px;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+</style>
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Frontend case study · 2020 – 2023 · Australia</p>
+    <h1>DGtek Provisioning Portal</h1>
+    <p class="role">Sole frontend engineer — fibre network operations platform</p>
+    <p class="lede">
+      A fibre network operator needed one system where its own staff, its reseller ISPs and the
+      public could all answer the same question — <em>can this street address be connected, and
+      what happens next?</em> I owned the entire frontend: three applications, seven shared npm
+      packages, and a Web Worker data layer that kept a very heavy admin interface responsive.
+    </p>
+
+    <div class="metrics">
+      <div class="metric"><b>14</b><span>repositories</span></div>
+      <div class="metric"><b>~72k</b><span>lines of frontend</span></div>
+      <div class="metric"><b>7</b><span>published packages</span></div>
+      <div class="metric"><b>3</b><span>audiences</span></div>
+      <div class="metric"><b>v8.0</b><span>admin dashboard</span></div>
+    </div>
+  </header>
+
+  <section>
+    <p class="eyebrow">The brief</p>
+    <h2>Selling fibre is mostly a data problem</h2>
+    <div class="prose">
+      <p>
+        DGtek builds and lights fibre — from a Melbourne base outward across Australia — then
+        wholesales it to retail service providers who sell to households and businesses. Before
+        anyone can be sold anything, three facts have to line up: is the building already lit, is it
+        inside a serviceable polygon, and if not, what would it cost to dig from the nearest pit to
+        the basement.
+      </p>
+      <p>
+        All of that lived in spreadsheets, KMZ exports and email threads. The portal replaced it
+        with one platform on three surfaces — with the awkward constraint that the reseller and the
+        network operator see the same customer record but must never see the same fields.
+      </p>
+    </div>
+
+    <div class="surfaces">
+      <article class="surface-card">
+        <p class="who">DGtek staff</p>
+        <h3>Admin dashboard</h3>
+        <ul>
+          <li>Network footprint: buildings, polygons and pits edited on the map</li>
+          <li>Customers, services, SLAs and per-partner discounts</li>
+          <li>Ticketing and installation scheduling by week</li>
+          <li>Reporting: revenue, churn, ARPU, connection pipeline</li>
+          <li>Roles, permissions and editable system messages</li>
+        </ul>
+        <p class="foot"><span>v8.0.0</span><span>41,672 LOC</span></p>
+      </article>
+
+      <article class="surface-card">
+        <p class="who">Reseller ISPs</p>
+        <h3>Partner cabinet</h3>
+        <ul>
+          <li>Address serviceability check with ETA and description</li>
+          <li>Customer onboarding and service lifecycle</li>
+          <li>Suspend, resume and cancel requests routed to DGtek</li>
+          <li>Installation slot booking</li>
+          <li>Tickets, documents and company profile</li>
+        </ul>
+        <p class="foot"><span>v7.1.4</span><span>15,351 LOC</span></p>
+      </article>
+
+      <article class="surface-card">
+        <p class="who">Public &amp; new partners</p>
+        <h3>Entry &amp; registration</h3>
+        <ul>
+          <li>Partner onboarding with ABN, email and phone validation</li>
+          <li>Sign-in and password recovery</li>
+          <li>Public build-cost calculator</li>
+          <li>Document library</li>
+        </ul>
+        <p class="foot"><span>v4.0.0</span><span>3,340 LOC</span></p>
+      </article>
+    </div>
+  </section>
+
+  <section class="rule-top">
+    <p class="eyebrow">Architecture</p>
+    <h2>The UI thread never opens a socket or a database</h2>
+    <div class="prose">
+      <p>
+        The admin dashboard holds thousands of buildings and customers, and every one of its tables
+        filters, sorts and exports. Doing that on the main thread meant dropped frames on every
+        keystroke, so I moved the whole data layer into a Web Worker and left the UI with nothing
+        but messages.
+      </p>
+      <p>
+        The worker owns the API client, the session credentials and a versioned IndexedDB cache of
+        ten object stores with secondary indexes. Components dispatch <code>{ route, action }</code>
+        and receive a result envelope; a separate <code>MessageChannel</code> port carries bulk
+        table rows so large payloads never queue behind small ones. Credentials are kept encrypted
+        rather than sitting in plain <code>localStorage</code> — obfuscation against a casual look
+        at devtools, not a security boundary, since the key ships in the bundle. The real boundary
+        is server-side.
+      </p>
+      <p>
+        The shape has a name now — local-first, sync engines, the architecture behind Linear and
+        Replicache. In 2020 it was just the only way I could make a table of several thousand
+        buildings filter without dropping frames, and it turned out to be the decision the codebase
+        was built on for the next three years.
+      </p>
+    </div>
+
+    <figure>
+      <div class="svg-scroll">
+        <svg viewBox="0 0 900 360" role="img" aria-label="Diagram: the Vue application communicates only by postMessage with a Web Worker, which owns the IndexedDB cache and all REST traffic, and computes reports from the cache instead of fetching them.">
+          <defs>
+            <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+            </marker>
+            <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path class="marker-accent" d="M 0 0 L 10 5 L 0 10 z"></path>
+            </marker>
+          </defs>
+
+          <!-- main thread panel -->
+          <text class="dpanel-label" x="30" y="28">Main thread</text>
+          <rect class="dpanel" x="30" y="40" width="180" height="280" rx="3"></rect>
+          <rect class="dbox" x="46" y="76" width="148" height="72" rx="3"></rect>
+          <text class="dtitle" x="120" y="104" text-anchor="middle">Vue 2 + Vuetify</text>
+          <text class="dsub" x="120" y="124" text-anchor="middle">tables · charts · map</text>
+          <rect class="dbox" x="46" y="176" width="148" height="60" rx="3"></rect>
+          <text class="dsub" x="120" y="202" text-anchor="middle">no fetch</text>
+          <text class="dsub" x="120" y="220" text-anchor="middle">no storage access</text>
+
+          <!-- worker panel -->
+          <text class="dpanel-label" x="350" y="28">Web Worker</text>
+          <rect class="dpanel" x="350" y="40" width="220" height="280" rx="3"></rect>
+          <rect class="dbox" x="366" y="70" width="188" height="48" rx="3"></rect>
+          <text class="dtitle" x="460" y="90" text-anchor="middle">message controller</text>
+          <text class="dsub" x="460" y="108" text-anchor="middle">route → action</text>
+          <rect class="dbox" x="366" y="134" width="188" height="72" rx="3"></rect>
+          <text class="dtitle" x="460" y="156" text-anchor="middle">action modules</text>
+          <text class="dsub" x="460" y="174" text-anchor="middle">customers · buildings</text>
+          <text class="dsub" x="460" y="190" text-anchor="middle">reports · import</text>
+          <rect class="dbox" x="366" y="222" width="188" height="48" rx="3"></rect>
+          <text class="dtitle" x="460" y="242" text-anchor="middle">credentials</text>
+          <text class="dsub" x="460" y="260" text-anchor="middle">AES · crypto-js</text>
+
+          <!-- stores -->
+          <rect class="dbox" x="690" y="62" width="180" height="96" rx="3"></rect>
+          <text class="dtitle" x="780" y="90" text-anchor="middle">IndexedDB</text>
+          <text class="dsub" x="780" y="110" text-anchor="middle">10 object stores</text>
+          <text class="dsub" x="780" y="128" text-anchor="middle">secondary indexes</text>
+
+          <rect class="dbox" x="690" y="238" width="180" height="82" rx="3"></rect>
+          <text class="dtitle" x="780" y="266" text-anchor="middle">REST API</text>
+          <text class="dsub" x="780" y="286" text-anchor="middle">buildings · customers</text>
+          <text class="dsub" x="780" y="304" text-anchor="middle">services · tickets</text>
+
+          <!-- main <-> worker -->
+          <line class="dline" x1="210" y1="112" x2="350" y2="112" marker-end="url(#a1)"></line>
+          <text class="dlabel" x="280" y="94" text-anchor="middle">postMessage</text>
+          <text class="dlabel" x="280" y="80" text-anchor="middle">{ route, action }</text>
+
+          <line class="dline" x1="350" y1="184" x2="210" y2="184" marker-end="url(#a1)"></line>
+          <text class="dlabel" x="280" y="204" text-anchor="middle">{ status, result }</text>
+
+          <line class="dline" x1="350" y1="256" x2="210" y2="256" marker-end="url(#a1)" stroke-dasharray="5 4"></line>
+          <text class="dlabel" x="280" y="276" text-anchor="middle">channel port</text>
+          <text class="dlabel" x="280" y="290" text-anchor="middle">bulk table rows</text>
+
+          <!-- worker <-> db -->
+          <line class="dline" x1="570" y1="88" x2="690" y2="88" marker-end="url(#a1)"></line>
+          <text class="dlabel" x="630" y="76" text-anchor="middle">read / write</text>
+
+          <line class="dline-accent" x1="690" y1="132" x2="570" y2="132" marker-end="url(#a2)"></line>
+          <text class="dlabel-accent" x="630" y="152" text-anchor="middle">cursor scan</text>
+          <text class="dlabel-accent" x="630" y="166" text-anchor="middle">→ report rows</text>
+
+          <!-- worker <-> api -->
+          <line class="dline" x1="570" y1="262" x2="690" y2="262" marker-end="url(#a1)"></line>
+          <text class="dlabel" x="630" y="250" text-anchor="middle">signed request</text>
+
+          <line class="dline" x1="690" y1="298" x2="570" y2="298" marker-end="url(#a1)"></line>
+          <text class="dlabel" x="630" y="318" text-anchor="middle">delta refresh</text>
+        </svg>
+      </div>
+      <figcaption>
+        Every read and write crosses one <code>postMessage</code> boundary. The teal path is the one
+        that removed work from the backend: monthly revenue, churn and per-building reports are
+        computed in the worker by walking IndexedDB cursors over the cached customers and services,
+        so the charts have no report endpoint behind them.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="rule-top">
+    <p class="eyebrow">Geospatial</p>
+    <h2>Answering “can you connect this address?” four different ways</h2>
+    <div class="prose">
+      <p>
+        A serviceability check looks like one lookup and is really a cascade. Some buildings are
+        already lit and matched by address. Some sit inside a polygon that is under construction.
+        Some addresses Google will not geocode at all — a common outcome for newly built apartment
+        towers, where the unit number exists in the listing but not yet in the map data.
+      </p>
+      <p>
+        I built the chain so that a failure at any stage falls through to the next one, and the last
+        stage is a human: an address nobody can resolve becomes a request in the operations queue
+        rather than a dead end for the partner trying to sell a connection.
+      </p>
+      <p>
+        Nothing in the model is pinned to a city. Polygons, pits and building records are just data
+        behind the same endpoints, and every status carries its own editable label and ETA — so the
+        network grows into a new state by loading more rows, not by changing code.
+      </p>
+    </div>
+
+    <figure>
+      <div class="svg-scroll">
+        <svg viewBox="0 0 900 500" role="img" aria-label="Diagram: an address check falls through marker matching, then point-in-polygon search, and when no coordinates are returned, a partial match against the local address store, ending in a manual review request.">
+          <defs>
+            <marker id="b1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+            </marker>
+            <marker id="b2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path class="marker-accent" d="M 0 0 L 10 5 L 0 10 z"></path>
+            </marker>
+          </defs>
+
+          <rect class="dbox" x="60" y="16" width="240" height="44" rx="3"></rect>
+          <text class="dtitle" x="180" y="43" text-anchor="middle">Address typed</text>
+
+          <rect class="dbox" x="60" y="88" width="240" height="56" rx="3"></rect>
+          <text class="dtitle" x="180" y="111" text-anchor="middle">Geocode</text>
+          <text class="dsub" x="180" y="130" text-anchor="middle">Google Maps + Geoscape</text>
+
+          <rect class="dbox" x="60" y="180" width="240" height="56" rx="3"></rect>
+          <text class="dtitle" x="180" y="203" text-anchor="middle">Marker match</text>
+          <text class="dsub" x="180" y="222" text-anchor="middle">lit · footprint buildings</text>
+
+          <rect class="dbox" x="60" y="252" width="240" height="60" rx="3"></rect>
+          <text class="dtitle" x="180" y="277" text-anchor="middle">Point in polygon</text>
+          <text class="dsub" x="180" y="296" text-anchor="middle">3 serviceability layers</text>
+
+          <rect class="dbox" x="60" y="356" width="240" height="100" rx="3"></rect>
+          <text class="dtitle" x="180" y="392" text-anchor="middle">DGtek address store</text>
+          <text class="dsub" x="180" y="411" text-anchor="middle">partial string match</text>
+          <text class="dsub" x="180" y="429" text-anchor="middle">over cached records</text>
+
+          <!-- outcomes -->
+          <rect class="dbox-accent" x="560" y="180" width="300" height="44" rx="3"></rect>
+          <text class="dtitle" x="710" y="207" text-anchor="middle">Status + ETA + description</text>
+
+          <rect class="dbox" x="560" y="276" width="300" height="44" rx="3"></rect>
+          <text class="dtitle" x="710" y="303" text-anchor="middle">Not serviceable</text>
+
+          <rect class="dbox" x="560" y="360" width="300" height="40" rx="3"></rect>
+          <text class="dtitle" x="710" y="385" text-anchor="middle">Record returned</text>
+
+          <rect class="dbox" x="560" y="412" width="300" height="40" rx="3"></rect>
+          <text class="dtitle" x="710" y="437" text-anchor="middle">Manual review → ops queue</text>
+
+          <!-- vertical chain -->
+          <line class="dline" x1="180" y1="60" x2="180" y2="88" marker-end="url(#b1)"></line>
+          <line class="dline" x1="180" y1="144" x2="180" y2="180" marker-end="url(#b1)"></line>
+          <text class="dlabel" x="192" y="167">lat / lng</text>
+          <line class="dline" x1="180" y1="236" x2="180" y2="252" marker-end="url(#b1)"></line>
+
+          <!-- no coordinates branch -->
+          <polyline class="dline" points="60,116 28,116 28,406 60,406" marker-end="url(#b1)"></polyline>
+          <text class="dlabel" transform="rotate(-90 22 280)" x="22" y="280" text-anchor="middle">no coordinates returned</text>
+
+          <!-- hits -->
+          <line class="dline-accent" x1="300" y1="202" x2="560" y2="202" marker-end="url(#b2)"></line>
+          <text class="dlabel-accent" x="424" y="192" text-anchor="middle">match found</text>
+          <polyline class="dline-accent" points="300,266 470,266 470,202"></polyline>
+          <text class="dlabel-accent" x="384" y="258" text-anchor="middle">inside polygon</text>
+
+          <line class="dline" x1="300" y1="298" x2="560" y2="298" marker-end="url(#b1)"></line>
+          <text class="dlabel" x="430" y="288" text-anchor="middle">outside every polygon</text>
+
+          <line class="dline" x1="300" y1="380" x2="560" y2="380" marker-end="url(#b1)"></line>
+          <text class="dlabel" x="430" y="370" text-anchor="middle">match</text>
+
+          <line class="dline" x1="300" y1="432" x2="560" y2="432" marker-end="url(#b1)"></line>
+          <text class="dlabel" x="430" y="422" text-anchor="middle">nothing found</text>
+        </svg>
+      </div>
+      <figcaption>
+        The fallback chain behind a single search box. Each stage that misses hands the address to
+        the next; only the last one involves a person. Partners see the same wording for a given
+        status everywhere, because the status text and its ETA are editable settings rather than
+        strings in the code.
+      </figcaption>
+    </figure>
+
+    <div class="legend">
+      <div><span class="dot" style="background: var(--st-lit)"></span> LIT — on-net today</div>
+      <div><span class="dot" style="background: var(--st-footprint)"></span> Footprint — service available</div>
+      <div><span class="dot" style="background: var(--st-build)"></span> Under construction</div>
+      <div><span class="dot" style="background: var(--st-soon)"></span> Coming soon</div>
+      <div><span class="dot" style="background: var(--st-none)"></span> Not available</div>
+    </div>
+  </section>
+
+  <section class="rule-top">
+    <p class="eyebrow">Selected problems</p>
+    <h2>Four things that were harder than they looked</h2>
+
+    <div class="problems">
+      <div class="problem">
+        <h3>Reports that outgrew the report endpoint</h3>
+        <div class="body">
+          <p>
+            Finance wanted monthly recurring revenue, churn and ARPU broken down by building and by
+            partner, recomputed as soon as anyone changed a service. Fetching that from the server
+            meant a slow endpoint that went stale the moment it returned.
+          </p>
+          <p>
+            Because the worker already held customers, services and partners in IndexedDB, I moved
+            the calculation there: cursors over the <code>buildingId</code> and <code>resellerId</code>
+            indexes produce the report rows, discounts are applied across their own validity window,
+            and Google Charts renders straight from the local result.
+          </p>
+        </div>
+      </div>
+
+      <div class="problem">
+        <h3>Importing customers from whatever the partner sent</h3>
+        <div class="body">
+          <p>
+            Partners migrated their customer bases in spreadsheets of wildly varying quality. A
+            single bad row could not be allowed to reject the file, and a silently accepted bad row
+            was worse.
+          </p>
+          <p>
+            The import pipeline sorts every problem into three buckets — fatal errors that stop the
+            file, errors that block a row, and warnings that let it through flagged — and shows the
+            operator the parsed result as an editable table before anything is written.
+          </p>
+        </div>
+      </div>
+
+      <div class="problem">
+        <h3>Quoting a fibre haul before anyone digs</h3>
+        <div class="body">
+          <p>
+            Sales needed a number for “what would it cost to reach this building?” on the call, not
+            after an engineering review.
+          </p>
+          <p>
+            The calculator takes the distance from the building to the ten nearest pits and prices
+            the route: metres through tunnels, through Telstra or NBN ducts, open trench and
+            underboring, pit types P5 / P6 / P8–P9, breakouts, asphalt, concrete or bluestone
+            reinstatement, and traffic management per day plus the plan itself. It exports a
+            client-ready PDF quote.
+          </p>
+        </div>
+      </div>
+
+      <div class="problem">
+        <h3>The table the field engineers actually wanted</h3>
+        <div class="body">
+          <p>
+            Network engineers were keeping PPPoE credentials, IP allocations and VLAN IDs in a side
+            spreadsheet because the portal only showed them read-only.
+          </p>
+          <p>
+            I gave them one screen of every customer with login, password, IP, router subnet, DGtek
+            VLAN and RSP VLAN editable in place, alongside speed in and out — and exports to Excel,
+            CSV and KML for the tools that live outside the portal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rule-top">
+    <p class="eyebrow">Reuse</p>
+    <h2>Seven packages, three applications</h2>
+    <div class="prose">
+      <p>
+        The map, the address inputs and the calculator were each needed by more than one
+        application, and the applications shipped on different schedules. Rather than a monorepo I
+        published them to npm and pulled them in at build time, so each app upgraded when it was
+        ready to.
+      </p>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Package</th>
+            <th>Version</th>
+            <th>What it does</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pkg">dgtek-portal-map-package</td>
+            <td class="ver">1.4.8</td>
+            <td>Map rendering, serviceability polygons, building CRUD, and the worker + IndexedDB layer the host app talks to</td>
+          </tr>
+          <tr>
+            <td class="pkg">dgtek-portal-calculator</td>
+            <td class="ver">1.2.9</td>
+            <td>Build-cost estimate from building to nearest pit, with PDF quote export</td>
+          </tr>
+          <tr>
+            <td class="pkg">dgtek-portal-polygons-editor</td>
+            <td class="ver">1.1.5</td>
+            <td>Drawing and editing serviceability polygons on the map, emitting save events to the host</td>
+          </tr>
+          <tr>
+            <td class="pkg">dgtek-portal-pits-editor</td>
+            <td class="ver">1.0.95</td>
+            <td>Placing and editing pits, the anchor points every haul distance is measured from</td>
+          </tr>
+          <tr>
+            <td class="pkg">portal-google-autocomplete</td>
+            <td class="ver">1.0.85</td>
+            <td>Address autocomplete as a custom element, with server-error events the host can handle</td>
+          </tr>
+          <tr>
+            <td class="pkg">simple-google-autocomplete</td>
+            <td class="ver">1.0.1</td>
+            <td>The lightweight variant for public pages — address, components, coordinates, nothing else</td>
+          </tr>
+          <tr>
+            <td class="pkg">garevna-date-functions</td>
+            <td class="ver">1.1.5</td>
+            <td>Week arithmetic behind the installation scheduler, accepting and returning any date format</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="rule-top">
+    <p class="eyebrow">Stack</p>
+    <h2>What it was built with</h2>
+
+    <div class="stack-grid">
+      <div>
+        <h3>Core</h3>
+        <div class="chips">
+          <span>Vue 2</span><span>Vuetify 2</span><span>Vue Router</span><span>Vuex</span><span>Webpack</span><span>SCSS</span>
+        </div>
+      </div>
+      <div>
+        <h3>Platform</h3>
+        <div class="chips">
+          <span>Web Workers</span><span>MessageChannel</span><span>IndexedDB</span><span>Service Worker / PWA</span><span>crypto-js</span>
+        </div>
+      </div>
+      <div>
+        <h3>Domain</h3>
+        <div class="chips">
+          <span>Google Maps API</span><span>Geoscape</span><span>Google Charts</span><span>xlsx</span><span>json2csv</span><span>tokml</span><span>PDF export</span>
+        </div>
+      </div>
+      <div>
+        <h3>Delivery</h3>
+        <div class="chips">
+          <span>npm publishing</span><span>Docker</span><span>Helm</span><span>Express static server</span><span>ESLint standard</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="closing">
+      <h3>Where it stood, honestly</h3>
+      <p>
+        This is a Vue 2 codebase from the Vue 2 era and it shows its age. Shared state reaches
+        components through a global symbol registry rather than injection, because the worker sits
+        outside the component tree and Vue 2 had no composition API to hand. Publishing the shared
+        packages to npm bought independent release cycles but left build scripts that install
+        dependencies at build time — workspaces in a monorepo, today. And with one engineer against
+        a moving spec, the coverage went to the parts a person could check by looking; the report
+        calculations and the import validation are pure functions sitting in isolation, and they
+        are exactly what I would put under test first.
+      </p>
+      <p>
+        What did hold up was the decision to put the data layer behind a message boundary. It
+        survived eight major versions of the admin dashboard, and the UI on top of it could have
+        been rewritten in any framework without touching it.
+      </p>
+    </div>
+  </section>
+
+  <section class="rule-top">
+    <p class="eyebrow">Availability</p>
+    <h2>Working together</h2>
+    <div class="rate-block">
+      <div>
+        <p class="rate-label">Expected compensation</p>
+        <p class="rate-value" id="rate-text">from $3,500 / month</p>
+      </div>
+      <button class="rate-edit" id="rate-edit" type="button" hidden>Edit</button>
+      <p class="rate-status" id="rate-status" hidden></p>
+    </div>
+  </section>
+
+  <footer>
+    DGtek Provisioning Portal · frontend case study · 2020 – 2023
+  </footer>
+
+</div>
+
+<script id="page-state" type="application/json">{"rate":"from $3,500 / month"}</script>
+
+<script>
+(function () {
+  var stateNode = document.getElementById('page-state')
+  var textNode = document.getElementById('rate-text')
+  var editBtn = document.getElementById('rate-edit')
+  var statusNode = document.getElementById('rate-status')
+  var artifact = null
+
+  var state
+  try {
+    state = JSON.parse(stateNode.textContent)
+  } catch (err) {
+    state = { rate: textNode.textContent.trim() }
+  }
+  textNode.textContent = state.rate
+
+  function setStatus (message) {
+    statusNode.textContent = message || ''
+    statusNode.hidden = !message
+  }
+
+  function closeEditor () {
+    var form = document.getElementById('rate-form')
+    if (form) form.remove()
+    textNode.hidden = false
+  }
+
+  function buildDocument () {
+    return '<!doctype html>\n' + document.documentElement.outerHTML
+  }
+
+  function commit (raw) {
+    var value = String(raw).replace(/[<>]/g, '').trim().slice(0, 80)
+    closeEditor()
+    if (!value || value === state.rate) {
+      setStatus('')
+      return
+    }
+
+    state.rate = value
+    stateNode.textContent = JSON.stringify(state)
+    textNode.textContent = value
+
+    // Return the page to its canonical resting state before serialising it,
+    // so the saved version matches what a fresh visitor would load.
+    setStatus('')
+    editBtn.hidden = true
+    var html = buildDocument()
+    editBtn.hidden = false
+    setStatus('Saving…')
+
+    artifact.publish(html).then(function () {
+      setStatus('Saved.')
+    }, function (err) {
+      var code = err && err.code
+      if (code === 'conflict') {
+        setStatus('Another version was saved first — this page is reloading with it.')
+      } else if (code === 'not_writer' || code === 'not_granted') {
+        editBtn.hidden = true
+        setStatus('This page is read-only for you.')
+      } else {
+        setStatus('Could not save' + (err && err.message ? ': ' + err.message : '.'))
+      }
+    })
+  }
+
+  function openEditor () {
+    if (document.getElementById('rate-form')) return
+    setStatus('')
+    textNode.hidden = true
+
+    var form = document.createElement('form')
+    form.id = 'rate-form'
+    form.className = 'rate-form'
+
+    var input = document.createElement('input')
+    input.type = 'text'
+    input.className = 'rate-input'
+    input.value = state.rate
+    input.maxLength = 80
+    input.setAttribute('aria-label', 'Expected compensation')
+
+    var save = document.createElement('button')
+    save.type = 'submit'
+    save.textContent = 'Save'
+
+    var cancel = document.createElement('button')
+    cancel.type = 'button'
+    cancel.textContent = 'Cancel'
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault()
+      commit(input.value)
+    })
+    cancel.addEventListener('click', function () {
+      closeEditor()
+      setStatus('')
+    })
+    input.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        closeEditor()
+        setStatus('')
+      }
+    })
+
+    form.appendChild(input)
+    form.appendChild(save)
+    form.appendChild(cancel)
+    textNode.parentNode.appendChild(form)
+    input.focus()
+    input.select()
+  }
+
+  editBtn.addEventListener('click', openEditor)
+
+  if (window.claude && typeof window.claude.use === 'function') {
+    window.claude.use('artifact').then(function (namespace) {
+      if (!namespace) return
+      artifact = namespace
+      editBtn.hidden = false
+    }, function () {})
+  }
+})()
+</script>
+</body>
+</html>

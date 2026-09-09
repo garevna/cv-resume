@@ -34,7 +34,14 @@ function buildValues (profile) {
   const symbol = salary.currency === 'USD' ? '$' : salary.currency + ' '
   const grouped = (sep) => String(salary.amount).replace(/\B(?=(\d{3})+(?!\d))/g, sep)
 
+  const roles = {}
+  for (const [key, period] of Object.entries(profile.roles || {})) {
+    roles[`role.${key}.en`] = period.en
+    roles[`role.${key}.ua`] = period.ua
+  }
+
   return {
+    ...roles,
     'name': profile.name,
     'title': profile.title,
     'email': profile.email,

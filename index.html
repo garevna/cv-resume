@@ -327,7 +327,7 @@
             <!-- Professional Summary -->
             <section>
                 <h2>Professional Summary</h2>
-                <p>Senior Frontend Developer with 4+ years of experience building high-performance web applications and managing complex data systems. Specialized in architecting scalable solutions, optimizing performance for large datasets, and designing user-centric interfaces. Proven ability to work with hundreds of thousands of database records, implement real-time synchronization, and handle complex business logic. Mentored junior developers and collaborated directly with C-level executives on architectural decisions.</p>
+                <p>Senior Frontend Developer with <!--p:years-->8+<!--/p--> years of experience building high-performance web applications and managing complex data systems. Specialized in architecting scalable solutions, optimizing performance for large datasets, and designing user-centric interfaces. Proven ability to work with hundreds of thousands of database records, implement real-time synchronization, and handle complex business logic. Mentored junior developers and collaborated directly with C-level executives on architectural decisions.</p>
             </section>
 
             <!-- Technical Stack -->
@@ -368,7 +368,7 @@
                             <div class="job-title">Senior Frontend Developer</div>
                             <div class="job-company">ITNET</div>
                         </div>
-                        <div class="job-meta">2022–2024 | Lviv, Ukraine</div>
+                        <div class="job-meta"><!--p:role.itnet.en-->Feb 2025–Present<!--/p--> | Lviv, Ukraine</div>
                     </div>
                     <h3>VD-Express — Bus Ticket Booking Platform</h3>
                     <p><strong>Role:</strong> Built frontend from scratch for international bus transportation service.</p>
@@ -399,17 +399,18 @@
                             <div class="job-title">Senior Frontend Developer</div>
                             <div class="job-company">DGtek</div>
                         </div>
-                        <div class="job-meta">2019–2022 | Australia (Remote)</div>
+                        <div class="job-meta"><!--p:role.dgtek.en-->Sep 2019–Sep 2023<!--/p--> | Australia (Remote)</div>
                     </div>
-                    <h3>Multi-functional Portal for DGtek & Resellers</h3>
-                    <p><strong>Role:</strong> Designed and developed comprehensive portal for 100k+ database records serving multiple user roles (resellers, supervisors, managers, technicians, administrators).</p>
-                    <h4 style="margin-top: 15px; color: var(--accent);">Key Responsibilities</h4>
+                    <h3>DGtek Provisioning Portal &mdash; B2B platform for a fibre network operator</h3>
+                    <p><strong>Role:</strong> Sole frontend engineer across 14 repositories (~72,000 lines): an admin dashboard, a reseller cabinet and a public entry app, over <!--p:records-->100k+<!--/p--> customer and building records serving resellers, supervisors, managers, technicians and administrators. <a href="./dgtek_portal.html">Read the full case study &rarr;</a></p>
+                    <h4 style="margin-top: 15px; color: var(--accent);">Key Contributions</h4>
                     <ul>
-                        <li><strong>Role-based functionality:</strong> Reseller ticket submission and real-time tracking, supervisor role management and access control, admin map polygon editing (active/in-progress/planned zones)</li>
-                        <li><strong>Smart scheduling:</strong> Auto-generated connection schedule based on reseller requests and crew availability, with rescheduling capabilities</li>
-                        <li><strong>Coverage lookup package:</strong> Integration with Geoscape API and Google Maps for address verification with connection time estimation</li>
-                        <li><strong>Shareholder analytics:</strong> Dashboard with animated charts and real-time data visualizations</li>
-                        <li><strong>Custom packages:</strong> Token-protected polygon editor, coverage verification with fallback APIs</li>
+                        <li><strong>Web Worker data layer:</strong> moved all API traffic, credentials and a versioned IndexedDB cache (10 object stores with secondary indexes) off the main thread behind a single <code>{ route, action }</code> message boundary, keeping data-heavy tables responsive and tolerant of a dropped connection</li>
+                        <li><strong>Reporting computed on the client:</strong> monthly revenue, churn and ARPU derived in the worker by walking IndexedDB cursors over cached customers and services, rendered with Google Charts &mdash; removing a class of slow report endpoints</li>
+                        <li><strong>Geospatial serviceability search:</strong> Google Maps + Geoscape, serviceability polygons and building markers by status, point-in-polygon lookup with a fallback chain for addresses Google will not geocode, and in-map editors for polygons and pits</li>
+                        <li><strong>Build-cost calculator:</strong> priced a fibre haul from a building to the nearest pit (trenching, underboring, pit types, reinstatement, traffic management) and exported a client-ready PDF quote</li>
+                        <li><strong>Smart scheduling and role-based access:</strong> auto-generated connection schedule from reseller requests and crew availability with rescheduling, reseller ticketing with live status, supervisor access control</li>
+                        <li><strong>7 published npm packages:</strong> map/worker layer, cost calculator, polygon and pit editors, two address-autocomplete components and date utilities, shared by three applications on independent release cycles</li>
                     </ul>
                 </div>
 
@@ -420,7 +421,7 @@
                             <div class="job-title">Frontend & Backend Developer</div>
                             <div class="job-company">Pineapple</div>
                         </div>
-                        <div class="job-meta">2019–2021 | Remote</div>
+                        <div class="job-meta"><!--p:role.pineapple.en-->2019–2022<!--/p--> | Remote</div>
                     </div>
                     <h3>CMS for Dynamic Landing Page Generation</h3>
                     <p><strong>Role:</strong> Built complete CMS (frontend and backend) for dynamic landing page creation.</p>
@@ -456,7 +457,7 @@
                     </div>
                     <div class="skill-category">
                         <h4>👥 Mentoring & Leadership</h4>
-                        <p>3+ years teaching junior developers, C-level stakeholder communication, project delivery, client negotiation</p>
+                        <p><!--p:yearsMentoring-->8+<!--/p--> years teaching junior developers, C-level stakeholder communication, project delivery, client negotiation</p>
                     </div>
                 </div>
             </section>
