@@ -72,7 +72,7 @@ Vue 2/3 (Composition API) | TypeScript | Pinia/Vuex | Web Workers | IndexedDB | 
 ## 🌐 Current Status
 
 - ✅ **Open to opportunities** | Remote only
-- 💵 **Salary:** $2,000+/month
+- 💵 **Salary:** $3,500+/month
 - 📍 **Timezone:** UTC+2 (Kyiv)
 - 🗣️ **Languages:** Ukrainian, Russian, English (Upper-Intermediate)
 
