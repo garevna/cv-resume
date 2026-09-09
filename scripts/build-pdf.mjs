@@ -11,7 +11,7 @@
  * and the same command runs on the CI runner.
  */
 
-import { access, rename, rm, stat } from 'node:fs/promises'
+import { access, readFile, rename, rm, stat, writeFile } from 'node:fs/promises'
 import { constants } from 'node:fs'
 import { execFile } from 'node:child_process'
 import { promisify } from 'node:util'
@@ -54,6 +54,35 @@ async function findBrowser () {
   )
 }
 
+/**
+ * Chrome stamps the wall clock into /CreationDate and /ModDate, so two builds
+ * of the same page differ byte for byte. Git would then see a change on every
+ * run and CI would commit a new PDF on every push. Both fields are plain text
+ * of fixed width, so overwriting the digits in place keeps every xref offset
+ * valid — and the timestamp becomes the repo's own "last updated" date.
+ */
+async function makeReproducible (path) {
+  const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june',
+    'july', 'august', 'september', 'october', 'november', 'december']
+
+  const profile = JSON.parse(await readFile(join(root, 'data/profile.json'), 'utf8'))
+  const [monthName, year] = String(profile.lastUpdated || '').toLowerCase().split(/\s+/)
+  const month = MONTHS.indexOf(monthName) + 1
+
+  const stamp = /^\d{4}$/.test(year || '') && month > 0
+    ? `${year}${String(month).padStart(2, '0')}01000000`
+    : '20200101000000'
+
+  const buffer = await readFile(path)
+  let text = buffer.toString('latin1')
+
+  const before = text
+  text = text.replace(/(\/(?:CreationDate|ModDate)\s*\(D:)\d{14}/g, `$1${stamp}`)
+  if (text.length !== before.length) throw new Error('Timestamp rewrite changed the file length')
+
+  await writeFile(path, Buffer.from(text, 'latin1'))
+}
+
 const browser = await findBrowser()
 
 // Stage inside the repo: a temp dir can sit on another volume, and renaming
@@ -76,6 +105,8 @@ try {
 
   ;({ size } = await stat(staging))
   if (size < 10000) throw new Error(`Rendered PDF is suspiciously small (${size} bytes) — check index.html`)
+
+  await makeReproducible(staging)
 
   // Only now is the existing PDF replaced, so a failed render leaves it intact.
   await rm(TARGET, { force: true })
