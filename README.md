@@ -51,19 +51,29 @@ Senior Frontend Developer with <!--p:years-->8+<!--/p--> years of experience bui
 
 ## 💼 Recent Work
 
-**VD-Express** — International bus booking platform
-- Vue 3, TypeScript, Vuetify 3, Pinia
-- WebSocket real-time synchronization, geolocation transfers, Firebase Auth
-- Multi-language support (uk/en/de), dynamic theming without rebuilds
+**VD Express Platform** — white-label booking core *(in development)*
 
-**DGtek Portal** — Multi-role system at scale
-- 100k+ records, role-based access control
-- Real-time map updates, auto-generated scheduling
-- Analytics dashboard with live data
+A pnpm monorepo split by responsibility: a booking core, a typed domain contract, an API layer, a shared UI library and an event bus. The core never imports host stores — the application registers them via `registerStoresFor*()`, so one core serves several independent carriers. Step order is declarative too: `WizardStep` predicates (`isEnabled` / `canEnter` / `canLeave`) instead of a hard-coded flow.
 
-**Pineapple CMS** — Dynamic content management
-- Headless CMS (Node.js + Express backend)
-- Runtime-configurable landing pages
+**BUSPORTAL** — multilingual marketing site
+
+`vite-ssg` static generation with hydration: 20+ pre-rendered routes across four locales, Pinia state serialised into the markup, and the SEO layer (canonical, hreflang, Open Graph, generated sitemap) extracted into a standalone composable.
+
+**DGtek Provisioning Portal** — B2B platform for a fibre network operator
+
+Three applications over <!--p:records-->100k+<!--/p--> customer and building records, with the entire data layer behind a single Web Worker message boundary — API traffic, credentials and a versioned IndexedDB cache of ten object stores. Monthly revenue, churn and ARPU are computed in the browser over IndexedDB cursors instead of a slow server endpoint.
+
+→ **[Read the case study](https://garevna.github.io/cv-resume/dgtek_portal.html)**
+
+**Coverage-check packages** — shipped by DGtek to its reseller ISPs
+
+Published packages that draw the operator's live coverage polygons on any site and resolve a visitor's address against them, then read that zone's settings back from the operator's admin to quote a realistic connection time — two days or two weeks by zone — before handing the visitor to a request form. Coverage is edited in one place and every downstream site follows, including sites the operator doesn't control.
+
+**Pineapple** — an ISP reselling DGtek's fibre network
+
+A Nuxt 2 public site, statically generated and composed from **10 npm packages I published**, with selective hydration via `vue-lazy-hydration` and navigation resolved from the CMS at runtime — plus the headless CMS itself (Vue frontend, Node.js/Express backend) storing landing pages as JSON with a publish/hide lifecycle.
+
+→ **[nuxt-app](https://github.com/garevna/nuxt-app)**
 
 ## 🛠️ Tech Stack
 
