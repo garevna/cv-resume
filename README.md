@@ -94,7 +94,7 @@ and are wrapped in the documents by invisible markers.
 
 ```bash
 npm run sync    # push profile.json values into all documents
-npm run pdf     # rebuild RESUME-eng.pdf from index.html
+npm run pdf     # rebuild RESUME-eng.pdf from RESUME.md
 npm run build   # both
 npm run check   # fail if any document has drifted (runs in CI)
 ```
@@ -103,7 +103,7 @@ Change a value in `data/profile.json`, not in the documents.
 
 ## 📱 How to Use
 
-1. **For PDF:** `npm run pdf` rebuilds `RESUME-eng.pdf` from `index.html` with headless Chrome (CI does this automatically on push)
+1. **For PDF:** `npm run pdf` rebuilds `RESUME-eng.pdf` from `RESUME.md` with headless Chrome (CI does this automatically on push)
 2. **For Markdown:** Copy content from [RESUME.md](./RESUME.md) or [CV_UA.md](./CV_UA.md)
 3. **For Web:** Open [index.html](./index.html) in browser or deploy to GitHub Pages
 4. **For Philosophy:** Browse [JS Philosophy Memes](./media/js-memes/) for fun insights

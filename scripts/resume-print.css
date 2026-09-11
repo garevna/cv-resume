@@ -1,0 +1,155 @@
+/* Print stylesheet for RESUME-eng.pdf, rendered from RESUME.md by scripts/build-pdf.mjs. */
+
+@page {
+  size: A4;
+  margin: 14mm 15mm 16mm;
+}
+
+:root {
+  --ink: #14211f;
+  --ink-mid: #3e4f4d;
+  --ink-soft: #6d7f7d;
+  --rule: #d3dcda;
+  --accent: #0a6b72;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  font-size: 9.6pt;
+  line-height: 1.45;
+  color: var(--ink);
+  background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---------- headings ---------- */
+
+h1 {
+  font-size: 21pt;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 1mm;
+  line-height: 1.1;
+}
+
+/* The line under the name: "**Senior Frontend Developer**" */
+h1 + p {
+  font-size: 11.5pt;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 2mm;
+}
+
+h2 {
+  font-size: 12.5pt;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 6mm 0 2mm;
+  padding-bottom: 1.2mm;
+  border-bottom: 1.2px solid var(--accent);
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+h3 {
+  font-size: 10.8pt;
+  font-weight: 700;
+  margin: 4mm 0 1mm;
+  break-after: avoid;
+}
+
+h4 {
+  font-size: 9.8pt;
+  font-weight: 700;
+  color: var(--ink-mid);
+  margin: 3mm 0 1mm;
+  break-after: avoid;
+}
+
+/* ---------- body ---------- */
+
+p {
+  margin: 0 0 1.6mm;
+  orphans: 3;
+  widows: 3;
+}
+
+strong { font-weight: 700; }
+
+em {
+  font-style: italic;
+  color: var(--ink-mid);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  word-break: break-word;
+}
+
+code {
+  font-family: "Consolas", "DejaVu Sans Mono", monospace;
+  font-size: 0.9em;
+  background: #eef3f2;
+  border: 0.6px solid var(--rule);
+  border-radius: 2px;
+  padding: 0 1mm;
+}
+
+ul, ol {
+  margin: 0 0 1.8mm;
+  padding-left: 4.5mm;
+}
+
+li {
+  margin-bottom: 0.7mm;
+  break-inside: avoid;
+}
+
+li::marker { color: var(--ink-soft); }
+
+hr {
+  border: 0;
+  border-top: 0.8px solid var(--rule);
+  margin: 3.5mm 0;
+}
+
+/* The contact block under the name is a run of hard-wrapped lines. */
+h1 + p + p {
+  font-size: 9pt;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+
+/* Keep a role heading with the lines that follow it. */
+h3, h3 + p, h3 + p + p { break-inside: avoid; }
+
+blockquote {
+  margin: 0 0 2mm;
+  padding-left: 3mm;
+  border-left: 2px solid var(--rule);
+  color: var(--ink-mid);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9pt;
+  margin: 0 0 2mm;
+}
+
+th, td {
+  text-align: left;
+  padding: 1mm 2mm;
+  border-bottom: 0.6px solid var(--rule);
+  vertical-align: top;
+}
+
+th { color: var(--ink-soft); font-weight: 600; }
+
+img { max-width: 100%; }

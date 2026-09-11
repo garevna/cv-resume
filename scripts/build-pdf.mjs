@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 /**
- * Renders index.html to RESUME-eng.pdf with headless Chrome.
+ * Renders RESUME.md to RESUME-eng.pdf with headless Chrome.
+ *
+ * RESUME.md is the detailed resume and the PDF is named after it, so the PDF
+ * is built from it rather than from index.html — index.html is the lighter
+ * interactive version and is allowed to be shorter, just never contradictory.
  *
  * The PDF is a build artifact, not a source file: values synced by
  * sync-profile.mjs reach it only through this step. Run both together with
@@ -17,12 +21,14 @@ import { execFile } from 'node:child_process'
 import { promisify } from 'node:util'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { dirname, join } from 'node:path'
+import { marked } from 'marked'
 
 
 const run = promisify(execFile)
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
-const SOURCE = join(root, 'index.html')
+const SOURCE = join(root, 'RESUME.md')
+const STYLES = join(root, 'scripts/resume-print.css')
 const TARGET = join(root, 'RESUME-eng.pdf')
 
 const CANDIDATES = [
@@ -83,15 +89,49 @@ async function makeReproducible (path) {
   await writeFile(path, Buffer.from(text, 'latin1'))
 }
 
+/** RESUME.md -> a self-contained HTML document Chrome can print. */
+async function renderMarkdown (path) {
+  const [markdown, css] = await Promise.all([
+    readFile(SOURCE, 'utf8'),
+    readFile(STYLES, 'utf8')
+  ])
+
+  // The <!--p:key--> sync markers are HTML comments: marked passes them
+  // through and the browser never paints them. Strip them anyway so the
+  // printed document carries no build scaffolding.
+  const clean = markdown.replace(/<!--\/?p(?::[a-zA-Z0-9_.]+)?-->/g, '')
+
+  const body = marked.parse(clean, { mangle: false, headerIds: false })
+
+  await writeFile(path, [
+    '<!doctype html>',
+    '<html lang="en">',
+    '<head>',
+    '<meta charset="utf-8">',
+    '<title>Resume</title>',
+    '<style>',
+    css,
+    '</style>',
+    '</head>',
+    '<body>',
+    body,
+    '</body>',
+    '</html>',
+    ''
+  ].join('\n'))
+}
+
 const browser = await findBrowser()
 
 // Stage inside the repo: a temp dir can sit on another volume, and renaming
 // across volumes fails after the old PDF is already gone.
 const staging = join(root, '.resume-build.pdf')
+const stagingHtml = join(root, '.resume-build.html')
 
 let size
 try {
   await rm(staging, { force: true })
+  await renderMarkdown(stagingHtml)
 
   await run(browser, [
     '--headless=new',
@@ -100,7 +140,7 @@ try {
     '--no-pdf-header-footer',
     '--virtual-time-budget=10000', // let webfonts and layout settle
     `--print-to-pdf=${staging}`,
-    pathToFileURL(SOURCE).href
+    pathToFileURL(stagingHtml).href
   ], { timeout: 120000 })
 
   ;({ size } = await stat(staging))
@@ -113,7 +153,8 @@ try {
   await rename(staging, TARGET)
 } finally {
   await rm(staging, { force: true })
+  await rm(stagingHtml, { force: true })
 }
 
-console.log(`RESUME-eng.pdf rebuilt from index.html — ${(size / 1024).toFixed(0)} KB`)
+console.log(`RESUME-eng.pdf rebuilt from RESUME.md — ${(size / 1024).toFixed(0)} KB`)
 console.log(`browser: ${browser}`)
