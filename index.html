@@ -348,6 +348,24 @@
             color: var(--accent);
             font-size: 1.02em;
         }
+
+        /* Подпись над рядом таблеток: в рукописной версии её не было, там
+           роль заголовка играл h4 внутри карточки. */
+        .tech-label {
+            margin: 18px 0 8px;
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        .tech-label strong {
+            color: var(--primary);
+        }
+
+        .tech-tag code {
+            background: none;
+            padding: 0;
+            font-size: 0.95em;
+        }
     </style>
 </head>
 <body>
@@ -379,11 +397,50 @@
 
             <section>
 <h2>Technical Stack</h2>
-<p><strong>Frontend:</strong><br>Vue 2/3 (Composition API, <code>&lt;script setup&gt;</code>) • TypeScript • Vuetify 2/3 • Pinia • Vuex • Vue Router • Vue i18n • Vite • Vitest • Cypress</p>
-<p><strong>Performance &amp; Data:</strong><br>Web Workers • IndexedDB (with advanced indexing) • REST API • WebSockets • Real-time Synchronization • Geolocation APIs (Google Maps, MapLibre GL, Geoscape)</p>
-<p><strong>DevOps &amp; Tools:</strong><br>Git • Firebase Auth • GitLab CI • vite-ssg • Directus</p>
-<p><strong>Backend (foundational):</strong><br>Node.js • Express • File System (fs)</p>
-<p><strong>Design &amp; Testing:</strong><br>Figma • SEO • Accessibility (a11y) • E2E Testing (Cypress) • Unit Testing (Vitest)</p>
+<p class="tech-label"><strong>Frontend:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Vue 2/3 (Composition API, <code>&lt;script setup&gt;</code>)</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Vuetify 2/3</span>
+                    <span class="tech-tag">Pinia</span>
+                    <span class="tech-tag">Vuex</span>
+                    <span class="tech-tag">Vue Router</span>
+                    <span class="tech-tag">Vue i18n</span>
+                    <span class="tech-tag">Vite</span>
+                    <span class="tech-tag">Vitest</span>
+                    <span class="tech-tag">Cypress</span>
+                </div>
+<p class="tech-label"><strong>Performance &amp; Data:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Web Workers</span>
+                    <span class="tech-tag">IndexedDB (with advanced indexing)</span>
+                    <span class="tech-tag">REST API</span>
+                    <span class="tech-tag">WebSockets</span>
+                    <span class="tech-tag">Real-time Synchronization</span>
+                    <span class="tech-tag">Geolocation APIs (Google Maps, MapLibre GL, Geoscape)</span>
+                </div>
+<p class="tech-label"><strong>DevOps &amp; Tools:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">Firebase Auth</span>
+                    <span class="tech-tag">GitLab CI</span>
+                    <span class="tech-tag">vite-ssg</span>
+                    <span class="tech-tag">Directus</span>
+                </div>
+<p class="tech-label"><strong>Backend (foundational):</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">File System (fs)</span>
+                </div>
+<p class="tech-label"><strong>Design &amp; Testing:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">SEO</span>
+                    <span class="tech-tag">Accessibility (a11y)</span>
+                    <span class="tech-tag">E2E Testing (Cypress)</span>
+                    <span class="tech-tag">Unit Testing (Vitest)</span>
+                </div>
             </section>
 
             <section>
@@ -393,7 +450,20 @@
 <h4>Project Portfolio</h4>
 <p><strong>1. Admin Dashboard — Corporate administration platform</strong></p>
 <p>SPA for managing users, roles, departments and transport infrastructure. Features include JWT authentication, role-based access control (RBAC), CRUD operations, data search and filtering, bus editing, geographical modules based on MapLibre, interface localisation and integration with a REST API.</p>
-<p><strong>Technology stack:</strong> Vue 3, TypeScript, Pinia, Vue Router, Vuetify 3, Axios, MapLibre GL, Vue i18n, Vite, Vitest, Cypress</p>
+<p class="tech-label"><strong>Technology stack:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Vue 3</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Pinia</span>
+                    <span class="tech-tag">Vue Router</span>
+                    <span class="tech-tag">Vuetify 3</span>
+                    <span class="tech-tag">Axios</span>
+                    <span class="tech-tag">MapLibre GL</span>
+                    <span class="tech-tag">Vue i18n</span>
+                    <span class="tech-tag">Vite</span>
+                    <span class="tech-tag">Vitest</span>
+                    <span class="tech-tag">Cypress</span>
+                </div>
 <p><strong>2. VD-Express — International Bus Booking Platform</strong></p>
 <p>Built frontend from scratch for international bus transportation service handling real-time seat selection, multi-step booking flows, and geolocation-based transfers.</p>
 <p><em>Architecture &amp; Design:</em></p>
@@ -411,7 +481,18 @@
 <li>Real-time seat sync through WebSocket with automatic reconnection (exponential backoff)</li>
 <li>Reusable component library with Vuetify 3 and custom patterns</li>
 </ul>
-<p><strong>Technology stack:</strong> Vue 3 (Composition API), TypeScript, Vuetify 3, Pinia, Firebase Auth, WebSocket, REST API, MapLibre GL, Vue i18n</p>
+<p class="tech-label"><strong>Technology stack:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Vue 3 (Composition API)</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Vuetify 3</span>
+                    <span class="tech-tag">Pinia</span>
+                    <span class="tech-tag">Firebase Auth</span>
+                    <span class="tech-tag">WebSocket</span>
+                    <span class="tech-tag">REST API</span>
+                    <span class="tech-tag">MapLibre GL</span>
+                    <span class="tech-tag">Vue i18n</span>
+                </div>
 <p><strong>3. BUSPORTAL — a multilingual promotional website for a SaaS platform</strong></p>
 <p>A marketing website for a CRM platform aimed at bus and logistics companies: showcasing features, pricing, FAQs, a blog and a lead generation funnel. The website is fully statically pre-rendered, available in four languages (uk/en/de/ru) and serves the Ukrainian, European and international markets.</p>
 <p><em>Technical solution:</em></p>
@@ -423,7 +504,21 @@
 <li><strong>Interactive interface:</strong> sticky-scroll with synchronised images, custom sliders, responsive cards with hover states</li>
 <li><strong>Content on self-hosted Directus:</strong> pre-rendered blog posts with actual publication dates and cross-regional alternate links</li>
 </ul>
-<p><strong>Technology stack:</strong> Vue 3 (Composition API), TypeScript, Vite 7, vite-ssg, Vuetify 3, Pinia, vue-i18n, vue-router, @unhead/vue, Directus 11, GA4, ESLint + Prettier</p>
+<p class="tech-label"><strong>Technology stack:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Vue 3 (Composition API)</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Vite 7</span>
+                    <span class="tech-tag">vite-ssg</span>
+                    <span class="tech-tag">Vuetify 3</span>
+                    <span class="tech-tag">Pinia</span>
+                    <span class="tech-tag">vue-i18n</span>
+                    <span class="tech-tag">vue-router</span>
+                    <span class="tech-tag">@unhead/vue</span>
+                    <span class="tech-tag">Directus 11</span>
+                    <span class="tech-tag">GA4</span>
+                    <span class="tech-tag">ESLint + Prettier</span>
+                </div>
 <p><strong>4. IS PORTAL — telecommunications business automation platform</strong></p>
 <p>A responsive multi-page landing page for a B2B platform for managing connections, installation teams, requests, warehouses and procurement.</p>
 <p><em>Features implemented:</em></p>
@@ -435,7 +530,17 @@
 <li>FAQ section, pop-ups and carousels using Swiper</li>
 <li>Component-based architecture using Vue 3</li>
 </ul>
-<p><strong>Technology stack:</strong> Vue 3, TypeScript, Vite, Pinia, Vue i18n, Vuetify, Swiper, Vitest</p>
+<p class="tech-label"><strong>Technology stack:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Vue 3</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Vite</span>
+                    <span class="tech-tag">Pinia</span>
+                    <span class="tech-tag">Vue i18n</span>
+                    <span class="tech-tag">Vuetify</span>
+                    <span class="tech-tag">Swiper</span>
+                    <span class="tech-tag">Vitest</span>
+                </div>
 <p><strong>5. IT NET — an IT company’s corporate website</strong></p>
 <p>A responsive, multilingual landing page (uk/en/de) showcasing the company, its CRM products and services. The site features interactive cards, separate desktop and mobile navigation flows, feedback forms and pop-up scenarios.</p>
 <p><em>Scope of responsibility:</em></p>
@@ -444,7 +549,17 @@
 <li>Integration of client-side logic and Vuetify components</li>
 <li>(Docker and CI/CD were set up by other team members)</li>
 </ul>
-<p><strong>Technology stack:</strong> Vue 3, TypeScript, Vite, Vuetify, Pinia, Vue i18n, Swiper, Vitest</p>
+<p class="tech-label"><strong>Technology stack:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Vue 3</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Vite</span>
+                    <span class="tech-tag">Vuetify</span>
+                    <span class="tech-tag">Pinia</span>
+                    <span class="tech-tag">Vue i18n</span>
+                    <span class="tech-tag">Swiper</span>
+                    <span class="tech-tag">Vitest</span>
+                </div>
 <p><strong>6. Site Constructor — multi-brand (white-label) front-end platform</strong></p>
 <p>Developed the client-side of an online bus ticket sales platform, where a single codebase supports several independent brands simultaneously. The design theme is determined at runtime; UI components, colour schemes, localisation and content specific to each brand are dynamically loaded — without the need to rebuild the project.</p>
 <p><em>Booking flow implemented:</em></p>
@@ -463,7 +578,18 @@
 <li>Runtime theme selection via <code>defineAsyncComponent</code> with dynamic import</li>
 <li>Responsive layout with separate mobile UX patterns</li>
 </ul>
-<p><strong>Technology stack:</strong> Vue 3 (Composition API, <code>&lt;script setup&gt;</code>), TypeScript, Vuetify 3, Pinia, vue-i18n, MapLibre GL, Firebase Auth, REST API</p>
+<p class="tech-label"><strong>Technology stack:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Vue 3 (Composition API</span>
+                    <span class="tech-tag"><code>&lt;script setup&gt;</code>)</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Vuetify 3</span>
+                    <span class="tech-tag">Pinia</span>
+                    <span class="tech-tag">vue-i18n</span>
+                    <span class="tech-tag">MapLibre GL</span>
+                    <span class="tech-tag">Firebase Auth</span>
+                    <span class="tech-tag">REST API</span>
+                </div>
 <p><strong>7. VD Express Platform — modular front-end platform (Active Development)</strong></p>
 <p>The online booking platform for international coach services is designed as a reusable core that serves several independent operators via a white-label solution. The entire booking flow is implemented within the reusable core as a Vue plugin.</p>
 <p><em>Architecture:</em></p>
@@ -493,7 +619,22 @@
 <li>Door-to-door transfers: geolocation, zones on MapLibre, cost calculation</li>
 <li>Three languages (uk/en/de) with localised formats</li>
 </ul>
-<p><strong>Technology stack:</strong> Vue 3 (Composition API), TypeScript, Vite, Vuetify 3, Pinia + persisted state, Vue Router, vue-i18n, MapLibre GL, Firebase Auth, WebSocket, Axios, libphonenumber-js, pnpm workspaces</p>
+<p class="tech-label"><strong>Technology stack:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Vue 3 (Composition API)</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Vite</span>
+                    <span class="tech-tag">Vuetify 3</span>
+                    <span class="tech-tag">Pinia + persisted state</span>
+                    <span class="tech-tag">Vue Router</span>
+                    <span class="tech-tag">vue-i18n</span>
+                    <span class="tech-tag">MapLibre GL</span>
+                    <span class="tech-tag">Firebase Auth</span>
+                    <span class="tech-tag">WebSocket</span>
+                    <span class="tech-tag">Axios</span>
+                    <span class="tech-tag">libphonenumber-js</span>
+                    <span class="tech-tag">pnpm workspaces</span>
+                </div>
 <p><strong>Status:</strong> The domain core, API layer, UI library and main booking workflow have been fully implemented. The next stage involves the declarative configuration of the workflow and the integration of a second carrier client.</p>
 <p><strong>8. Visual Content Editor — a visual editor for content management</strong></p>
 <p>An interactive visual editor for creating and editing website content in real time. It allows users to modify text, images, styles and page structure without needing to access the code.</p>
@@ -514,7 +655,16 @@
 <li>Real-time synchronisation via WebSocket</li>
 <li>Integration with the CMS backend for data storage</li>
 </ul>
-<p><strong>Technology stack:</strong> Vue 3, TypeScript, Vuetify 3, Pinia, WebSocket, REST API, Vite</p>
+<p class="tech-label"><strong>Technology stack:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Vue 3</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Vuetify 3</span>
+                    <span class="tech-tag">Pinia</span>
+                    <span class="tech-tag">WebSocket</span>
+                    <span class="tech-tag">REST API</span>
+                    <span class="tech-tag">Vite</span>
+                </div>
 <h3><strong>Senior Frontend Developer</strong></h3>
 <p><strong>DGtek Fibre Network</strong> (Australia) | <!--p:role.dgtek.en-->Sep 2019–Sep 2023<!--/p-->  </p>
 <p><em>Remote</em></p>
@@ -546,7 +696,15 @@
 <li>Navigation and page content resolved at runtime from the CMS endpoint, so marketing edits pages without a deploy</li>
 <li>Repo: <a href="https://github.com/garevna/nuxt-app">https://github.com/garevna/nuxt-app</a></li>
 </ul>
-<p><strong>Technology stack:</strong> Nuxt 2, Vue 2, Vuetify 2, Vuex, vue-lazy-hydration, PWA</p>
+<p class="tech-label"><strong>Technology stack:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Nuxt 2</span>
+                    <span class="tech-tag">Vue 2</span>
+                    <span class="tech-tag">Vuetify 2</span>
+                    <span class="tech-tag">Vuex</span>
+                    <span class="tech-tag">vue-lazy-hydration</span>
+                    <span class="tech-tag">PWA</span>
+                </div>
 <p><strong>CMS for Dynamic Landing Page Generation</strong></p>
 <p>Built a complete CMS enabling dynamic landing page creation, content management, and survey form generation with customizable field types.</p>
 <p><em>Architecture:</em></p>
@@ -559,13 +717,17 @@
 
             <section>
 <h2>Core Competencies</h2>
-<h3>Performance &amp; Optimization</h3>
+<div class="skills-grid">
+                    <div class="skill-category">
+<h4>Performance &amp; Optimization</h4>
 <ul>
 <li><strong>Web Workers + IndexedDB:</strong> distribute computation, handle massive datasets, advanced indexing strategies</li>
 <li><strong>Bundle optimization:</strong> code splitting, dynamic imports, lazy loading</li>
 <li><strong>Real-time Synchronization:</strong> WebSocket with automatic reconnection, exponential backoff, ping-control</li>
 </ul>
-<h3>Architecture &amp; Design</h3>
+                    </div>
+                    <div class="skill-category">
+<h4>Architecture &amp; Design</h4>
 <ul>
 <li>Scalable architectures for complex applications (100k+ records)</li>
 <li>State management (Pinia, Vuex) with guaranteed data consistency</li>
@@ -573,25 +735,33 @@
 <li>Plugin-based architecture for code reusability</li>
 <li>Component-driven development with reusable UI patterns</li>
 </ul>
-<h3>Real-time Systems</h3>
+                    </div>
+                    <div class="skill-category">
+<h4>Real-time Systems</h4>
 <ul>
 <li>WebSocket handling with robust reconnection logic</li>
 <li>Multi-app data sync (editor + preview + production)</li>
 <li>Offline-first strategies with intelligent fallback</li>
 </ul>
-<h3>Accessibility &amp; SEO</h3>
+                    </div>
+                    <div class="skill-category">
+<h4>Accessibility &amp; SEO</h4>
 <ul>
 <li>Semantic HTML, ARIA attributes, screen reader testing</li>
 <li>Dynamic meta-tags for search engines and AI crawlers</li>
 <li>International localization and multi-locale support</li>
 </ul>
-<h3>Mentoring &amp; Communication</h3>
+                    </div>
+                    <div class="skill-category">
+<h4>Mentoring &amp; Communication</h4>
 <ul>
 <li><!--p:yearsMentoring-->8+<!--/p--> years mentoring junior developers</li>
 <li>Onboarding students to commercial projects</li>
 <li>Direct stakeholder communication with C-level executives</li>
 <li>Technical documentation and code reviews</li>
 </ul>
+                    </div>
+                </div>
             </section>
 
             <section>
@@ -601,13 +771,13 @@
 
             <section>
 <h2>Portfolio</h2>
-<ul>
-<li>📚 <strong>JS Lessons:</strong> <a href="https://garevna.github.io/js-lessons/">https://garevna.github.io/js-lessons/</a></li>
-<li>🧠 <strong>JS Quiz:</strong> <a href="https://garevna.github.io/js-quiz/">https://garevna.github.io/js-quiz/</a></li>
-<li>🎨 <strong>JS Philosophy Memes:</strong> <a href="https://github.com/garevna/cv-resume/tree/main/media/js-memes">https://github.com/garevna/cv-resume/tree/main/media/js-memes</a></li>
-<li>🔗 <strong>GitHub:</strong> <a href="https://github.com/garevna">https://github.com/garevna</a></li>
-<li>💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/garevna/">https://www.linkedin.com/in/garevna/</a></li>
-</ul>
+<div class="links-section">
+                    <a href="https://garevna.github.io/js-lessons/" target="_blank" class="link-btn">📚 JS Lessons</a>
+                    <a href="https://garevna.github.io/js-quiz/" target="_blank" class="link-btn">🧠 JS Quiz</a>
+                    <a href="https://github.com/garevna/cv-resume/tree/main/media/js-memes" target="_blank" class="link-btn">🎨 JS Philosophy Memes</a>
+                    <a href="https://github.com/garevna" target="_blank" class="link-btn">🔗 GitHub</a>
+                    <a href="https://www.linkedin.com/in/garevna/" target="_blank" class="link-btn">💼 LinkedIn</a>
+                </div>
             </section>
 
             <section>
@@ -616,11 +786,20 @@
 
             <section>
 <h2>Languages</h2>
-<ul>
-<li>🇺🇦 Ukrainian (Native)</li>
-<li>🇷🇺 Russian (Fluent)</li>
-<li>🇬🇧 English (Upper-Intermediate)</li>
-</ul>
+<div class="langs">
+                    <div class="lang-item">
+                        <span class="lang-flag">🇺🇦</span>
+                        <div><strong>Ukrainian</strong><br><small>Native</small></div>
+                    </div>
+                    <div class="lang-item">
+                        <span class="lang-flag">🇷🇺</span>
+                        <div><strong>Russian</strong><br><small>Fluent</small></div>
+                    </div>
+                    <div class="lang-item">
+                        <span class="lang-flag">🇬🇧</span>
+                        <div><strong>English</strong><br><small>Upper-Intermediate</small></div>
+                    </div>
+                </div>
             </section>
 
             <section>
