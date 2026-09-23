@@ -366,6 +366,57 @@
             padding: 0;
             font-size: 0.95em;
         }
+
+        /* Проект — сворачиваемая панель. Стек намеренно снаружи: тот, кто
+           просматривает резюме по диагонали, ищет именно его. */
+        details.project {
+            margin: 20px 0 10px;
+            border-left: 3px solid var(--border);
+            padding-left: 16px;
+        }
+
+        details.project[open] {
+            border-left-color: var(--accent);
+        }
+
+        details.project > summary {
+            cursor: pointer;
+            padding: 6px 0;
+            color: var(--accent);
+            font-size: 1.02em;
+            list-style: none;
+        }
+
+        details.project > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.project > summary::before {
+            content: '▸';
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            color: var(--text-light);
+        }
+
+        details.project[open] > summary::before {
+            content: '▾';
+        }
+
+        details.project > summary strong {
+            color: inherit;
+        }
+
+        /* На печати панели не должны прятать текст. */
+        @media print {
+            details.project > summary::before {
+                content: none;
+            }
+
+            details.project > *:not(summary) {
+                display: revert !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -448,8 +499,10 @@
 <h3><strong>Senior Frontend Developer</strong></h3>
 <p><strong>ITNET</strong> (Lviv, Ukraine) | <!--p:role.itnet.en-->Feb 2025–Present<!--/p-->  </p>
 <h4>Project Portfolio</h4>
-<p><strong>1. Admin Dashboard — Corporate administration platform</strong></p>
+                <details class="project">
+                    <summary><strong>1. Admin Dashboard — Corporate administration platform</strong></summary>
 <p>SPA for managing users, roles, departments and transport infrastructure. Features include JWT authentication, role-based access control (RBAC), CRUD operations, data search and filtering, bus editing, geographical modules based on MapLibre, interface localisation and integration with a REST API.</p>
+                </details>
 <p class="tech-label"><strong>Technology stack:</strong></p>
                 <div class="tech-stack">
                     <span class="tech-tag">Vue 3</span>
@@ -464,7 +517,8 @@
                     <span class="tech-tag">Vitest</span>
                     <span class="tech-tag">Cypress</span>
                 </div>
-<p><strong>2. VD-Express — International Bus Booking Platform</strong></p>
+                <details class="project">
+                    <summary><strong>2. VD-Express — International Bus Booking Platform</strong></summary>
 <p>Built frontend from scratch for international bus transportation service handling real-time seat selection, multi-step booking flows, and geolocation-based transfers.</p>
 <p><em>Architecture &amp; Design:</em></p>
 <ul>
@@ -481,6 +535,7 @@
 <li>Real-time seat sync through WebSocket with automatic reconnection (exponential backoff)</li>
 <li>Reusable component library with Vuetify 3 and custom patterns</li>
 </ul>
+                </details>
 <p class="tech-label"><strong>Technology stack:</strong></p>
                 <div class="tech-stack">
                     <span class="tech-tag">Vue 3 (Composition API)</span>
@@ -493,7 +548,8 @@
                     <span class="tech-tag">MapLibre GL</span>
                     <span class="tech-tag">Vue i18n</span>
                 </div>
-<p><strong>3. BUSPORTAL — a multilingual promotional website for a SaaS platform</strong></p>
+                <details class="project">
+                    <summary><strong>3. BUSPORTAL — a multilingual promotional website for a SaaS platform</strong></summary>
 <p>A marketing website for a CRM platform aimed at bus and logistics companies: showcasing features, pricing, FAQs, a blog and a lead generation funnel. The website is fully statically pre-rendered, available in four languages (uk/en/de/ru) and serves the Ukrainian, European and international markets.</p>
 <p><em>Technical solution:</em></p>
 <ul>
@@ -504,6 +560,7 @@
 <li><strong>Interactive interface:</strong> sticky-scroll with synchronised images, custom sliders, responsive cards with hover states</li>
 <li><strong>Content on self-hosted Directus:</strong> pre-rendered blog posts with actual publication dates and cross-regional alternate links</li>
 </ul>
+                </details>
 <p class="tech-label"><strong>Technology stack:</strong></p>
                 <div class="tech-stack">
                     <span class="tech-tag">Vue 3 (Composition API)</span>
@@ -519,7 +576,8 @@
                     <span class="tech-tag">GA4</span>
                     <span class="tech-tag">ESLint + Prettier</span>
                 </div>
-<p><strong>4. IS PORTAL — telecommunications business automation platform</strong></p>
+                <details class="project">
+                    <summary><strong>4. IS PORTAL — telecommunications business automation platform</strong></summary>
 <p>A responsive multi-page landing page for a B2B platform for managing connections, installation teams, requests, warehouses and procurement.</p>
 <p><em>Features implemented:</em></p>
 <ul>
@@ -530,6 +588,7 @@
 <li>FAQ section, pop-ups and carousels using Swiper</li>
 <li>Component-based architecture using Vue 3</li>
 </ul>
+                </details>
 <p class="tech-label"><strong>Technology stack:</strong></p>
                 <div class="tech-stack">
                     <span class="tech-tag">Vue 3</span>
@@ -541,7 +600,8 @@
                     <span class="tech-tag">Swiper</span>
                     <span class="tech-tag">Vitest</span>
                 </div>
-<p><strong>5. IT NET — an IT company’s corporate website</strong></p>
+                <details class="project">
+                    <summary><strong>5. IT NET — an IT company’s corporate website</strong></summary>
 <p>A responsive, multilingual landing page (uk/en/de) showcasing the company, its CRM products and services. The site features interactive cards, separate desktop and mobile navigation flows, feedback forms and pop-up scenarios.</p>
 <p><em>Scope of responsibility:</em></p>
 <ul>
@@ -549,6 +609,7 @@
 <li>Integration of client-side logic and Vuetify components</li>
 <li>(Docker and CI/CD were set up by other team members)</li>
 </ul>
+                </details>
 <p class="tech-label"><strong>Technology stack:</strong></p>
                 <div class="tech-stack">
                     <span class="tech-tag">Vue 3</span>
@@ -560,7 +621,8 @@
                     <span class="tech-tag">Swiper</span>
                     <span class="tech-tag">Vitest</span>
                 </div>
-<p><strong>6. Site Constructor — multi-brand (white-label) front-end platform</strong></p>
+                <details class="project">
+                    <summary><strong>6. Site Constructor — multi-brand (white-label) front-end platform</strong></summary>
 <p>Developed the client-side of an online bus ticket sales platform, where a single codebase supports several independent brands simultaneously. The design theme is determined at runtime; UI components, colour schemes, localisation and content specific to each brand are dynamically loaded — without the need to rebuild the project.</p>
 <p><em>Booking flow implemented:</em></p>
 <ul>
@@ -578,6 +640,7 @@
 <li>Runtime theme selection via <code>defineAsyncComponent</code> with dynamic import</li>
 <li>Responsive layout with separate mobile UX patterns</li>
 </ul>
+                </details>
 <p class="tech-label"><strong>Technology stack:</strong></p>
                 <div class="tech-stack">
                     <span class="tech-tag">Vue 3 (Composition API</span>
@@ -590,7 +653,8 @@
                     <span class="tech-tag">Firebase Auth</span>
                     <span class="tech-tag">REST API</span>
                 </div>
-<p><strong>7. VD Express Platform — modular front-end platform (Active Development)</strong></p>
+                <details class="project">
+                    <summary><strong>7. VD Express Platform — modular front-end platform (Active Development)</strong></summary>
 <p>The online booking platform for international coach services is designed as a reusable core that serves several independent operators via a white-label solution. The entire booking flow is implemented within the reusable core as a Vue plugin.</p>
 <p><em>Architecture:</em></p>
 <ul>
@@ -619,6 +683,7 @@
 <li>Door-to-door transfers: geolocation, zones on MapLibre, cost calculation</li>
 <li>Three languages (uk/en/de) with localised formats</li>
 </ul>
+                </details>
 <p class="tech-label"><strong>Technology stack:</strong></p>
                 <div class="tech-stack">
                     <span class="tech-tag">Vue 3 (Composition API)</span>
@@ -636,7 +701,8 @@
                     <span class="tech-tag">pnpm workspaces</span>
                 </div>
 <p><strong>Status:</strong> The domain core, API layer, UI library and main booking workflow have been fully implemented. The next stage involves the declarative configuration of the workflow and the integration of a second carrier client.</p>
-<p><strong>8. Visual Content Editor — a visual editor for content management</strong></p>
+                <details class="project">
+                    <summary><strong>8. Visual Content Editor — a visual editor for content management</strong></summary>
 <p>An interactive visual editor for creating and editing website content in real time. It allows users to modify text, images, styles and page structure without needing to access the code.</p>
 <p><em>Features:</em></p>
 <ul>
@@ -655,6 +721,7 @@
 <li>Real-time synchronisation via WebSocket</li>
 <li>Integration with the CMS backend for data storage</li>
 </ul>
+                </details>
 <p class="tech-label"><strong>Technology stack:</strong></p>
                 <div class="tech-stack">
                     <span class="tech-tag">Vue 3</span>
@@ -668,7 +735,8 @@
 <h3><strong>Senior Frontend Developer</strong></h3>
 <p><strong>DGtek Fibre Network</strong> (Australia) | <!--p:role.dgtek.en-->Sep 2019–Sep 2023<!--/p-->  </p>
 <p><em>Remote</em></p>
-<p><a href="https://garevna.github.io/cv-resume/dgtek_portal.html"><strong>DGtek Provisioning Portal</strong></a> | 2020–2023</p>
+                <details class="project">
+                    <summary><a href="https://garevna.github.io/cv-resume/dgtek_portal.html"><strong>DGtek Provisioning Portal</strong></a> | 2020–2023</summary>
 <p>Frontend Lead / Senior Frontend Engineer</p>
 <p>Sole frontend engineer across DGtek&#39;s web products: the provisioning portal below, the corporate MPA site, a series of landing pages, and the npm packages that tied them together.</p>
 <p>Sole frontend engineer on a B2B OSS/provisioning platform for a fibre network operator expanding from Melbourne across Australia, serving three user groups: DGtek network admins, reseller ISPs (RSPs) and public visitors, over <!--p:records-->100k+<!--/p--> customer and building records. Owned the whole frontend estate — 14 repositories, ~72,000 lines of Vue/JS, delivered as a set of applications plus 7 in-house npm packages shared between them.</p>
@@ -683,12 +751,14 @@
 <p>• <strong>Packaged reusable functionality as published npm libraries</strong> (map/worker package, cost calculator, polygons editor, pits editor, two address-autocomplete components, date utilities), consumed by three separate applications and wired into their CI build scripts.</p>
 <p>• <strong>Shipped the coverage-check packages to DGtek&#39;s reseller ISPs</strong>, which turned a component into a distribution channel: a reseller&#39;s own site draws DGtek&#39;s live coverage polygons, resolves a visitor&#39;s address against them, then reads that zone&#39;s settings back from DGtek&#39;s admin to quote a realistic connection time — two days or two weeks by zone — before handing the visitor to a connection request. Coverage is edited in one place; the portal, the corporate site, every landing page and third-party reseller sites all follow from it.</p>
 <p>• Also built companion clients: a PWA connection-status checker, a public address-check landing page, and mobile app prototypes (Ionic/Capacitor and NativeScript).</p>
+                </details>
 <p><strong>Technology stack</strong>: Vue 2, Vuetify 2, Vuex, Vue Router, Web Workers, IndexedDB, Service Workers/PWA, Webpack, Google Maps API, Geoscape API, crypto-js, xlsx / json2csv / tokml, PDF generation, npm package publishing. Mobile prototypes on Vue 3 + Ionic + Capacitor.</p>
 <h3><strong>Frontend Developer</strong></h3>
 <p><strong>Pineapple</strong> | <!--p:role.pineapple.en-->2019–2022<!--/p-->  </p>
 <p><em>Remote</em></p>
 <p>Frontend across Pineapple&#39;s web products: a headless CMS was the largest of them, alongside the corporate site and a series of campaign landing pages — all sharing the DGtek coverage-check packages, so a visitor could test an address and start a connection request from any of them.</p>
-<p><strong>Public site — Nuxt 2, statically generated</strong></p>
+                <details class="project">
+                    <summary><strong>Public site — Nuxt 2, statically generated</strong></summary>
 <ul>
 <li><code>target: &#39;static&#39;</code> with SSR output: pages ship as HTML and hydrate on demand, deployed straight to a CDN branch</li>
 <li>Composed from <strong>10 npm packages I published</strong> (nav bar, internet plans, FAQ, testimonials, contact form, popup, footer, system bar, how-to-connect, shared styles), each versioned and released independently</li>
@@ -696,6 +766,7 @@
 <li>Navigation and page content resolved at runtime from the CMS endpoint, so marketing edits pages without a deploy</li>
 <li>Repo: <a href="https://github.com/garevna/nuxt-app">https://github.com/garevna/nuxt-app</a></li>
 </ul>
+                </details>
 <p class="tech-label"><strong>Technology stack:</strong></p>
                 <div class="tech-stack">
                     <span class="tech-tag">Nuxt 2</span>
@@ -705,7 +776,8 @@
                     <span class="tech-tag">vue-lazy-hydration</span>
                     <span class="tech-tag">PWA</span>
                 </div>
-<p><strong>CMS for Dynamic Landing Page Generation</strong></p>
+                <details class="project">
+                    <summary><strong>CMS for Dynamic Landing Page Generation</strong></summary>
 <p>Built a complete CMS enabling dynamic landing page creation, content management, and survey form generation with customizable field types.</p>
 <p><em>Architecture:</em></p>
 <ul>
@@ -713,6 +785,7 @@
 <li>Each landing page stored as JSON</li>
 <li>REST API for lifecycle management</li>
 </ul>
+                </details>
             </section>
 
             <section>
@@ -819,6 +892,20 @@
             <p>Available at: <a href="https://github.com/garevna/cv-resume" target="_blank" style="color: var(--accent); text-decoration: none;">github.com/garevna/cv-resume</a></p>
         </footer>
     </div>
+
+    <script>
+        // Печать: раскрыть все панели, чтобы в PDF не пропал текст, и вернуть
+        // как было, когда диалог закрыт.
+        const panels = () => Array.from(document.querySelectorAll('details.project'))
+        let wasOpen = []
+        addEventListener('beforeprint', () => {
+            wasOpen = panels().map(p => p.open)
+            panels().forEach(p => { p.open = true })
+        })
+        addEventListener('afterprint', () => {
+            panels().forEach((p, i) => { p.open = wasOpen[i] })
+        })
+    </script>
 </body>
 </html>
 

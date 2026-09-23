@@ -366,6 +366,57 @@
             padding: 0;
             font-size: 0.95em;
         }
+
+        /* Проект — сворачиваемая панель. Стек намеренно снаружи: тот, кто
+           просматривает резюме по диагонали, ищет именно его. */
+        details.project {
+            margin: 20px 0 10px;
+            border-left: 3px solid var(--border);
+            padding-left: 16px;
+        }
+
+        details.project[open] {
+            border-left-color: var(--accent);
+        }
+
+        details.project > summary {
+            cursor: pointer;
+            padding: 6px 0;
+            color: var(--accent);
+            font-size: 1.02em;
+            list-style: none;
+        }
+
+        details.project > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.project > summary::before {
+            content: '▸';
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            color: var(--text-light);
+        }
+
+        details.project[open] > summary::before {
+            content: '▾';
+        }
+
+        details.project > summary strong {
+            color: inherit;
+        }
+
+        /* На печати панели не должны прятать текст. */
+        @media print {
+            details.project > summary::before {
+                content: none;
+            }
+
+            details.project > *:not(summary) {
+                display: revert !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -399,6 +450,20 @@
             <p>Available at: <a href="https://github.com/garevna/cv-resume" target="_blank" style="color: var(--accent); text-decoration: none;">github.com/garevna/cv-resume</a></p>
         </footer>
     </div>
+
+    <script>
+        // Печать: раскрыть все панели, чтобы в PDF не пропал текст, и вернуть
+        // как было, когда диалог закрыт.
+        const panels = () => Array.from(document.querySelectorAll('details.project'))
+        let wasOpen = []
+        addEventListener('beforeprint', () => {
+            wasOpen = panels().map(p => p.open)
+            panels().forEach(p => { p.open = true })
+        })
+        addEventListener('afterprint', () => {
+            panels().forEach((p, i) => { p.open = wasOpen[i] })
+        })
+    </script>
 </body>
 </html>
 

@@ -64,8 +64,12 @@ const escape = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/
  *   Vue 2/3 • TypeScript • Vuetify 2/3
  */
 const pills = (html) => html.replace(
-  /<p><strong>([^<]+?):<\/strong>\s*(?:<br\s*\/?>)?\s*([\s\S]*?)<\/p>/g,
-  (whole, label, rest) => {
+  // The colon sits inside the bold almost everywhere and outside it once —
+  // **Technology stack:** against **Technology stack**: — so both are read
+  // rather than corrected in the source.
+  /<p><strong>([^<]+?):?<\/strong>:?\s*(?:<br\s*\/?>)?\s*([\s\S]*?)<\/p>/g,
+  (whole, rawLabel, rest) => {
+    const label = rawLabel.replace(/:\s*$/, '')
     // Inline markup is fine — a stack line may name `<script setup>` in code
     // font. Anything that starts a block of its own is prose, not a list.
     if (/<(a\s|ul|ol|div|p[\s>]|h[1-6])/.test(rest)) return whole
@@ -154,6 +158,82 @@ const cards = (chunk) => {
 }
 
 /**
+ * Every project in the experience becomes a panel that opens.
+ *
+ * The section is the longest on the page and a reader arrives wanting the
+ * shape of it, not seven hundred words at once. The title stays, the detail
+ * folds away — and the technology stack stays out of the fold, because that
+ * is what someone scanning is looking for.
+ *
+ * A project title is a paragraph that opens with bold text, optionally
+ * wrapped in a link, and it is never the first paragraph after a place of
+ * work — that one is the employer and the dates.
+ *
+ * Runs before the pills, while the stack is still a single line and the
+ * markup is one block per line.
+ */
+// The colon sits inside the bold in most of the resume and outside it once —
+// **Technology stack:** against **Technology stack**: — and both mean the same
+// thing, so both are recognised rather than corrected in the source.
+const STACK = /^<p><strong>[^<]*stack:?<\/strong>:?\s/i
+
+/**
+ * A title is a paragraph that is only its bold name, give or take a link
+ * around it and a date after it. A bold label with a sentence behind it —
+ * **Status:** the domain core is implemented… — is not a title, and the
+ * length of what follows is what tells them apart.
+ */
+const TITLE = /^<p>(?:<a\b[^>]*>)?<strong>[\s\S]*?<\/strong>(?:<\/a>)?([\s\S]*?)<\/p>\s*$/
+
+const isTitle = (line) => {
+  if (STACK.test(line)) return false
+  const m = line.match(TITLE)
+  if (!m) return false
+  return m[1].replace(/<[^>]+>/g, '').replace(/&[a-z]+;/gi, '_').trim().length <= 30
+}
+
+const CLOSES = /^<(h[2-4]|ul|ol)\b/
+
+const panels = (chunk) => {
+  if (!/^<h2>Professional Experience/.test(chunk)) return chunk
+
+  const out = []
+  let open = false
+  let afterRole = false
+
+  const close = () => {
+    if (!open) return
+    out.push('                </details>')
+    open = false
+  }
+
+  for (const line of chunk.split('\n')) {
+    if (/^<h3\b/.test(line)) { close(); afterRole = true; out.push(line); continue }
+
+    // The employer and the dates, directly under the role.
+    if (afterRole && /^<p>/.test(line)) { afterRole = false; out.push(line); continue }
+
+    if (STACK.test(line)) { close(); out.push(line); continue }
+
+    if (isTitle(line)) {
+      close()
+      const inner = line.replace(/^<p>/, '').replace(/<\/p>\s*$/, '')
+      out.push('                <details class="project">')
+      out.push('                    <summary>' + inner + '</summary>')
+      open = true
+      continue
+    }
+
+    if (!open && CLOSES.test(line)) { out.push(line); continue }
+
+    out.push(line)
+  }
+
+  close()
+  return out.join('\n')
+}
+
+/**
  * The page styles hang on <section>, one per chapter, and markdown has no
  * such thing — it has headings. Each <h2> opens a section and the next one
  * closes it.
@@ -167,6 +247,7 @@ const sections = rendered
   .map((chunk) => chunk.trim())
   .filter(Boolean)
   .map(cards)
+  .map(panels)
   .map(pills)
   .map(languages)
   .map(buttons)
