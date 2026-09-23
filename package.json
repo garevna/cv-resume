@@ -5,8 +5,9 @@
   "scripts": {
     "sync": "node scripts/sync-profile.mjs",
     "check": "node scripts/sync-profile.mjs --check",
+    "html": "node scripts/build-html.mjs",
     "pdf": "node scripts/build-pdf.mjs",
-    "build": "npm run sync && npm run pdf"
+    "build": "npm run sync && npm run html && npm run pdf"
   },
   "devDependencies": {
     "marked": "^18.0.12"
