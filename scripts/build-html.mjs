@@ -56,6 +56,29 @@ const rendered = marked.parse(body, { mangle: false, headerIds: false })
 const escape = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
 /**
+ * Splits on the commas that separate items, not on the ones inside an item.
+ *
+ *   Vue 3 (Composition API, `<script setup>`), TypeScript, Pinia
+ *
+ * reads as three technologies, not four: the first comma is part of the
+ * parenthesis and belongs to Vue. Anything nested — brackets too — is carried
+ * whole, and an unbalanced bracket simply never reopens the split.
+ */
+const commas = (html) => {
+  const out = ['']
+  let depth = 0
+
+  for (const char of html) {
+    if (char === '(' || char === '[') depth++
+    else if (char === ')' || char === ']') depth = Math.max(0, depth - 1)
+    else if (char === ',' && depth === 0) { out.push(''); continue }
+    out[out.length - 1] += char
+  }
+
+  return out
+}
+
+/**
  * A paragraph that opens with a bold label and a colon, and whose rest is a
  * list separated by • or commas, is a technology stack.
  *
@@ -80,7 +103,7 @@ const pills = (html) => html.replace(
     const bulleted = rest.includes('•')
     if (!bulleted && !/stack$/i.test(label)) return whole
 
-    const parts = (bulleted ? rest.split('•') : rest.split(','))
+    const parts = (bulleted ? rest.split('•') : commas(rest))
       .map((p) => p.replace(/<br\s*\/?>/g, ' ').trim())
       .filter(Boolean)
 
