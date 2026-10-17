@@ -14,13 +14,14 @@
     "period": "month"
   },
   "yearsExperience": 8,
-  "yearsMentoring": 8,
-  "npmPackages": 38,
+  "yearsMentoring": 10,
+  "npmPackages": 39,
   "recordsHandled": "100k+",
   "links": {
     "github": "https://github.com/garevna",
     "linkedin": "https://www.linkedin.com/in/garevna/",
-    "lessons": "https://garevna.github.io/js-lessons/"
+    "lessons": "https://garevna.github.io/js-lessons/",
+    "npm": "https://www.npmjs.com/~garevna"
   },
   "lastUpdated": "September 2026",
   "roles": {

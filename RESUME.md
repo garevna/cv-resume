@@ -3,13 +3,17 @@
 
 📧 <!--p:email.md-->[irina.h.fylyppova@gmail.com](mailto:irina.h.fylyppova@gmail.com)<!--/p-->  
 🔗 [GitHub](https://github.com/garevna) | [LinkedIn](https://www.linkedin.com/in/garevna/)  
-🌍 <!--p:location.en-->Kharkiv, Ukraine<!--/p--> | <!--p:availability.en-->Remote only<!--/p-->
+🌍 <!--p:location.en-->Kharkiv, Ukraine<!--/p--> | <!--p:availability.en-->Remote only<!--/p--> | <!--p:timezone-->UTC+2 (Kyiv)<!--/p-->, working across any timezone
+
+**Open to:** Senior Frontend Engineer · Full-Stack Engineer (Vue / Node) · Frontend Architect · Developer Advocate · Technical Writer — contract or freelance
+
+📁 **[Project catalogue](./PROJECTS.md)** — every project at full length
 
 ---
 
 ## Professional Summary
 
-Senior Frontend Developer with <!--p:years-->8+<!--/p--> years of experience building high-performance web applications and managing complex data systems. Specialized in architecting scalable solutions, optimizing performance, real-time synchronization, and leading technical design decisions. Proven track record of delivering complex multi-featured systems serving <!--p:records-->100k+<!--/p--> records and managing cross-functional teams.
+Senior Frontend Developer with <!--p:years-->8+<!--/p--> years building high-performance web applications — and the architecture underneath them. I take frontend estates end to end: at DGtek I was the sole frontend engineer across 14 repositories and ~72,000 lines of Vue, three applications over <!--p:records-->100k+<!--/p--> customer and building records, with the entire data layer behind a Web Worker boundary and monthly revenue, churn and ARPU reporting moved off the server into IndexedDB cursors in the browser. <!--p:packages-->39<!--/p--> published npm packages, several of them shipped to third-party companies — one team’s component became another company’s website. I also write and teach: an open JavaScript course in three languages, on a rendering platform I built from scratch and release through a build gated by eight command-line checks.
 
 ---
 
@@ -22,276 +26,193 @@ Vue 2/3 (Composition API, `<script setup>`) • TypeScript • Vuetify 2/3 • P
 Web Workers • IndexedDB (with advanced indexing) • REST API • WebSockets • Real-time Synchronization • Geolocation APIs (Google Maps, MapLibre GL, Geoscape)
 
 **DevOps & Tools:**  
-Git • Firebase Auth • GitLab CI • vite-ssg • Directus
+Git • GitHub Actions • GitLab CI • pnpm workspaces • Cloudflare Workers / D1 / KV • Cloudflare Pages • Firebase Auth • Firestore • Telegram Bot API • vite-ssg • Directus
 
-**Backend (foundational):**  
-Node.js • Express • File System (fs)
+**Backend:**  
+Node.js • Express • Cloudflare Workers (D1, KV, Cron Triggers) • SQL migrations • REST API design • Token verification and RBAC
 
 **Design & Testing:**  
-Figma • SEO • Accessibility (a11y) • E2E Testing (Cypress) • Unit Testing (Vitest)
+Figma • SEO • Accessibility (a11y) • E2E Testing (Cypress, Playwright) • Unit Testing (Vitest) • Type checking (vue-tsc)
 
 ---
-
 ## Professional Experience
 
-### **Senior Frontend Developer**  
-**ITNET** (Lviv, Ukraine) | <!--p:role.itnet.en-->Feb 2025–Present<!--/p-->  
+### **Senior Frontend Developer** — ITNET
 
-#### Project Portfolio
+**Lviv, Ukraine** | <!--p:role.itnet.en-->Feb 2025–Present<!--/p--> · *Remote*
 
-**1. Admin Dashboard — Corporate administration platform**
+Eight projects on Vue 3 and TypeScript, from marketing sites to the platform below.
 
-SPA for managing users, roles, departments and transport infrastructure. Features include JWT authentication, role-based access control (RBAC), CRUD operations, data search and filtering, bus editing, geographical modules based on MapLibre, interface localisation and integration with a REST API.
+- **VD Express Platform** — a white-label booking core as a pnpm monorepo split by
+  responsibility (`wizard-core`, `app-types`, `app-services`, `shared-ui`,
+  `event-manager`). The core imports no host store: the application registers them through
+  `registerStoresFor*()`, so one core serves several independent carriers. Step order is
+  declarative too — `WizardStep` predicates rather than a hard-coded flow.
+- **VD-Express & Site Constructor** — international coach booking: real-time seat
+  availability over WebSocket with reconnection and ping monitoring, interactive cabin
+  plans, door-to-door transfers on MapLibre, runtime-loaded themes for new brands without
+  a rebuild, Firebase Auth, three locales.
+- **BUSPORTAL** — a marketing site statically generated with `vite-ssg`: 20+ pre-rendered
+  routes across four locales, Pinia state serialised into the markup, and the SEO layer
+  extracted into a standalone composable.
 
-**Technology stack:** Vue 3, TypeScript, Pinia, Vue Router, Vuetify 3, Axios, MapLibre GL, Vue i18n, Vite, Vitest, Cypress
+**Stack:** Vue 3, TypeScript, Vuetify 3, Pinia, Vue Router, vue-i18n, Vite, Vitest,
+Cypress, MapLibre GL, Firebase Auth, WebSocket, pnpm workspaces
 
----
-
-**2. VD-Express — International Bus Booking Platform**
-
-Built frontend from scratch for international bus transportation service handling real-time seat selection, multi-step booking flows, and geolocation-based transfers.
-
-*Architecture & Design:*
-- Designed runtime-loadable theme system enabling deployment for new brands without frontend rebuilds
-- Integrated WebSocket real-time synchronization for live seat availability and booking status updates
-- Implemented multi-language support (uk/en/de) with locale-specific formatting (dates, currencies, phone numbers)
-- Firebase Auth integration (email/password, SMS+reCAPTCHA, Google OAuth)
-- Dynamic meta-tags and SEO optimization for search engines and AI crawlers
-
-*Key Features:*
-- Multi-step booking flow: search → route selection with transfers → seat selection on bus map → passenger data → payment
-- Personal transfers: interactive map-based pickup/dropoff with geolocation and cost calculation
-- Real-time seat sync through WebSocket with automatic reconnection (exponential backoff)
-- Reusable component library with Vuetify 3 and custom patterns
-
-**Technology stack:** Vue 3 (Composition API), TypeScript, Vuetify 3, Pinia, Firebase Auth, WebSocket, REST API, MapLibre GL, Vue i18n
+→ **[All eight projects in the catalogue](./PROJECTS.md)**
 
 ---
 
-**3. BUSPORTAL — a multilingual promotional website for a SaaS platform**
+### **Senior Frontend Developer / Frontend Lead** — DGtek Fibre Network
 
-A marketing website for a CRM platform aimed at bus and logistics companies: showcasing features, pricing, FAQs, a blog and a lead generation funnel. The website is fully statically pre-rendered, available in four languages (uk/en/de/ru) and serves the Ukrainian, European and international markets.
+**Australia** | <!--p:role.dgtek.en-->Sep 2019–Sep 2023<!--/p--> · *Remote*
 
-*Technical solution:*
-- **Static generation with hydration** via vite-ssg: all routes are pre-rendered as HTML, and the Pinia state is serialised into the markup
-- **Four localisations, 20+ routes** with distinct URLs, synchronisation of localisation with the route during pre-rendering and at runtime
-- **SEO layer** as a separate composable: title/description/keywords, canonical, hreflang, Open Graph, Twitter Card, sitemap.xml with auto-generation
-- **Lead generation and analytics:** demo request, price enquiry and call-back forms; integration with APIs and events in GA4/Google Ads
-- **Interactive interface:** sticky-scroll with synchronised images, custom sliders, responsive cards with hover states
-- **Content on self-hosted Directus:** pre-rendered blog posts with actual publication dates and cross-regional alternate links
+Sole frontend engineer on a B2B provisioning platform for a fibre operator — 14
+repositories, ~72,000 lines of Vue, three applications and 7 in-house npm packages, over
+<!--p:records-->100k+<!--/p--> customer and building records.
 
-**Technology stack:** Vue 3 (Composition API), TypeScript, Vite 7, vite-ssg, Vuetify 3, Pinia, vue-i18n, vue-router, @unhead/vue, Directus 11, GA4, ESLint + Prettier
+- **Architected a Web Worker data layer** used by every application: a route/action message
+  controller, credentials encrypted rather than left in localStorage, all API traffic, and
+  a versioned IndexedDB cache of ten object stores with secondary indexes and
+  migration-aware upgrades — which is what kept a heavy admin UI responsive and
+  offline-tolerant.
+- **Moved reporting off the server**: monthly revenue, churn and ARPU are computed in the
+  worker over IndexedDB cursors and rendered with Google Charts, removing a whole class of
+  slow report endpoints.
+- **Turned a component into a distribution channel**: coverage-check packages shipped to
+  DGtek's reseller ISPs draw the operator's live polygons on sites DGtek does not control,
+  resolve a visitor's address against them and quote a realistic connection time from that
+  zone's settings. Coverage is edited in one place and every downstream site follows.
+- Geospatial work on Google Maps and Geoscape, a fibre-haul cost calculator exporting
+  client-ready PDF quotes, and bulk import/export tooling with a validation pipeline.
 
----
+**Stack:** Vue 2, Vuetify 2, Vuex, Web Workers, IndexedDB, Service Workers/PWA, Webpack,
+Google Maps API, Geoscape, crypto-js, npm publishing
 
-**4. IS PORTAL — telecommunications business automation platform**
-
-A responsive multi-page landing page for a B2B platform for managing connections, installation teams, requests, warehouses and procurement.
-
-*Features implemented:*
-- Responsive versions for desktop and mobile with distinct UX patterns
-- Localisation of the interface; interactive menu and seamless navigation between sections
-- Pricing module with the option to switch between monthly and annual subscriptions
-- Request, call-back and consultation forms with validation
-- FAQ section, pop-ups and carousels using Swiper
-- Component-based architecture using Vue 3
-
-**Technology stack:** Vue 3, TypeScript, Vite, Pinia, Vue i18n, Vuetify, Swiper, Vitest
-
----
-
-**5. IT NET — an IT company’s corporate website**
-
-A responsive, multilingual landing page (uk/en/de) showcasing the company, its CRM products and services. The site features interactive cards, separate desktop and mobile navigation flows, feedback forms and pop-up scenarios.
-
-*Scope of responsibility:*
-- Development of the user interface, responsive layout and interactivity
-- Integration of client-side logic and Vuetify components
-- (Docker and CI/CD were set up by other team members)
-
-**Technology stack:** Vue 3, TypeScript, Vite, Vuetify, Pinia, Vue i18n, Swiper, Vitest
+→ **[Full case study](https://garevna.github.io/cv-resume/dgtek_portal.html)** ·
+**[Catalogue](./PROJECTS.md)**
 
 ---
 
-**6. Site Constructor — multi-brand (white-label) front-end platform**
+### **Frontend Developer** — Pineapple
 
-Developed the client-side of an online bus ticket sales platform, where a single codebase supports several independent brands simultaneously. The design theme is determined at runtime; UI components, colour schemes, localisation and content specific to each brand are dynamically loaded — without the need to rebuild the project.
+**ISP reselling DGtek's network** | <!--p:role.pineapple.en-->2019–2022<!--/p--> · *Remote*
 
-*Booking flow implemented:*
-- Route search (including geolocation) using the MapLibre GL map
-- Comparison of journey options; interactive seat selection diagram on the bus
-- Passenger details, adding luggage, selecting services
-- Payment and receipt of an e-ticket; personal account with booking history
+A Nuxt 2 public site, statically generated and composed from **10 npm packages I
+published**, with selective hydration through `vue-lazy-hydration` and navigation resolved
+from the CMS at runtime — plus the headless CMS itself (Vue frontend, Node/Express
+backend) storing landing pages as JSON with a publish/hide lifecycle.
 
-*Architectural approach:*
-- Vue 3 (Composition API) + TypeScript with Vuetify 3 as the component library
-- Pinia: state is broken down into subject-specific stores (search, booking, passengers, payments, authorisation)
-- vue-i18n with separate dictionary sets for each brand
-- Content (dynamic pages, menus, colours, popular destinations) is defined in a JSON configuration file
-- Runtime theme selection via `defineAsyncComponent` with dynamic import
-- Responsive layout with separate mobile UX patterns
-
-**Technology stack:** Vue 3 (Composition API, `<script setup>`), TypeScript, Vuetify 3, Pinia, vue-i18n, MapLibre GL, Firebase Auth, REST API
+**Stack:** Nuxt 2, Vue 2, Vuetify 2, Vuex, vue-lazy-hydration, PWA, Node.js, Express
 
 ---
 
-**7. VD Express Platform — modular front-end platform (Active Development)**
+## Independent Products & Education
 
-The online booking platform for international coach services is designed as a reusable core that serves several independent operators via a white-label solution. The entire booking flow is implemented within the reusable core as a Vue plugin.
+### **Full-Stack Developer** — Bible
 
-*Architecture:*
-- **Monorepository** on pnpm workspaces, split by responsibility:
-  - `wizard-core` — booking core (Pinia forms, domain services, routes)
-  - `app-types` — unified domain contract (models for journeys, segments, buses, seats)
-  - `app-services` — API layer (search, booking, reservations, calculations)
-  - `shared-ui` — component library (fields with masks, phone number validation)
-  - `event-manager` — typed application event bus
+**Reading app and ministry coordination platform** | 2023–Present ·
+[kcc-bible.pp.ua](https://kcc-bible.pp.ua/) · [source](https://github.com/garevna/bible)
 
-- **Dependency inversion:** the core does not import application stores; instead, the host registers them via `registerStoresFor*()`, ensuring full reusability
+Started alone in 2023 as a Bible reader and grown into the tool a church runs its
+ministries on. Now developed with an AI coding agent — the practice above comes from here.
+About 25,000 lines; my only TypeScript-first codebase, and the one I would show to explain
+how I work today.
 
-- **Configurable flow:** `WizardStep` with `isEnabled/canEnter/canLeave` predicates and `WizardFlowConfig` allow the order of steps to be described declaratively
+- **A serverless back end of its own**: a Cloudflare Worker verifies the caller's Firebase
+  token and decides authorisation itself — roles and ministries in KV, messages, events,
+  participants and materials in D1 behind five versioned SQL migrations, a nightly cron,
+  a CORS allowlist, the bot token as a Worker secret. 3,600 lines of Worker TypeScript with
+  1,700 lines of tests beside it.
+- **Permissions designed against lock-out**: reader, publisher, administrator, plus owners
+  the admin page cannot modify, and no administrator can change their own role.
+- **A rota with real operational logic**: recurring events with a different time per
+  weekday and single-day overrides, two invitation modes, substitutes who agree in advance
+  and step in automatically, escalation to the schedulers when both decline.
+- **Two Telegram bots** — one publishing to the church channel, a service bot writing to
+  ministers privately with inline buttons whose effect matches acting in the app.
+- **A rewrite that kept its users**: a migration script mints a Firebase Auth account per
+  legacy login, dry run by default, with `--check`, `--undo` and `--delete-legacy` as
+  separate deliberate steps.
 
-*Functionality:*
-- Search for return journeys with route planning via connections
-- Interactive cabin layout with real-world seating plans, seat types and automatic seat selection for groups
-- Real-time seat availability synchronisation via WebSocket with automatic reconnection and ping monitoring
-- Passengers with seat types and discounts, step-by-step cost recalculation in multiple currencies
-- Full lifecycle: booking → payment → PDF tickets → email → cancellation/refund
-- Personal account with history, loyalty programme and promotions
-- Door-to-door transfers: geolocation, zones on MapLibre, cost calculation
-- Three languages (uk/en/de) with localised formats
-
-**Technology stack:** Vue 3 (Composition API), TypeScript, Vite, Vuetify 3, Pinia + persisted state, Vue Router, vue-i18n, MapLibre GL, Firebase Auth, WebSocket, Axios, libphonenumber-js, pnpm workspaces
-
-**Status:** The domain core, API layer, UI library and main booking workflow have been fully implemented. The next stage involves the declarative configuration of the workflow and the integration of a second carrier client.
-
----
-
-**8. Visual Content Editor — a visual editor for content management**
-
-An interactive visual editor for creating and editing website content in real time. It allows users to modify text, images, styles and page structure without needing to access the code.
-
-*Features:*
-- Drag-and-drop editing of page components
-- WYSIWYG editor with real-time preview
-- Style management (colours, fonts, sizes) via an intuitive interface
-- Saving and version control of content
-- Synchronisation of changes between the editor and the live version of the website
-- Support for multilingual content
-- 
-*Architecture:*
-- Vue 3 (Composition API) for reactive interface updates
-- Pinia for managing the editor’s state and change history
-- Real-time synchronisation via WebSocket
-- Integration with the CMS backend for data storage
-
-**Technology stack:** Vue 3, TypeScript, Vuetify 3, Pinia, WebSocket, REST API, Vite
+**Stack:** Vue 3, TypeScript, Pinia, Vuetify 3, Vite, PWA, Cloudflare Workers / D1 / KV /
+Cron, Firebase Auth, Firestore, Telegram Bot API, MapLibre GL, Playwright, Vitest, pnpm
 
 ---
 
----
+### **Author & Platform Engineer** — developer education
 
-### **Senior Frontend Developer**  
+**Independent** | 2015–Present ·
+[garevna.github.io/js-lessons](https://garevna.github.io/js-lessons/)
 
-**DGtek Fibre Network** (Australia) | <!--p:role.dgtek.en-->Sep 2019–Sep 2023<!--/p-->  
+Teaching developers since 2015, with the courseware public and deployed from 2017 onwards:
+garevna.github.io (2017), vue-course (2018), js-simulator (2018), js-course (2019) and
+**Client-Side JS** today — 164 lessons in Ukrainian, Russian and English.
 
-*Remote*
+- **A rendering platform with no framework**: native custom elements with shadow DOM, a
+  versioned service worker for offline reading, and web workers delivering content and
+  icons.
+- **An authoring language and its compiler**: lessons compile to components — replayable
+  console and terminal sessions, quizzes, and code-repair exercises that run the reader's
+  code in a sandboxed frame and score the repair.
+- **Release gated by eight command-line checks**, including a byte-exact translation
+  round-trip: every page is reassembled from its skeleton and message files and compared
+  with the original before anything ships.
+- **A serverless rebuild under a deadline**: when Glitch ended project hosting, the five
+  practice back-ends twelve lessons depend on were rebuilt as one Cloudflare Worker, every
+  route reconstructed from the request text printed in the lessons.
 
-[**DGtek Provisioning Portal**](https://garevna.github.io/cv-resume/dgtek_portal.html) | 2020–2023
+**Stack:** JavaScript (ES2022), Web Components, Shadow DOM, Service Workers, Web Workers,
+Webpack, Cloudflare Workers, Node.js tooling, Chrome DevTools Protocol
 
-Frontend Lead / Senior Frontend Engineer
-
-Sole frontend engineer across DGtek's web products: the provisioning portal below, the corporate MPA site, a series of landing pages, and the npm packages that tied them together.
-
-Sole frontend engineer on a B2B OSS/provisioning platform for a fibre network operator expanding from Melbourne across Australia, serving three user groups: DGtek network admins, reseller ISPs (RSPs) and public visitors, over <!--p:records-->100k+<!--/p--> customer and building records. Owned the whole frontend estate — 14 repositories, ~72,000 lines of Vue/JS, delivered as a set of applications plus 7 in-house npm packages shared between them.
-
-• **Admin dashboard** (~42k LOC): network footprint and building management, customers and services, SLAs, partners, ticketing, installation scheduling, document storage, role/permission settings and an analytics section (MRR, churn, ARPU, connection pipeline, per-building and per-partner reports).
-
-• **Partner (RSP) cabinet**: address serviceability check, customer and service lifecycle (assign, suspend, resume, cancel), tickets, installation slot booking, statistics and white-labelled company profile.
-
-• **Entry & registration app**: partner onboarding with ABN/email/phone validation, auth, password recovery, public build-cost calculator.
-
-• **Architected a Web Worker data layer** used across all apps: a route/action message controller, credentials kept encrypted rather than in plain localStorage (crypto-js), all API traffic and a versioned IndexedDB cache (10 object stores with secondary indexes, migration-aware upgrades, MessageChannel ports). This kept a heavy admin UI responsive and offline-tolerant on datasets of thousands of buildings and customers.
-
-• **Moved reporting to the client**: monthly revenue, churn and connection reports are computed in the worker over IndexedDB cursors and indexes instead of on the server, then rendered with Google Charts — removing a whole class of slow report endpoints.
-
-• **Geospatial features on Google Maps API + Geoscape (AU address database)**: rendering of serviceability polygons and building markers by status (lit / footprint / under construction / coming soon), point-in-polygon address lookup, fallback flow for addresses Google fails to geocode, and in-map editors for polygons and pits.
-
-• **Build-cost calculator** estimating fibre haul cost from a building to the nearest pit (tunnels, Telstra/NBN ducts, open trench, underboring, pit types, reinstatement, traffic management) and exporting a client-ready PDF quote.
-
-• **Bulk data tooling**: customer import from spreadsheets with a validation pipeline separating fatal errors, errors and warnings; exports to Excel, CSV and KML; editable inline engineering table (PPPoE credentials, IP, VLANs, subnets).
-
-• **Packaged reusable functionality as published npm libraries** (map/worker package, cost calculator, polygons editor, pits editor, two address-autocomplete components, date utilities), consumed by three separate applications and wired into their CI build scripts.
-
-• **Shipped the coverage-check packages to DGtek's reseller ISPs**, which turned a component into a distribution channel: a reseller's own site draws DGtek's live coverage polygons, resolves a visitor's address against them, then reads that zone's settings back from DGtek's admin to quote a realistic connection time — two days or two weeks by zone — before handing the visitor to a connection request. Coverage is edited in one place; the portal, the corporate site, every landing page and third-party reseller sites all follow from it.
-
-• Also built companion clients: a PWA connection-status checker, a public address-check landing page, and mobile app prototypes (Ionic/Capacitor and NativeScript).
-
-**Technology stack**: Vue 2, Vuetify 2, Vuex, Vue Router, Web Workers, IndexedDB, Service Workers/PWA, Webpack, Google Maps API, Geoscape API, crypto-js, xlsx / json2csv / tokml, PDF generation, npm package publishing. Mobile prototypes on Vue 3 + Ionic + Capacitor.
-
----
-
-### **Frontend Developer**  
-**Pineapple** | <!--p:role.pineapple.en-->2019–2022<!--/p-->  
-
-*Remote*
-
-Frontend across Pineapple's web products: a headless CMS was the largest of them, alongside the corporate site and a series of campaign landing pages — all sharing the DGtek coverage-check packages, so a visitor could test an address and start a connection request from any of them.
-
-**Public site — Nuxt 2, statically generated**
-
-- `target: 'static'` with SSR output: pages ship as HTML and hydrate on demand, deployed straight to a CDN branch
-- Composed from **10 npm packages I published** (nav bar, internet plans, FAQ, testimonials, contact form, popup, footer, system bar, how-to-connect, shared styles), each versioned and released independently
-- Selective hydration via `vue-lazy-hydration` (`when-visible`): below-the-fold sections cost nothing until the visitor reaches them
-- Navigation and page content resolved at runtime from the CMS endpoint, so marketing edits pages without a deploy
-- Repo: https://github.com/garevna/nuxt-app
-
-**Technology stack:** Nuxt 2, Vue 2, Vuetify 2, Vuex, vue-lazy-hydration, PWA
-
----
-
-**CMS for Dynamic Landing Page Generation**
-
-Built a complete CMS enabling dynamic landing page creation, content management, and survey form generation with customizable field types.
-
-*Architecture:*
-- Backend uses file system storage
-- Each landing page stored as JSON
-- REST API for lifecycle management
+→ **[Catalogue](./PROJECTS.md)**
 
 ---
 
 ## Core Competencies
 
-### Performance & Optimization
-- **Web Workers + IndexedDB:** distribute computation, handle massive datasets, advanced indexing strategies
-- **Bundle optimization:** code splitting, dynamic imports, lazy loading
-- **Real-time Synchronization:** WebSocket with automatic reconnection, exponential backoff, ping-control
+**Performance & data at scale** — Web Workers and IndexedDB with secondary indexes and
+migration-aware upgrades; reporting computed over cursors in the browser instead of on the
+server; bundle splitting and lazy hydration.
 
-### Architecture & Design
-- Scalable architectures for complex applications (100k+ records)
-- State management (Pinia, Vuex) with guaranteed data consistency
-- White-label and multi-brand systems with runtime configuration
-- Plugin-based architecture for code reusability
-- Component-driven development with reusable UI patterns
+**Architecture** — white-label and multi-brand systems configured at runtime; monorepos
+split by responsibility with dependency inversion, so one core serves several hosts;
+plugin-based reuse; state split into subject-specific stores.
 
-### Real-time Systems
-- WebSocket handling with robust reconnection logic
-- Multi-app data sync (editor + preview + production)
-- Offline-first strategies with intelligent fallback
+**Real-time** — WebSocket synchronisation with automatic reconnection, exponential backoff
+and ping monitoring; multi-app data sync; offline-first fallbacks.
 
-### Accessibility & SEO
-- Semantic HTML, ARIA attributes, screen reader testing
-- Dynamic meta-tags for search engines and AI crawlers
-- International localization and multi-locale support
+**Back end** — Cloudflare Workers with D1, KV and cron triggers; versioned SQL migrations;
+token verification and role-based access designed against privilege lock-out; REST APIs on
+Node and Express.
+
+**Accessibility & SEO** — semantic HTML, ARIA, screen-reader testing; static pre-rendering
+with hydration; canonical, hreflang, Open Graph and generated sitemaps; dynamic meta tags
+for search engines and AI crawlers.
+
+### AI-Assisted Engineering
+
+- **Agent-driven development with a verification loop:** a substantial share of my work is
+  produced with an AI coding agent and none of it is trusted on sight — changes are
+  exercised in a real headless browser over the Chrome DevTools Protocol, measured before
+  and after, and reverted byte for byte when the measurement contradicts the claim
+- **Harness before feature:** every new construct ships with a validator, so a malformed
+  input is named on the command line instead of rendering as silent emptiness — the role
+  an eval suite plays in an LLM product
+- **Sandboxed execution of untrusted code:** reader-submitted code runs in an isolated
+  frame and is graded by behavioural assertions rather than text comparison, because a real
+  problem has several correct answers
+- **Scoring instead of pass/fail:** an exercise can report that the code works and could
+  have been written better, which is usually the truthful answer
 
 ### Mentoring & Communication
-- <!--p:yearsMentoring-->8+<!--/p--> years mentoring junior developers
+
+- <!--p:yearsMentoring-->10+<!--/p--> years mentoring junior developers, with the
+  courseware public since 2017
 - Onboarding students to commercial projects
 - Direct stakeholder communication with C-level executives
-- Technical documentation and code reviews
-
----
+- Technical documentation and code reviews — including documentation written for the
+  non-technical people who use what I build
 
 ## Education
 
@@ -302,6 +223,9 @@ Higher Education (Mathematician)
 
 ## Portfolio
 
+<!--p:packages-->39<!--/p--> published npm packages, and 87 public repositories of which 63 are deployed as live sites — Vue and JavaScript in roughly equal measure, with at least one release every year since 2017.
+
+- 📦 **npm:** https://www.npmjs.com/~garevna
 - 📚 **JS Lessons:** https://garevna.github.io/js-lessons/
 - 🧠 **JS Quiz:** https://garevna.github.io/js-quiz/
 - 🎨 **JS Philosophy Memes:** https://github.com/garevna/cv-resume/tree/main/media/js-memes

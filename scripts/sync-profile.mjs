@@ -24,7 +24,7 @@ import { dirname, join, relative } from 'node:path'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
-const FILES = ['README.md', 'RESUME.md', 'CV_UA.md', 'index.html']
+const FILES = ['README.md', 'RESUME.md', 'PROJECTS.md', 'CV_UA.md', 'index.html']
 
 const MARKER = /<!--p:([a-zA-Z0-9_.]+)-->([\s\S]*?)<!--\/p-->/g
 
@@ -64,6 +64,7 @@ function buildValues (profile) {
     'links.github': profile.links.github,
     'links.linkedin': profile.links.linkedin,
     'links.lessons': profile.links.lessons,
+    'links.npm': profile.links.npm,
 
     'lastUpdated': profile.lastUpdated
   }

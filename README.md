@@ -6,6 +6,7 @@
 
 - **[:round_pushpin: pdf](https://garevna.github.io/cv-resume/RESUME-eng.pdf)**
 - **[RESUME.md](./RESUME.md)** — English version for international opportunities
+- **[PROJECTS.md](./PROJECTS.md)** — the full project catalogue behind it
 - **[CV_UA.md](./CV_UA.md)** — Ukrainian version
 - **[Interactive web version](https://garevna.github.io/cv-resume/index.html)**
 
@@ -38,15 +39,15 @@ Senior Frontend Developer with <!--p:years-->8+<!--/p--> years of experience bui
 - **Performance optimization:** Web Workers, IndexedDB, bundle optimization
 - **Real-time systems:** WebSocket synchronization, live updates
 - **Complex architectures:** multi-step workflows, dynamic theming, state management
-- **Mentoring & leadership:** <!--p:yearsMentoring-->8+<!--/p--> years teaching junior developers
+- **Mentoring & leadership:** <!--p:yearsMentoring-->10+<!--/p--> years teaching junior developers
 
 ## 💰 Key Stats
 
 - <!--p:years-->8+<!--/p--> years senior frontend development
 - <!--p:records-->100k+<!--/p--> records database experience
 - 8+ complete projects from architecture to deployment
-- <!--p:yearsMentoring-->8+<!--/p--> years mentoring junior developers
-- <!--p:packages-->38<!--/p--> NPM packages published
+- <!--p:yearsMentoring-->10+<!--/p--> years mentoring junior developers
+- <!--p:packages-->39<!--/p--> NPM packages published
 - Remote-only specialist
 
 ## 💼 Recent Work
@@ -77,7 +78,7 @@ A Nuxt 2 public site, statically generated and composed from **10 npm packages I
 
 ## 🛠️ Tech Stack
 
-Vue 2/3 (Composition API) | Nuxt 2 | TypeScript | Pinia/Vuex | Web Workers | IndexedDB | Firebase Auth | REST API | Node.js/Express | Google Maps | Webpack/Vite | <!--p:packages-->38<!--/p--> NPM packages
+Vue 2/3 (Composition API) | Nuxt 2 | TypeScript | Pinia/Vuex | Web Workers | IndexedDB | Firebase Auth | REST API | Node.js/Express | Google Maps | Webpack/Vite | <!--p:packages-->39<!--/p--> NPM packages
 
 ## 🌐 Current Status
 
