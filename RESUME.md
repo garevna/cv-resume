@@ -240,13 +240,13 @@ Higher Education (Mathematician)
 
 - 🇺🇦 Ukrainian (Native)
 - 🇷🇺 Russian (Fluent)
-- 🇬🇧 English (Upper-Intermediate)
+- 🇬🇧 English (Professional working proficiency)
 
 ---
 
 ## Work Preferences
 
 - ✅ <!--p:availability.en-->Remote only<!--/p-->
-- 💰 Salary expectation: <!--p:salary.en-->$3,500+/month<!--/p-->
+- 💰 Rate: <!--p:salary.en-->Depends on scope and engagement — happy to discuss<!--/p-->
 - 📍 Timezone: <!--p:timezone-->UTC+2 (Kyiv)<!--/p-->
 - 🔄 Open to long-term engagements, complex projects, and architectural challenges

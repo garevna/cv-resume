@@ -50,8 +50,12 @@ function buildValues (profile) {
     'location.ua': profile.location.ua,
     'timezone': profile.timezone,
 
-    'salary.en': `${symbol}${grouped(',')}+/${salary.period}`,
-    'salary.ua': `від ${symbol}${grouped(',')}/місяць`,
+    // Not a figure. A published number can only be a ceiling — no client
+    // offers above what the candidate already asked for in writing — and the
+    // old $3,500 sat below the floor for this profile. The amount stays in
+    // profile.json to quote from; the documents say how it is decided.
+    'salary.en': 'Depends on scope and engagement — happy to discuss',
+    'salary.ua': 'Залежить від обсягу та формату — готова обговорити',
 
     'availability.en': profile.remoteOnly ? 'Remote only' : 'Open to on-site',
     'availability.ua': profile.remoteOnly ? 'Тільки remote' : 'Готова до офісу',

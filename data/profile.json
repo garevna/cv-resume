@@ -9,9 +9,11 @@
   "timezone": "UTC+2 (Kyiv)",
   "remoteOnly": true,
   "salary": {
-    "amount": 3500,
+    "amount": 5500,
     "currency": "USD",
-    "period": "month"
+    "period": "month",
+    "public": false,
+    "note": "Not published. Quoted per engagement; researched range for this profile is $5,500-7,500/month or EUR 30-40/hour on a B2B contract."
   },
   "yearsExperience": 8,
   "yearsMentoring": 10,
