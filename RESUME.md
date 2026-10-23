@@ -65,7 +65,7 @@ Cypress, MapLibre GL, Firebase Auth, WebSocket, pnpm workspaces
 
 ### **JavaScript & Vue.js Instructor** — Ukrainian IT School
 
-**Kharkiv** | <!--p:role.itschool.en-->Feb 2019–Dec 2024<!--/p--> · *Part-time, alongside client work*
+**Kharkiv** | <!--p:role.itschool.en-->Sep 2019–Sep 2025<!--/p--> · *Part-time, alongside client work*
 
 Taught JavaScript and Vue.js to junior developers for six years, on a course I wrote and
 still maintain — and a shorter Vue course beside it.
@@ -85,7 +85,7 @@ languages, described below.
 
 ### **Front-End Instructor** — A-Level IT School
 
-**Kharkiv** | <!--p:role.alevel.en-->2016–2019<!--/p--> · *Part-time*
+**Kharkiv** | <!--p:role.alevel.en-->2017–2019<!--/p--> · *Part-time*
 
 Where the course began. Two years of teaching front-end fundamentals, with the material
 written as it was taught — the first public release of it dates from 2017.
