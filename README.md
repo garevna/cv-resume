@@ -85,7 +85,7 @@ Vue 2/3 (Composition API) | Nuxt 2 | TypeScript | Pinia/Vuex | Web Workers | Ind
 - ✅ **Open to opportunities** | <!--p:availability.en-->Remote only<!--/p-->
 - 💵 **Rate:** <!--p:salary.en-->Depends on scope and engagement — happy to discuss<!--/p-->
 - 📍 **Timezone:** <!--p:timezone-->UTC+2 (Kyiv)<!--/p-->
-- 🗣️ **Languages:** Ukrainian, Russian, English (Professional working proficiency)
+- 🗣️ **Languages:** Ukrainian, Russian, English (C2 — Proficient)
 
 ## 🔧 Maintaining This Repo
 
