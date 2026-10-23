@@ -279,7 +279,7 @@ Frontend Lead / Senior Frontend Engineer
 
 Sole frontend engineer across DGtek's web products: the provisioning portal below, the corporate MPA site, a series of landing pages, and the npm packages that tied them together.
 
-Sole frontend engineer on a B2B OSS/provisioning platform for a fibre network operator expanding from Melbourne across Australia, serving three user groups: DGtek network admins, reseller ISPs (RSPs) and public visitors, over <!--p:records-->100k+<!--/p--> customer and building records. Owned the whole frontend estate — 14 repositories, ~72,000 lines of Vue/JS, delivered as a set of applications plus 7 in-house npm packages shared between them.
+Sole frontend engineer on a B2B OSS/provisioning platform for a fibre network operator expanding from Melbourne across Australia, serving four user groups: DGtek network admins, reseller ISPs (RSPs), public visitors and the shareholders who read the reports, over <!--p:records-->100k+<!--/p--> customer and building records. Owned the whole frontend estate — 14 repositories, ~72,000 lines of Vue/JS, delivered as a set of applications plus 7 in-house npm packages shared between them.
 
 • **Admin dashboard** (~42k LOC): network footprint and building management, customers and services, SLAs, partners, ticketing, installation scheduling, document storage, role/permission settings and an analytics section (MRR, churn, ARPU, connection pipeline, per-building and per-partner reports).
 
@@ -289,9 +289,9 @@ Sole frontend engineer on a B2B OSS/provisioning platform for a fibre network op
 
 • **Architected a Web Worker data layer** used across all apps: a route/action message controller, credentials kept encrypted rather than in plain localStorage (crypto-js), all API traffic and a versioned IndexedDB cache (10 object stores with secondary indexes, migration-aware upgrades, MessageChannel ports). This kept a heavy admin UI responsive and offline-tolerant on datasets of thousands of buildings and customers.
 
-• **Moved reporting to the client**: monthly revenue, churn and connection reports are computed in the worker over IndexedDB cursors and indexes instead of on the server, then rendered with Google Charts — removing a whole class of slow report endpoints.
+• **Moved the reporting the shareholders read to the client**: monthly revenue, churn and connection reports are computed in the worker over IndexedDB cursors and indexes instead of on the server, then rendered with Google Charts — removing a whole class of slow report endpoints.
 
-• **Geospatial features on Google Maps API + Geoscape (AU address database)**: rendering of serviceability polygons and building markers by status (lit / footprint / under construction / coming soon), point-in-polygon address lookup, fallback flow for addresses Google fails to geocode, and in-map editors for polygons and pits.
+• **Geospatial features on Google Maps API + Geoscape (AU address database)**: rendering of serviceability polygons and building markers by status (lit / footprint / under construction / coming soon), point-in-polygon address lookup against whichever coordinates came back, a fallback flow for addresses Google fails to geocode, and in-map editors for polygons and pits. The address search sat behind its own worker boundary — self-contained, which is what let it ship as a published package and run on sites DGtek did not control.
 
 • **Build-cost calculator** estimating fibre haul cost from a building to the nearest pit (tunnels, Telstra/NBN ducts, open trench, underboring, pit types, reinstatement, traffic management) and exporting a client-ready PDF quote.
 

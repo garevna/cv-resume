@@ -63,31 +63,68 @@ Cypress, MapLibre GL, Firebase Auth, WebSocket, pnpm workspaces
 
 ---
 
+### **JavaScript & Vue.js Instructor** — Ukrainian IT School
+
+**Kharkiv** | <!--p:role.itschool.en-->Feb 2019–Dec 2024<!--/p--> · *Part-time, alongside client work*
+
+Taught JavaScript and Vue.js to junior developers for six years, on a course I wrote and
+still maintain — and a shorter Vue course beside it.
+
+- Fundamentals through to the awkward parts: functions as values, objects and
+  constructors, references, prototypal inheritance, `this` and the ways it is lost.
+- Vue 2 and Vue 3 with the Composition API, state management, REST APIs and project work.
+- Students were onboarded onto commercial projects, which is the part that decides whether
+  a course was any good.
+
+The course outgrew the classroom and is now **Client-Side JS** — 164 lessons in three
+languages, described below.
+
+→ [garevna.github.io/js-lessons](https://garevna.github.io/js-lessons/)
+
+---
+
+### **Front-End Instructor** — A-Level IT School
+
+**Kharkiv** | <!--p:role.alevel.en-->2016–2019<!--/p--> · *Part-time*
+
+Where the course began. Two years of teaching front-end fundamentals, with the material
+written as it was taught — the first public release of it dates from 2017.
+
+---
+
 ### **Senior Frontend Developer / Frontend Lead** — DGtek Fibre Network
 
 **Australia** | <!--p:role.dgtek.en-->Sep 2019–Sep 2023<!--/p--> · *Remote*
 
 Sole frontend engineer on a B2B provisioning platform for a fibre operator — 14
 repositories, ~72,000 lines of Vue, three applications and 7 in-house npm packages, over
-<!--p:records-->100k+<!--/p--> customer and building records.
+<!--p:records-->100k+<!--/p--> customer and building records. Four kinds of user: the
+operator's admins, the reseller ISPs selling on its network, the public checking an
+address, and the shareholders, who read the reports.
 
-- **Architected a Web Worker data layer** used by every application: a route/action message
-  controller, credentials encrypted rather than left in localStorage, all API traffic, and
-  a versioned IndexedDB cache of ten object stores with secondary indexes and
-  migration-aware upgrades — which is what kept a heavy admin UI responsive and
-  offline-tolerant.
-- **Moved reporting off the server**: monthly revenue, churn and ARPU are computed in the
-  worker over IndexedDB cursors and rendered with Google Charts, removing a whole class of
-  slow report endpoints.
+- **Architected the Web Worker data layer** shared by all three applications: a
+  route/action message controller, credentials encrypted rather than left in
+  localStorage, all API traffic, and a versioned IndexedDB cache of ten object stores
+  with secondary indexes and migration-aware upgrades — which is what kept a heavy admin
+  UI responsive and offline-tolerant.
+- **Moved the reporting the shareholders read off the server**: monthly revenue, churn and
+  ARPU are computed in a worker over IndexedDB cursors and drawn with Google Charts,
+  removing a whole class of slow report endpoints.
 - **Turned a component into a distribution channel**: coverage-check packages shipped to
   DGtek's reseller ISPs draw the operator's live polygons on sites DGtek does not control,
   resolve a visitor's address against them and quote a realistic connection time from that
   zone's settings. Coverage is edited in one place and every downstream site follows.
-- Geospatial work on Google Maps and Geoscape, a fibre-haul cost calculator exporting
-  client-ready PDF quotes, and bulk import/export tooling with a validation pipeline.
+- **Packaged the address search**, which the worker boundary made possible: it geocodes
+  against two sources — Geoscape for Australian addresses, Google Maps otherwise, with a
+  fallback for addresses Google cannot resolve — then runs point-in-polygon on whatever
+  coordinates come back to decide which coverage zone the building falls in. Self-contained
+  behind a message port, so it shipped as a published package and ran on sites DGtek did
+  not control.
+- A fibre-haul cost calculator pricing a run to the nearest pit and exporting a
+  client-ready PDF quote, and bulk import/export tooling with a validation pipeline.
 
 **Stack:** Vue 2, Vuetify 2, Vuex, Web Workers, IndexedDB, Service Workers/PWA, Webpack,
-Google Maps API, Geoscape, crypto-js, npm publishing
+Google Maps API, Geoscape API, crypto-js, npm publishing
 
 → **[Full case study](https://garevna.github.io/cv-resume/dgtek_portal.html)** ·
 **[Catalogue](./PROJECTS.md)**
@@ -140,14 +177,15 @@ Cron, Firebase Auth, Firestore, Telegram Bot API, MapLibre GL, Playwright, Vites
 
 ---
 
-### **Author & Platform Engineer** — developer education
+### **Author & Platform Engineer** — Client-Side JS
 
-**Independent** | 2015–Present ·
+**Independent** | 2017–Present ·
 [garevna.github.io/js-lessons](https://garevna.github.io/js-lessons/)
 
-Teaching developers since 2015, with the courseware public and deployed from 2017 onwards:
-garevna.github.io (2017), vue-course (2018), js-simulator (2018), js-course (2019) and
-**Client-Side JS** today — 164 lessons in Ukrainian, Russian and English.
+The course from the two schools above, rebuilt as a product: 164 lessons in Ukrainian,
+Russian and English, on a rendering platform I wrote myself. Public and deployed since
+2017 — garevna.github.io, vue-course (2018), js-simulator (2018), js-course (2019) and
+Client-Side JS today.
 
 - **A rendering platform with no framework**: native custom elements with shadow DOM, a
   versioned service worker for offline reading, and web workers delivering content and

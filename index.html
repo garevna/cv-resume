@@ -572,25 +572,52 @@ extracted into a standalone composable.</li>
                     <span class="tech-tag">pnpm workspaces</span>
                 </div>
 <p>→ <strong><a href="./PROJECTS.md">All eight projects in the catalogue</a></strong></p>
+<h3><strong>JavaScript &amp; Vue.js Instructor</strong> — Ukrainian IT School</h3>
+<p><strong>Kharkiv</strong> | <!--p:role.itschool.en-->Feb 2019–Dec 2024<!--/p--> · <em>Part-time, alongside client work</em></p>
+<p>Taught JavaScript and Vue.js to junior developers for six years, on a course I wrote and
+still maintain — and a shorter Vue course beside it.</p>
+<ul>
+<li>Fundamentals through to the awkward parts: functions as values, objects and
+constructors, references, prototypal inheritance, <code>this</code> and the ways it is lost.</li>
+<li>Vue 2 and Vue 3 with the Composition API, state management, REST APIs and project work.</li>
+<li>Students were onboarded onto commercial projects, which is the part that decides whether
+a course was any good.</li>
+</ul>
+<p>The course outgrew the classroom and is now <strong>Client-Side JS</strong> — 164 lessons in three
+languages, described below.</p>
+<p>→ <a href="https://garevna.github.io/js-lessons/">garevna.github.io/js-lessons</a></p>
+<h3><strong>Front-End Instructor</strong> — A-Level IT School</h3>
+<p><strong>Kharkiv</strong> | <!--p:role.alevel.en-->2016–2019<!--/p--> · <em>Part-time</em></p>
+<p>Where the course began. Two years of teaching front-end fundamentals, with the material
+written as it was taught — the first public release of it dates from 2017.</p>
 <h3><strong>Senior Frontend Developer / Frontend Lead</strong> — DGtek Fibre Network</h3>
 <p><strong>Australia</strong> | <!--p:role.dgtek.en-->Sep 2019–Sep 2023<!--/p--> · <em>Remote</em></p>
 <p>Sole frontend engineer on a B2B provisioning platform for a fibre operator — 14
 repositories, ~72,000 lines of Vue, three applications and 7 in-house npm packages, over</p>
-<!--p:records-->100k+<!--/p--> customer and building records.<ul>
-<li><strong>Architected a Web Worker data layer</strong> used by every application: a route/action message
-controller, credentials encrypted rather than left in localStorage, all API traffic, and
-a versioned IndexedDB cache of ten object stores with secondary indexes and
-migration-aware upgrades — which is what kept a heavy admin UI responsive and
-offline-tolerant.</li>
-<li><strong>Moved reporting off the server</strong>: monthly revenue, churn and ARPU are computed in the
-worker over IndexedDB cursors and rendered with Google Charts, removing a whole class of
-slow report endpoints.</li>
+<!--p:records-->100k+<!--/p--> customer and building records. Four kinds of user: the
+<p>operator&#39;s admins, the reseller ISPs selling on its network, the public checking an
+address, and the shareholders, who read the reports.</p>
+<ul>
+<li><strong>Architected the Web Worker data layer</strong> shared by all three applications: a
+route/action message controller, credentials encrypted rather than left in
+localStorage, all API traffic, and a versioned IndexedDB cache of ten object stores
+with secondary indexes and migration-aware upgrades — which is what kept a heavy admin
+UI responsive and offline-tolerant.</li>
+<li><strong>Moved the reporting the shareholders read off the server</strong>: monthly revenue, churn and
+ARPU are computed in a worker over IndexedDB cursors and drawn with Google Charts,
+removing a whole class of slow report endpoints.</li>
 <li><strong>Turned a component into a distribution channel</strong>: coverage-check packages shipped to
 DGtek&#39;s reseller ISPs draw the operator&#39;s live polygons on sites DGtek does not control,
 resolve a visitor&#39;s address against them and quote a realistic connection time from that
 zone&#39;s settings. Coverage is edited in one place and every downstream site follows.</li>
-<li>Geospatial work on Google Maps and Geoscape, a fibre-haul cost calculator exporting
-client-ready PDF quotes, and bulk import/export tooling with a validation pipeline.</li>
+<li><strong>Packaged the address search</strong>, which the worker boundary made possible: it geocodes
+against two sources — Geoscape for Australian addresses, Google Maps otherwise, with a
+fallback for addresses Google cannot resolve — then runs point-in-polygon on whatever
+coordinates come back to decide which coverage zone the building falls in. Self-contained
+behind a message port, so it shipped as a published package and ran on sites DGtek did
+not control.</li>
+<li>A fibre-haul cost calculator pricing a run to the nearest pit and exporting a
+client-ready PDF quote, and bulk import/export tooling with a validation pipeline.</li>
 </ul>
 <p class="tech-label"><strong>Stack:</strong></p>
                 <div class="tech-stack">
@@ -602,7 +629,7 @@ client-ready PDF quotes, and bulk import/export tooling with a validation pipeli
                     <span class="tech-tag">Service Workers/PWA</span>
                     <span class="tech-tag">Webpack</span>
                     <span class="tech-tag">Google Maps API</span>
-                    <span class="tech-tag">Geoscape</span>
+                    <span class="tech-tag">Geoscape API</span>
                     <span class="tech-tag">crypto-js</span>
                     <span class="tech-tag">npm publishing</span>
                 </div>
@@ -671,12 +698,13 @@ Cron</span>
                     <span class="tech-tag">Vitest</span>
                     <span class="tech-tag">pnpm</span>
                 </div>
-<h3><strong>Author &amp; Platform Engineer</strong> — developer education</h3>
-<p><strong>Independent</strong> | 2015–Present ·
+<h3><strong>Author &amp; Platform Engineer</strong> — Client-Side JS</h3>
+<p><strong>Independent</strong> | 2017–Present ·
 <a href="https://garevna.github.io/js-lessons/">garevna.github.io/js-lessons</a></p>
-<p>Teaching developers since 2015, with the courseware public and deployed from 2017 onwards:
-garevna.github.io (2017), vue-course (2018), js-simulator (2018), js-course (2019) and
-<strong>Client-Side JS</strong> today — 164 lessons in Ukrainian, Russian and English.</p>
+<p>The course from the two schools above, rebuilt as a product: 164 lessons in Ukrainian,
+Russian and English, on a rendering platform I wrote myself. Public and deployed since
+2017 — garevna.github.io, vue-course (2018), js-simulator (2018), js-course (2019) and
+Client-Side JS today.</p>
 <ul>
 <li><strong>A rendering platform with no framework</strong>: native custom elements with shadow DOM, a
 versioned service worker for offline reading, and web workers delivering content and
