@@ -278,7 +278,7 @@ Higher Education (Mathematician)
 
 - 🇺🇦 Ukrainian (Native)
 - 🇷🇺 Russian (Fluent)
-- 🇬🇧 English (C2 — Proficient)
+- 🇬🇧 English (C1 — Advanced)
 
 ---
 
