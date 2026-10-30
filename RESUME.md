@@ -149,6 +149,7 @@ backend) storing landing pages as JSON with a publish/hide lifecycle.
 ### **Full-Stack Developer** — Site Visual Editor
 
 **A visual editor for multilingual websites** | 2026 ·
+**[live demo](https://garevna.github.io/sve-studio/)** ·
 [source](https://github.com/garevna/sve-studio) · *commercially licensed, not open source*
 
 Pages are assembled from ready-made blocks, edited in place and published without touching
@@ -166,8 +167,13 @@ and the site's own stylesheets are all editable, with CSS edited in the browser 
 CodeMirror. The editor has colour schemes of its own, so it never disappears into the site
 it is editing.
 
+• **The editor opens in a role.** A content manager gets pages, menu, footer, banner and
+company data — and not the palette, the stylesheets or the technical settings. The
+person who writes the copy cannot accidentally restyle the site.
+
 • **Multilingual throughout** — every text, page name and menu entry in each language, with
-the menu following a page when it is renamed.
+the menu following a page when it is renamed. The demo ships in Ukrainian, English and
+German.
 
 • **Nothing leaves the browser in the demo.** State lives in IndexedDB, so an evaluator can
 build a whole site without anything being stored on a server.
