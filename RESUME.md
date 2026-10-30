@@ -13,14 +13,14 @@
 
 ## Professional Summary
 
-Senior Frontend Developer with <!--p:years-->8+<!--/p--> years building high-performance web applications — and the architecture underneath them. I take frontend estates end to end: at DGtek I was the sole frontend engineer across 14 repositories and ~72,000 lines of Vue, three applications over <!--p:records-->100k+<!--/p--> customer and building records, with the entire data layer behind a Web Worker boundary and monthly revenue, churn and ARPU reporting moved off the server into IndexedDB cursors in the browser. <!--p:packages-->39<!--/p--> published npm packages, several of them shipped to third-party companies — one team’s component became another company’s website. I also write and teach: an open JavaScript course in three languages, on a rendering platform I built from scratch and release through a build gated by eight command-line checks.
+Senior Frontend Developer with <!--p:years-->8+<!--/p--> years building high-performance web applications — and the architecture underneath them. I take frontend estates end to end: at DGtek I was the sole frontend engineer across 14 repositories and ~72,000 lines of Vue, three applications over <!--p:records-->100k+<!--/p--> customer and building records, with the entire data layer behind a Web Worker boundary and monthly revenue, churn and ARPU reporting moved off the server into IndexedDB cursors in the browser. <!--p:packages-->39<!--/p--> published npm packages, several of them shipped to third-party companies — one team’s component became another company’s website. My own products run to another 65,000 lines: a visual editor for multilingual sites on Nuxt 4, and a coordination platform on a Cloudflare Worker. I also write and teach — an open JavaScript course in three languages, on a rendering platform I built from scratch and release through a build gated by eight command-line checks.
 
 ---
 
 ## Technical Stack
 
 **Frontend:**  
-Vue 2/3 (Composition API, `<script setup>`) • TypeScript • Vuetify 2/3 • Pinia • Vuex • Vue Router • Vue i18n • Vite • Vitest • Cypress
+Vue 2/3 (Composition API, `<script setup>`) • Nuxt 2/4 • TypeScript • Vuetify 2/3 • Pinia • Vuex • Vue Router • Vue i18n • Vite • Vitest • Cypress
 
 **Performance & Data:**  
 Web Workers • IndexedDB (with advanced indexing) • REST API • WebSockets • Real-time Synchronization • Geolocation APIs (Google Maps, MapLibre GL, Geoscape)
@@ -145,6 +145,41 @@ backend) storing landing pages as JSON with a publish/hide lifecycle.
 ---
 
 ## Independent Products & Education
+
+### **Full-Stack Developer** — Site Visual Editor
+
+**A visual editor for multilingual websites** | 2026 ·
+[source](https://github.com/garevna/sve-studio) · *commercially licensed, not open source*
+
+Pages are assembled from ready-made blocks, edited in place and published without touching
+code. My largest codebase: about 41,000 lines across 461 files — 133 components, a
+workspace package for the editor's own UI, a server layer with its own content API, and a
+service worker.
+
+• **Editing where the thing is.** Every block looks exactly as it does on the site and
+opens for editing on a click. New blocks are chosen from live previews rendered in the
+site's own colours and fonts, and land where the "+" was pressed. The whole page is also a
+list — drag to reorder, hide, jump to a block.
+
+• **The site's look is data, not code.** Palette, UI kit, fonts, header and footer layouts
+and the site's own stylesheets are all editable, with CSS edited in the browser through
+CodeMirror. The editor has colour schemes of its own, so it never disappears into the site
+it is editing.
+
+• **Multilingual throughout** — every text, page name and menu entry in each language, with
+the menu following a page when it is renamed.
+
+• **Nothing leaves the browser in the demo.** State lives in IndexedDB, so an evaluator can
+build a whole site without anything being stored on a server.
+
+• **Built for a phone as well**: tools move into a bottom dock and panels slide up from the
+bottom rather than being a desktop layout squeezed narrow.
+
+**Stack:** Nuxt 4, Vue 3, TypeScript, Vuetify 3, Pinia, vue-i18n, CodeMirror, Sortable.js,
+IndexedDB (idb-keyval), h3 and unstorage on the server, Service Worker, pnpm workspaces,
+Node 24
+
+---
 
 ### **Full-Stack Developer** — Bible
 

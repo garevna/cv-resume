@@ -20,7 +20,7 @@
 ## Технічний стек
 
 **Frontend:**  
-Vue 2/3 (Composition API, `<script setup>`) • TypeScript • Vuetify 2/3 • Pinia • Vuex • Vue Router • Vue i18n • Vite • Vitest • Cypress • Playwright
+Vue 2/3 (Composition API, `<script setup>`) • Nuxt 2/4 • TypeScript • Vuetify 2/3 • Pinia • Vuex • Vue Router • Vue i18n • Vite • Vitest • Cypress • Playwright
 
 **Performance & Data:**  
 Web Workers • IndexedDB (з системою індексів) • Service Workers / PWA • REST API • WebSockets • Real-time синхронізація • Geolocation API (Google Maps, MapLibre GL, Geoscape)
@@ -107,6 +107,22 @@ Figma • SEO • Доступність (a11y) • Технічне письм�
 ---
 
 ## Власні продукти та освіта
+
+### **Full-Stack Developer** — Site Visual Editor
+
+**Візуальний редактор для багатомовних сайтів** | 2026 · [вихідний код](https://github.com/garevna/sve-studio) · *комерційна ліцензія, не open source*
+
+Сторінки складаються з готових блоків, редагуються на місці та публікуються — без дотику до коду. Моя найбільша кодова база: близько 41 000 рядків у 461 файлі — 133 компоненти, окремий пакет для UI самого редактора, серверний шар із власним content API та service worker.
+
+- **Редагування там, де річ.** Кожен блок виглядає точно так, як на сайті, і відкривається на клік. Нові блоки обираються з живих прев'ю в кольорах і шрифтах сайту й стають туди, де натиснули «+». Уся сторінка також є списком — перетягуванням порядку, приховування, перехід до блоку.
+- **Вигляд сайту — це дані, а не код.** Палітра, UI-кіт, шрифти, макети шапки й підвалу та власні стилі сайту редагуються, CSS — прямо в браузері через CodeMirror. У редактора є свої кольорові схеми, щоб він ніколи не зливався із сайтом, який редагує.
+- **Багатомовність наскрізь** — кожен текст, назва сторінки й пункт меню кожною мовою сайту.
+- **У демо нічого не виходить за межі браузера** — стан живе в IndexedDB, тож можна зібрати цілий сайт, і нічого не потрапить на сервер.
+- **Зроблено й під телефон**: інструменти переїжджають у нижню панель, а вікна виїжджають знизу, а не стискується десктопна розкладка.
+
+**Стек:** Nuxt 4, Vue 3, TypeScript, Vuetify 3, Pinia, vue-i18n, CodeMirror, Sortable.js, IndexedDB (idb-keyval), h3 та unstorage на сервері, Service Worker, pnpm workspaces, Node 24
+
+---
 
 ### **Full-Stack Developer** — Bible
 

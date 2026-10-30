@@ -475,7 +475,7 @@
 
             <section>
 <h2>Professional Summary</h2>
-<p>Senior Frontend Developer with <!--p:years-->8+<!--/p--> years building high-performance web applications — and the architecture underneath them. I take frontend estates end to end: at DGtek I was the sole frontend engineer across 14 repositories and ~72,000 lines of Vue, three applications over <!--p:records-->100k+<!--/p--> customer and building records, with the entire data layer behind a Web Worker boundary and monthly revenue, churn and ARPU reporting moved off the server into IndexedDB cursors in the browser. <!--p:packages-->39<!--/p--> published npm packages, several of them shipped to third-party companies — one team’s component became another company’s website. I also write and teach: an open JavaScript course in three languages, on a rendering platform I built from scratch and release through a build gated by eight command-line checks.</p>
+<p>Senior Frontend Developer with <!--p:years-->8+<!--/p--> years building high-performance web applications — and the architecture underneath them. I take frontend estates end to end: at DGtek I was the sole frontend engineer across 14 repositories and ~72,000 lines of Vue, three applications over <!--p:records-->100k+<!--/p--> customer and building records, with the entire data layer behind a Web Worker boundary and monthly revenue, churn and ARPU reporting moved off the server into IndexedDB cursors in the browser. <!--p:packages-->39<!--/p--> published npm packages, several of them shipped to third-party companies — one team’s component became another company’s website. My own products run to another 65,000 lines: a visual editor for multilingual sites on Nuxt 4, and a coordination platform on a Cloudflare Worker. I also write and teach — an open JavaScript course in three languages, on a rendering platform I built from scratch and release through a build gated by eight command-line checks.</p>
             </section>
 
             <section>
@@ -483,6 +483,7 @@
 <p class="tech-label"><strong>Frontend:</strong></p>
                 <div class="tech-stack">
                     <span class="tech-tag">Vue 2/3 (Composition API, <code>&lt;script setup&gt;</code>)</span>
+                    <span class="tech-tag">Nuxt 2/4</span>
                     <span class="tech-tag">TypeScript</span>
                     <span class="tech-tag">Vuetify 2/3</span>
                     <span class="tech-tag">Pinia</span>
@@ -656,6 +657,43 @@ backend) storing landing pages as JSON with a publish/hide lifecycle.</p>
 
             <section>
 <h2>Independent Products &amp; Education</h2>
+<h3><strong>Full-Stack Developer</strong> — Site Visual Editor</h3>
+<p><strong>A visual editor for multilingual websites</strong> | 2026 ·
+<a href="https://github.com/garevna/sve-studio">source</a> · <em>commercially licensed, not open source</em></p>
+<p>Pages are assembled from ready-made blocks, edited in place and published without touching
+code. My largest codebase: about 41,000 lines across 461 files — 133 components, a
+workspace package for the editor&#39;s own UI, a server layer with its own content API, and a
+service worker.</p>
+<p>• <strong>Editing where the thing is.</strong> Every block looks exactly as it does on the site and
+opens for editing on a click. New blocks are chosen from live previews rendered in the
+site&#39;s own colours and fonts, and land where the &quot;+&quot; was pressed. The whole page is also a
+list — drag to reorder, hide, jump to a block.</p>
+<p>• <strong>The site&#39;s look is data, not code.</strong> Palette, UI kit, fonts, header and footer layouts
+and the site&#39;s own stylesheets are all editable, with CSS edited in the browser through
+CodeMirror. The editor has colour schemes of its own, so it never disappears into the site
+it is editing.</p>
+<p>• <strong>Multilingual throughout</strong> — every text, page name and menu entry in each language, with
+the menu following a page when it is renamed.</p>
+<p>• <strong>Nothing leaves the browser in the demo.</strong> State lives in IndexedDB, so an evaluator can
+build a whole site without anything being stored on a server.</p>
+<p>• <strong>Built for a phone as well</strong>: tools move into a bottom dock and panels slide up from the
+bottom rather than being a desktop layout squeezed narrow.</p>
+<p class="tech-label"><strong>Stack:</strong></p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Nuxt 4</span>
+                    <span class="tech-tag">Vue 3</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Vuetify 3</span>
+                    <span class="tech-tag">Pinia</span>
+                    <span class="tech-tag">vue-i18n</span>
+                    <span class="tech-tag">CodeMirror</span>
+                    <span class="tech-tag">Sortable.js</span>
+                    <span class="tech-tag">IndexedDB (idb-keyval)</span>
+                    <span class="tech-tag">h3 and unstorage on the server</span>
+                    <span class="tech-tag">Service Worker</span>
+                    <span class="tech-tag">pnpm workspaces</span>
+                    <span class="tech-tag">Node 24</span>
+                </div>
 <h3><strong>Full-Stack Developer</strong> — Bible</h3>
 <p><strong>Reading app and ministry coordination platform</strong> | 2023–Present ·
 <a href="https://kcc-bible.pp.ua/">kcc-bible.pp.ua</a> · <a href="https://github.com/garevna/bible">source</a></p>
