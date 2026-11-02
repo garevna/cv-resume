@@ -13,7 +13,7 @@
 
 ## Professional Summary
 
-Senior Frontend Developer with <!--p:years-->8+<!--/p--> years building high-performance web applications — and the architecture underneath them. I take frontend estates end to end: at DGtek I was the sole frontend engineer across 14 repositories and ~72,000 lines of Vue, three applications over <!--p:records-->100k+<!--/p--> customer and building records, with the entire data layer behind a Web Worker boundary and monthly revenue, churn and ARPU reporting moved off the server into IndexedDB cursors in the browser. <!--p:packages-->39<!--/p--> published npm packages, several of them shipped to third-party companies — one team’s component became another company’s website. My own products run to another 65,000 lines: a visual editor for multilingual sites on Nuxt 4, and a coordination platform on a Cloudflare Worker. I also write and teach — an open JavaScript course in three languages, on a rendering platform I built from scratch and release through a build gated by eight command-line checks.
+Senior Frontend Developer with <!--p:years-->8+<!--/p--> years building high-performance web applications — and the architecture underneath them. I take frontend estates end to end: at DGtek I was the sole frontend engineer across 14 repositories and ~72,000 lines of Vue, three applications over <!--p:records-->100k+<!--/p--> customer and building records, with the entire data layer behind a Web Worker boundary and monthly revenue, churn and ARPU reporting moved off the server into IndexedDB cursors in the browser. <!--p:packages-->39<!--/p--> published npm packages, several of them shipped to third-party companies — one team’s component became another company’s website. My own products run to another 65,000 lines: Pagewright, a visual editor for multilingual sites on Nuxt 4, and a coordination platform on a Cloudflare Worker. I also write and teach — an open JavaScript course in three languages, on a rendering platform I built from scratch and release through a build gated by eight command-line checks.
 
 ---
 
@@ -146,16 +146,23 @@ backend) storing landing pages as JSON with a publish/hide lifecycle.
 
 ## Independent Products & Education
 
-### **Full-Stack Developer** — Site Visual Editor
+### **Full-Stack Developer** — Pagewright
 
 **A visual editor for multilingual websites** | 2026 ·
-**[live demo](https://garevna.github.io/sve-studio/)** ·
+**[live demo — the editor](https://garevna.github.io/sve-studio/)** ·
+**[the site it built](https://garevna.github.io/sve-studio/site/)** ·
 [source](https://github.com/garevna/sve-studio) · *commercially licensed, not open source*
 
 Pages are assembled from ready-made blocks, edited in place and published without touching
-code. My largest codebase: about 41,000 lines across 461 files — 133 components, a
-workspace package for the editor's own UI, a server layer with its own content API, and a
-service worker.
+code. My largest codebase: about 49,700 lines across 555 files — 143 components, a
+workspace package for the editor's own UI, a content API, and a second Nuxt application
+for the published site itself.
+
+• **The published site is a separate application.** None of the editor's styles, plugins
+or settings can reach it, so a client's site can be deployed without the editor at all.
+One codebase renders it either way: on the server from the content API for a real site,
+and in the browser from the visitor's own IndexedDB for the demo — unsaved changes
+included, so a whole site can be built with nothing stored on a server.
 
 • **Editing where the thing is.** Every block looks exactly as it does on the site and
 opens for editing on a click. New blocks are chosen from live previews rendered in the
@@ -174,9 +181,6 @@ person who writes the copy cannot accidentally restyle the site.
 • **Multilingual throughout** — every text, page name and menu entry in each language, with
 the menu following a page when it is renamed. The demo ships in Ukrainian, English and
 German.
-
-• **Nothing leaves the browser in the demo.** State lives in IndexedDB, so an evaluator can
-build a whole site without anything being stored on a server.
 
 • **Built for a phone as well**: tools move into a bottom dock and panels slide up from the
 bottom rather than being a desktop layout squeezed narrow.
