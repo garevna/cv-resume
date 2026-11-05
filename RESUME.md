@@ -164,6 +164,13 @@ One codebase renders it either way: on the server from the content API for a rea
 and in the browser from the visitor's own IndexedDB for the demo — unsaved changes
 included, so a whole site can be built with nothing stored on a server.
 
+• **Visitors sign in, and the owner answers from Telegram.** Firebase Auth and Firestore
+give each visitor an account and a message thread, with rules that let them read only
+their own. A Cloudflare Worker posts each message into a private Telegram channel; a reply
+in that channel is written back to the thread, and the visitor sees the answer on the site.
+The owner never opens an admin panel — which is the point, because an admin panel is where
+small-business enquiries go unanswered.
+
 • **Editing where the thing is.** Every block looks exactly as it does on the site and
 opens for editing on a click. New blocks are chosen from live previews rendered in the
 site's own colours and fonts, and land where the "+" was pressed. The whole page is also a
@@ -182,12 +189,9 @@ person who writes the copy cannot accidentally restyle the site.
 the menu following a page when it is renamed. The demo ships in Ukrainian, English and
 German.
 
-• **Built for a phone as well**: tools move into a bottom dock and panels slide up from the
-bottom rather than being a desktop layout squeezed narrow.
-
 **Stack:** Nuxt 4, Vue 3, TypeScript, Vuetify 3, Pinia, vue-i18n, CodeMirror, Sortable.js,
-IndexedDB (idb-keyval), h3 and unstorage on the server, Service Worker, pnpm workspaces,
-Node 24
+IndexedDB (idb-keyval), h3 and unstorage on the server, Service Worker, Firebase Auth,
+Firestore (security rules), Cloudflare Workers, Telegram Bot API, pnpm workspaces, Node 24
 
 ---
 

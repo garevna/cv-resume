@@ -671,6 +671,12 @@ or settings can reach it, so a client&#39;s site can be deployed without the edi
 One codebase renders it either way: on the server from the content API for a real site,
 and in the browser from the visitor&#39;s own IndexedDB for the demo — unsaved changes
 included, so a whole site can be built with nothing stored on a server.</p>
+<p>• <strong>Visitors sign in, and the owner answers from Telegram.</strong> Firebase Auth and Firestore
+give each visitor an account and a message thread, with rules that let them read only
+their own. A Cloudflare Worker posts each message into a private Telegram channel; a reply
+in that channel is written back to the thread, and the visitor sees the answer on the site.
+The owner never opens an admin panel — which is the point, because an admin panel is where
+small-business enquiries go unanswered.</p>
 <p>• <strong>Editing where the thing is.</strong> Every block looks exactly as it does on the site and
 opens for editing on a click. New blocks are chosen from live previews rendered in the
 site&#39;s own colours and fonts, and land where the &quot;+&quot; was pressed. The whole page is also a
@@ -685,8 +691,6 @@ person who writes the copy cannot accidentally restyle the site.</p>
 <p>• <strong>Multilingual throughout</strong> — every text, page name and menu entry in each language, with
 the menu following a page when it is renamed. The demo ships in Ukrainian, English and
 German.</p>
-<p>• <strong>Built for a phone as well</strong>: tools move into a bottom dock and panels slide up from the
-bottom rather than being a desktop layout squeezed narrow.</p>
 <p class="tech-label"><strong>Stack:</strong></p>
                 <div class="tech-stack">
                     <span class="tech-tag">Nuxt 4</span>
@@ -700,6 +704,10 @@ bottom rather than being a desktop layout squeezed narrow.</p>
                     <span class="tech-tag">IndexedDB (idb-keyval)</span>
                     <span class="tech-tag">h3 and unstorage on the server</span>
                     <span class="tech-tag">Service Worker</span>
+                    <span class="tech-tag">Firebase Auth</span>
+                    <span class="tech-tag">Firestore (security rules)</span>
+                    <span class="tech-tag">Cloudflare Workers</span>
+                    <span class="tech-tag">Telegram Bot API</span>
                     <span class="tech-tag">pnpm workspaces</span>
                     <span class="tech-tag">Node 24</span>
                 </div>
