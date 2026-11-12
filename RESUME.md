@@ -154,9 +154,9 @@ backend) storing landing pages as JSON with a publish/hide lifecycle.
 [source](https://github.com/garevna/sve-studio) · *commercially licensed, not open source*
 
 Pages are assembled from ready-made blocks, edited in place and published without touching
-code. My largest codebase: about 76,000 lines across 638 files — 168 components in the
-editor and 88 more in the published site, two workspace packages, a content API, three
-Cloudflare Workers, and a second Nuxt application for the site itself.
+code. My largest codebase: about 76,000 lines across 638 files — the editor, a second
+Nuxt application for the published site, two workspace packages, a content API and three
+Cloudflare Workers, with 306 Vue components between them.
 
 • **The published site is a separate application.** None of the editor's styles, plugins
 or settings can reach it, so a client's site can be deployed without the editor at all.
