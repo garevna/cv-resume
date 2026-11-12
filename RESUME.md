@@ -13,7 +13,7 @@
 
 ## Professional Summary
 
-Senior Frontend Developer with <!--p:years-->8+<!--/p--> years building high-performance web applications — and the architecture underneath them. I take frontend estates end to end: at DGtek I was the sole frontend engineer across 14 repositories and ~72,000 lines of Vue, three applications over <!--p:records-->100k+<!--/p--> customer and building records, with the entire data layer behind a Web Worker boundary and monthly revenue, churn and ARPU reporting moved off the server into IndexedDB cursors in the browser. <!--p:packages-->39<!--/p--> published npm packages, several of them shipped to third-party companies — one team’s component became another company’s website. My own products run to another 65,000 lines: Pagewright, a visual editor for multilingual sites on Nuxt 4, and a coordination platform on a Cloudflare Worker. I also write and teach — an open JavaScript course in three languages, on a rendering platform I built from scratch and release through a build gated by eight command-line checks.
+Senior Frontend Developer with <!--p:years-->8+<!--/p--> years building high-performance web applications — and the architecture underneath them. I take frontend estates end to end: at DGtek I was the sole frontend engineer across 14 repositories and ~72,000 lines of Vue, three applications over <!--p:records-->100k+<!--/p--> customer and building records, with the entire data layer behind a Web Worker boundary and monthly revenue, churn and ARPU reporting moved off the server into IndexedDB cursors in the browser. <!--p:packages-->39<!--/p--> published npm packages, several of them shipped to third-party companies — one team’s component became another company’s website. My own products run to another 100,000 lines: Pagewright, a visual editor for multilingual sites on Nuxt 4 that connects to a client's own API through configuration rather than code, and a coordination platform on a Cloudflare Worker. I also write and teach — an open JavaScript course in three languages, on a rendering platform I built from scratch and release through a build gated by eight command-line checks.
 
 ---
 
@@ -149,20 +149,22 @@ backend) storing landing pages as JSON with a publish/hide lifecycle.
 ### **Full-Stack Developer** — Pagewright
 
 **A visual editor for multilingual websites** | 2026 ·
-**[live demo — the editor](https://garevna.github.io/sve-studio/)** ·
-**[the site it built](https://garevna.github.io/sve-studio/site/)** ·
+**[live demo — the editor](https://pagewright.pp.ua/)** ·
+**[the site it built](https://pagewright.pp.ua/site/)** ·
 [source](https://github.com/garevna/sve-studio) · *commercially licensed, not open source*
 
 Pages are assembled from ready-made blocks, edited in place and published without touching
-code. My largest codebase: about 49,700 lines across 555 files — 143 components, a
-workspace package for the editor's own UI, a content API, and a second Nuxt application
-for the published site itself.
+code. My largest codebase: about 76,000 lines across 638 files — 168 components in the
+editor and 88 more in the published site, two workspace packages, a content API, three
+Cloudflare Workers, and a second Nuxt application for the site itself.
 
 • **The published site is a separate application.** None of the editor's styles, plugins
 or settings can reach it, so a client's site can be deployed without the editor at all.
 One codebase renders it either way: on the server from the content API for a real site,
 and in the browser from the visitor's own IndexedDB for the demo — unsaved changes
-included, so a whole site can be built with nothing stored on a server.
+included, so a whole site can be built with nothing stored on a server. The same build
+runs on Cloudflare Workers over KV and R2, or on any Node host over a single folder: the
+deployment chooses its storage when it starts, not when it is built.
 
 • **Visitors sign in, and the owner answers from Telegram.** Firebase Auth and Firestore
 give each visitor an account and a message thread, with rules that let them read only
@@ -170,6 +172,23 @@ their own. A Cloudflare Worker posts each message into a private Telegram channe
 in that channel is written back to the thread, and the visitor sees the answer on the site.
 The owner never opens an admin panel — which is the point, because an admin panel is where
 small-business enquiries go unanswered.
+
+• **A client's own API, connected by configuration rather than code.** Forms on the site
+know only their own field keys; where each value goes — address, parameter name, format —
+is a setting, read by one workspace package the site and the editor share. Four kinds of
+request cover what a form needs: the options for a field, the nights a calendar may offer,
+the handoff into the client's own booking or basket (by link, or by a session their API
+opens first), and a popup's answer. A new client changes settings, not code. The editor
+has a section for it, where each request is edited under its own row, what will be sent is
+shown before it is sent, and a check runs against the real API.
+
+• **Demonstrated against a client that behaves like a real one.** A made-up hotel chain
+lives outside the site as its own service — a Cloudflare Worker with a D1 database, its
+own page for taking requests and a live admin panel. The demo asks it for cities and for
+the nights that are free, shows room types priced for the dates and guests chosen, hands
+the visitor over to the chain's own booking page, and the booking is in that chain's admin
+seconds later. A real system takes its place by changing a base address and some parameter
+names.
 
 • **Editing where the thing is.** Every block looks exactly as it does on the site and
 opens for editing on a click. New blocks are chosen from live previews rendered in the
@@ -181,9 +200,13 @@ and the site's own stylesheets are all editable, with CSS edited in the browser 
 CodeMirror. The editor has colour schemes of its own, so it never disappears into the site
 it is editing.
 
-• **The editor opens in a role.** A content manager gets pages, menu, footer, banner and
-company data — and not the palette, the stylesheets or the technical settings. The
-person who writes the copy cannot accidentally restyle the site.
+• **Roles the server enforces, not only the interface.** A content manager gets pages,
+menu, footer, banner and company data — not the palette, the stylesheets or the technical
+settings — and the lists that hide those buttons are the same ones that refuse the writes
+behind them: the caller's Firebase token decides, per path. Owners are a setting of the
+deployment rather than a row in a table, so handing a client's own person the supervisor
+role cannot leave me unable to put things right. Everyone else appears in a Users section
+after their first sign-in, able to look and to save nothing until given a role.
 
 • **Multilingual throughout** — every text, page name and menu entry in each language, with
 the menu following a page when it is renamed. The demo ships in Ukrainian, English and
@@ -191,7 +214,8 @@ German.
 
 **Stack:** Nuxt 4, Vue 3, TypeScript, Vuetify 3, Pinia, vue-i18n, CodeMirror, Sortable.js,
 IndexedDB (idb-keyval), h3 and unstorage on the server, Service Worker, Firebase Auth,
-Firestore (security rules), Cloudflare Workers, Telegram Bot API, pnpm workspaces, Node 24
+Firestore (security rules), Cloudflare Workers (KV, R2, D1), Telegram Bot API, pnpm
+workspaces, Node 24
 
 ---
 
