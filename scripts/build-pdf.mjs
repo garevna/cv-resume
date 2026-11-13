@@ -23,6 +23,8 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 import { dirname, join } from 'node:path'
 import { marked } from 'marked'
 
+import { fontFaceCss } from './fonts.mjs'
+
 
 const run = promisify(execFile)
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -91,10 +93,15 @@ async function makeReproducible (path) {
 
 /** RESUME.md -> a self-contained HTML document Chrome can print. */
 async function renderMarkdown (path) {
-  const [markdown, css] = await Promise.all([
+  const [markdown, styles, faces] = await Promise.all([
     readFile(SOURCE, 'utf8'),
-    readFile(STYLES, 'utf8')
+    readFile(STYLES, 'utf8'),
+    fontFaceCss(root, { inline: true })
   ])
+
+  // The fonts travel inside the document: see scripts/fonts.mjs.
+  if (!styles.includes('/* FONTS */')) throw new Error('No /* FONTS */ marker in resume-print.css')
+  const css = styles.replace('/* FONTS */', faces)
 
   // The <!--p:key--> sync markers are HTML comments: marked passes them
   // through and the browser never paints them. Strip them anyway so the

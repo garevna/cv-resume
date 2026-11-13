@@ -23,6 +23,8 @@ import { fileURLToPath } from 'node:url'
 
 import { marked } from 'marked'
 
+import { fontFaceCss } from './fonts.mjs'
+
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
 const SOURCE = join(root, 'RESUME.md')
@@ -277,7 +279,13 @@ const sections = rendered
   .map((chunk) => '            <section>\n' + chunk + '\n            </section>')
   .join('\n\n')
 
-const page = template.replace('<!--CONTENT-->', sections)
+// The faces are linked rather than inlined here: a browser fetches only the
+// subset it needs and keeps it. scripts/fonts.mjs says why the PDF differs.
+if (!template.includes('<!--FONTS-->')) throw new Error('No <!--FONTS--> placeholder in page-template.html')
+
+const page = template
+  .replace('<!--FONTS-->', await fontFaceCss(root, { inline: false }))
+  .replace('<!--CONTENT-->', sections)
 
 await writeFile(TARGET, page)
 

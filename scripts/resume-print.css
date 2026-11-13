@@ -1,5 +1,9 @@
 /* Print stylesheet for RESUME-eng.pdf, rendered from RESUME.md by scripts/build-pdf.mjs. */
 
+/* build-pdf.mjs replaces this with the @font-face rules from scripts/fonts.mjs,
+   each file inlined - see the note there on why a linked font will not do. */
+/* FONTS */
+
 @page {
   size: A4;
   margin: 14mm 15mm 16mm;
@@ -17,7 +21,7 @@
 
 body {
   margin: 0;
-  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
   font-size: 9.6pt;
   line-height: 1.45;
   color: var(--ink);
@@ -93,7 +97,7 @@ a {
 }
 
 code {
-  font-family: "Consolas", "DejaVu Sans Mono", monospace;
+  font-family: "Roboto Mono", "Consolas", monospace;
   font-size: 0.9em;
   background: #eef3f2;
   border: 0.6px solid var(--rule);
