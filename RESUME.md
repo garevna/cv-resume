@@ -226,14 +226,14 @@ workspaces, Node 24
 
 Started alone in 2023 as a Bible reader and grown into the tool a church runs its
 ministries on. Now developed with an AI coding agent — the practice above comes from here.
-About 25,000 lines; my only TypeScript-first codebase, and the one I would show to explain
-how I work today.
+About 42,000 lines across 261 files; my only TypeScript-first
+codebase, and the one I would show to explain how I work today.
 
 - **A serverless back end of its own**: a Cloudflare Worker verifies the caller's Firebase
   token and decides authorisation itself — roles and ministries in KV, messages, events,
-  participants and materials in D1 behind five versioned SQL migrations, a nightly cron,
-  a CORS allowlist, the bot token as a Worker secret. 3,600 lines of Worker TypeScript with
-  1,700 lines of tests beside it.
+  participants and materials in D1 behind fifteen versioned SQL migrations, a nightly cron,
+  a CORS allowlist, the bot token as a Worker secret. 7,100 lines of Worker TypeScript with
+  3,200 lines of tests beside it.
 - **Permissions designed against lock-out**: reader, publisher, administrator, plus owners
   the admin page cannot modify, and no administrator can change their own role.
 - **A rota with real operational logic**: recurring events with a different time per
