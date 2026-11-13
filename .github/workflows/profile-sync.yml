@@ -9,6 +9,8 @@ on:
       - 'CV_UA.md'
       - 'data/profile.json'
       - 'scripts/**'
+      - 'media/**'
+      - '.github/workflows/profile-sync.yml'
   pull_request:
 
 jobs:
@@ -31,7 +33,20 @@ jobs:
     needs: check
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write   # the rebuilt artifacts are committed back
+      pages: write      # ...and published
+      id-token: write
+    # Pages' Source is set to GitHub Actions, which means GitHub no longer runs
+    # its own "pages build and deployment" workflow: the site changes only when
+    # a job here deploys it. Without the steps at the end of this one, the
+    # published page simply stops following the repository - which is what it
+    # did, silently, for two weeks.
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -58,3 +73,24 @@ jobs:
           git add index.html RESUME-eng.pdf
           git commit -m "Rebuild index.html and RESUME-eng.pdf from RESUME.md"
           git push
+
+      # The site is the generated page and what it needs, not the whole
+      # repository: no node_modules, no build scripts. The artifact is made
+      # from the files this job just built, so the deployment cannot lag a
+      # commit behind the way a second checkout would.
+      - name: Assemble the published site
+        run: |
+          mkdir -p _site
+          cp index.html RESUME-eng.pdf PROJECTS.md RESUME.md CV_UA.md about-me.md _site/
+          cp -r media _site/media
+          touch _site/.nojekyll
+          du -sh _site
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
